@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/work/xmlcode/NorthXslt.xslt"?> 
+<Rag>
+   <Article>
+     <Magazine> Web Techniques Magazine </Magazine>
+     <IssueDate> March  1998 </IssueDate>
+     <Headline>Database Developer</Headline> 
+     <Deck>New Servers, New Architectures, and Logic in the Database</Deck>
+     <Byline> By Ken North</Byline>
+
+     <ArticleText>
+	If you are a Web developer faced with creating database-enabled pages, 
+	or a database developer faced with building Web-enabled applications, 
+	you have probably experienced the phenomenon known as "Web time." The 
+	computer industry has never been quiet, but recent years have been 
+	particularly frenetic. The popularity of the Web produced a flurry of 
+	software-development activity....
+
+     <Subhead ID="HEAD1">Application Architecture, Database Architecture</Subhead>
+	In the mainframe era, database applications were often monolithic executables. 
+	Operating-system improvements and modular programming brought dynamic linking 
+	and shared libraries. Subsequent developments continued the trend of 
+	distributing the logic of database applications. 
+
+     <Subhead ID="HEAD2">Logic in the Database</Subhead>
+	Because data integrity is a primary concern of database developers, DBMS vendors 
+	provide several techniques for controlling how a DBMS manages data. These include 
+	constraints, procedures, triggers, functions and packages. Some SQL dialects also 
+	provide rules and a <CODE>CREATE</CODE> <CODE>RULE</CODE> statement. 
+
+     </ArticleText>
+
+     <BIOGRAPHY>
+	<Author>Ken North</Author> is a software consultant who also writes and teaches 
+	seminars. His 1998 projects include <Book>Database Magic with Ken North</Book>, 
+	<Book>Java Database Magic with Ken North</Book> (<Publisher>Prentice-Hall 
+	PTR</Publisher>), and Expert Series seminars.
+     </BIOGRAPHY>
+
+   </Article>
+
+   <Article>
+
+     <Magazine> Wit Mag </Magazine>
+     <IssueDate> August  1998 </IssueDate>
+     <Headline>XML Developer</Headline> 
+     <Deck>New Techniques, New Things, and All that kind of stuf</Deck>
+     <Byline> By J. Steve Witt</Byline>
+
+     <ArticleText>
+	Just testing to see if we can loop through this file and read all of the articles in it.
+     </ArticleText>
+
+     <BIOGRAPHY>
+	<Author>Steve Witt</Author> is a senior software engineer who also writes and teaches 
+	subjects on the Bible. His 1998 projects include <Book>Tabernacle Patterns</Book>, 
+	<Book>Revelation with the Tabernacle</Book>, and ACTS seminars.
+     </BIOGRAPHY>
+
+   </Article>
+</Rag>

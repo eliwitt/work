@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Responsive HTML5 Forms</title>
+		<link href='http://fonts.googleapis.com/css?family=Oleo+Script:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="styles/screen.css" />
+	</head>
+	<body>
+		<header><h1>Responsive HTML5 forms</h1></header>
+		<article>
+			<form action="#" method="post">
+				<label for="firstName">First Name <sup>*</sup></label>
+				<input name="firstName" placeholder="First Name" required />
+	
+				<label for="lastName">Last Name <sup>*</sup></label>
+				<input name="lastName" placeholder="Last Name" required />
+			
+				<label for="emailaddress">Email address <sup>*</sup></label>
+				<input type="email" name="emailaddress" placeholder="anything@example.com" required />
+			
+				<label for="servicestart">Service Start Date</label>
+				<input name="servicestart" type="date" />
+			
+				<label for="computers">How many team members will you share with?</label>
+				<input name="computers" type="number" min="0" max ="10" value="1" />	
+			
+				<label><input type="checkbox" /> I have read and agree to the terms and conditions</label>
+			
+				<label for="submit" class="centerit" title="Click here to register your account">
+					<input type="submit" name="submit" value="Register for an account!" />
+				</label>
+				<p class="legal"><sup>*</sup> denotes a required field.</p>		
+							
+			</form>
+		</article>
+		<footer> </footer>
+	</body>
+</html>

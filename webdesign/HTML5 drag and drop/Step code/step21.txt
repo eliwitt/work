@@ -1,0 +1,1 @@
+var newVal = parseInt(num) + 1;

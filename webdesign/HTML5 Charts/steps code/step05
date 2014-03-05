@@ -1,0 +1,29 @@
+			<div id="infographic">
+				<h1>HIV Infection rate</h1>
+				<h2>In the African continent</h2>
+				<h3>Versis foreign Aid</h3>
+				<div id="barcharts">
+					<div id="chart1">
+						<div id="chart1_bar1" class="women">
+							<div class="label">XXXX</div>
+						</div>
+						<div id="chart1_bar2" class="men">
+							<div class="label">XXXX</div>
+						</div>
+					</div>
+					<div id="chart2">
+						<div id="chart2_bar1" class="women">
+							<div class="label">XXXX</div>
+						</div>
+						<div id="chart2_bar2" class="men">
+							<div class="label">XXXX</div>
+						</div>
+					</div>
+				</div>
+				<div id="areacharts">
+				
+				</div>
+				<div id="attribution">
+					<h6>SOURCE: UNITED NATIONS, WORLD BANK, IMF</h6>
+				</div>
+			</div>

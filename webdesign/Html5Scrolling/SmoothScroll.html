@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+<title>html 5 scrolling</title>
+<script type="text/javascript" src="http://localhost/work/scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+ 
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+});
+</script>
+<style type="text/css">
+.clearfix {
+			width: 100%;
+			height: 50px;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			background: #0c6;
+			}
+
+#content {
+			width: 100%;
+			height: auto;
+			padding-top: 60px;
+			}
+			
+.nav-main li {
+ margin: 0;
+ padding: 0;
+ display: inline;
+ list-style: none;
+}			
+</style>
+</head>
+<body>
+ <div id="content">
+                 <div class="clearfix">
+                        <a class="scroll" href="/#menu" data-section="menu">Menu</a>
+                        <a class="scroll" href="/#locations" data-section="locations">Locations</a>
+                        <a class="scroll" href="/#deals" data-section="deals">Specials</a>
+                        <a class="scroll" href="/#merch" data-section="merch">Gift Cards</a>
+                </div>
+<div id="home" >
+<h1>There is no place like home</h1>
+The t-day story is hard
+<p />
+I love a good story
+				<p>Here&#8217;s a neat little jQuery trick to fancy up your internal anchor links, by making them scroll smoothly to their target as opposed to jumping instantly.</p>
+<p>Internal anchor links are very common place,<br />
+e.g. &#8220;back to top&#8221; links, or FAQ pages which list all the questions at the top.<br />
+Making them visually scroll to their target not only looks a bit fancy, it also gives some visual feedback to the user as to their new position on the page.</p>
+<p>This is what it looks like in action, click the following link:<br />
+<p />
+What about X-mas????
+</div>
+<div id="menu">
+<h1>	Just a large amount of text</h1>
+	<p />
+	hi there mom
+	
+	<p />
+	go home
+	
+	it t-day
+</div>
+<div id="locations" >
+<h1>Location, location, loaction</h1>
+Location is very important to a company
+
+<p />
+Going home this t-day may be ruff.
+<br />
+nice
+</div>
+<div id="deals" >
+<h1>Deals we have them</h1>
+Hi mom
+<p />
+Do we deal 
+</div>
+<div id="merch" >
+<h1>Merchantdise</h1>
+Well hopefully you have something to sale if you have a site.
+<p />
+In Korea the stores hire people to stand in the stores to shout out the deals in the different departments.
+<p />
+Weird
+</div>
+</div>
+</body>
+</html>

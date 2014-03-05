@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Writing HTML depending on browser</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function()
+      {
+        if($.browser.msie) {
+       $("#target").html("<marquee><h1>" +
+       "A new marquee element!</h1></marquee>");
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Writing HTML depending on browser</h1>
+    <div id="target"></div>
+  </body>
+</html>

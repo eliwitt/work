@@ -1,0 +1,8 @@
+<ul id="items" ondragstart="dragStartHandler(event)">
+   	  <li id="white" draggable="true" data-value="Plain-White-Tshirt">Plain White Tshirt</li>
+   	  <li id="pink" draggable="true" data-value="Plain-Pink-Tshirt">Plain Pink Tshirt</li>
+   	  <li id="blue" draggable="true" data-value="Plain-Blue-Tshirt">Plain Blue Tshirt</li>
+   	  <li id="green" draggable="true" data-value="Plain-Green-Tshirt">Plain Green Tshirt</li>
+   	  <li id="grey" draggable="true" data-value="Plain-Grey-Tshirt">Plain Grey Tshirt</li>
+   	  <li id="yellow" draggable="true" data-value="Plain-Yellow-Tshirt">Plain Yellow Tshirt</li>
+</ul>

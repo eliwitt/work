@@ -1,0 +1,1 @@
+function dragStartHandler(event) {  	  if (event.target instanceof HTMLLIElement) { //make sure it's the correct type   	 dragged = event.target;    	} else {     	     	}      }

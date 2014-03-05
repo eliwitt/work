@@ -1,0 +1,26 @@
+			<div id="data">
+				<h1>AIDS infections versus Foreign Aid</h1>
+				<h2>Note this is dummy data</h2>
+				<table id="datasource">
+					<tr>
+						<th id="td1_1">&nbsp;</th>
+						<th id="td1_2">2009</th>
+						<th id="td1_3">2010</th>
+					</tr>
+					<tr>
+						<th id="td2_1">Male</th>
+						<td id="td2_2">97565</td>
+						<td id="td2_3">57128</td>
+					</tr>
+					<tr>
+						<th id="td3_1">Female</th>
+						<td id="td3_2">130312</td>
+						<td id="td3_3">82312</td>
+					</tr>
+					<tr>
+						<th id="td4_1">Foreign Aid</th>
+						<td id="td4_2">30.2</td>
+						<td id="td4_3">42.6</td>
+					</tr>
+				</table>
+			</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns=" http://www.w3.org/1999/xhtml ">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Request json test</title> 
+<script src="http://code.jquery.com/jquery-1.5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+	//attach a jQuery live event to the button
+	$('#getdata-button').live('click', function(){
+		$.getJSON('json-data.php', function(data) {	
+            // alert("in the callback");
+            // alert(data); //uncomment this for debug
+			// alert (data.item1+" "+data.item2+" "+data.item3); //further debug
+			$('#showdata').html("<p>item1="+data.item1+"<br> item2="+data.item2+"<br> item3="+data.item3+"</p>");
+		});
+	});
+});
+
+</script> 
+</head>
+<body>
+<a href="#" id="getdata-button">Get JSON Data</a>
+<div id="showdata"></div>
+</body>
+</html> 

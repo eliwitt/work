@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+label {
+	display: block;
+	margin-top: 9px;
+}
+input {
+	-moz-transition: border .5s;
+	-webkit-transition: border .5s;
+	-o-transition: border .5s;
+	transition: border .5s;
+}
+input:focus {
+	outline:0;
+	border: rgba(72, 107, 11, .7) 9px solid;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;	
+}
+textarea {
+	height: 20px;
+	-moz-transition: height .5s, border .5s;
+	-webkit-transition: height .5s, border .5s;
+	-o-transition: height .5s, border .5s;
+	transition: height .5s, border .5s;
+}
+textarea:focus {
+	outline: 0;
+	height: 250px;
+	border: rgba(72, 107, 11, .7) 9px solid;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;	
+}
+</style>
+</head>
+<body>
+<div id="page">
+  <header>
+    <h1>demo :: focus</h1>
+  </header>
+  <article>
+  <form>
+  <label for="firstName">First Name: </label><input name="firstName" type="text"><br />
+  <label for="lastName">Last Name: </label><input name="lastName" type="text"><br />
+  <label for="comment">Comment: </label><textarea name="comment" cols="18" rows="5"></textarea>
+  </form>
+</article>
+<p><em>This file by Greg Rewis, originally published at <a href="http://assortedgarbage.com/demos/css3-focus.html">http://assortedgarbage.com/demos/css3-focus.html</a>.</em></p>
+</div>
+
+</body></html>

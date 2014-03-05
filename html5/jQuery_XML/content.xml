@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <channel>
+ <item number="1">
+ 	<Title>Imagination is powerful</Title>
+ 	<price>19</price>
+ 	<quote>Imagination is more important than knowledge.</quote>
+ 	<detailtitle>Imagination is key to being</detailtitle>
+	<content>
+	This is item one
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+		<more1>
+		<readme>
+			<url>#</url>
+			<text>Read More</text>
+		</readme>
+	</more1>
+ </item>
+ <item number="2">
+ 	<Title>Make mistakes to learn</Title>
+ 	<price>29</price>
+ 	<quote>Anyone who has never made a mistake has never tried anything new.</quote>
+ 	<detailtitle>Have you made mistakes?</detailtitle> 	
+	<content>
+		This is item two
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+		<more2>
+		<readme>
+			<url>#</url>
+			<text>Read More</text>
+		</readme>
+	</more2>
+ </item>
+ <item number="3">
+ 	<Title>Great Spirits</Title>
+ 	 	<price>39</price>
+ 	<quote>Great spirits have often encountered violent opposition from weak minds.</quote>
+ 	<detailtitle>You can change the world</detailtitle>
+	<content>
+		This is item three
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+			<more3>
+		<readme>
+			<url>#</url>
+			<text>Read More</text>
+		</readme>
+		<readme>
+			<url>http://www.google.com</url>
+			<text>Share this</text>
+		</readme>
+		<readme>
+			<url>#</url>
+			<text>Become a member</text>
+		</readme>
+		<readme>
+			<url>#</url>
+			<text>Donate</text>
+		</readme>
+	</more3>
+ </item>
+ <item number="4">
+ 	<Title>Make a difference</Title>
+ 	<price>22</price>
+ 	<quote>A man is but the product of his thoughts what he thinks, he becomes.</quote>
+ 	<detailtitle>Where attention goes - energy flows</detailtitle> 	
+	<content>
+		This is item four
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+		<more4>
+		<readme>
+			<url>http://www.google.com</url>
+			<text>Google</text>
+		</readme>
+	</more4>	
+ </item>
+ <item number="5">
+ 	<Title>A weak man is just by accident.</Title>	
+ 	<price>49</price>
+ 	<quote>A weak man is just by accident. A strong but non-violent man is unjust by accident.</quote>
+ 	<detailtitle>Don't become weak, stay strong!</detailtitle> 		
+	<content>
+		This is item five
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+	<more5>
+		<readme>
+			<url>#</url>
+			<text>Read More</text>
+		</readme>
+	</more5>
+ </item>
+ <item number="6">
+ 	<Title>Don't believe the lies</Title>	
+ 	<price>10</price>
+ 	<quote>The whole of science is nothing more than a refinement of everyday thinking.</quote>
+ 	<detailtitle>The whole of science is key!</detailtitle> 	
+	<content>
+		This is item six
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+		<more6>
+		<readme>
+			<url>#</url>
+			<text>Donate</text>
+		</readme>
+	</more6>	
+ </item>
+ <item number="7">
+ 	<Title>Judge of Truth &amp; Knowledge</Title>
+ 	<price>15</price>
+ 	<quote>Whoever undertakes to set himself up as a judge of Truth and Knowledge is shipwrecked by the laughter of the gods.</quote>
+ 	<detailtitle>Laughter of the gods</detailtitle> 	
+	<content>
+		This is item seven
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+	</content>
+		<more7>
+		<readme>
+			<url>#</url>
+			<text>Become a member</text>
+		</readme>
+	</more7>	
+ </item> 
+ <item number="8">
+ 	<Title>It's time to move on</Title>
+ 	<price>17</price>
+ 	<quote>A nation's culture resides in the hearts and in the soul of its people.</quote>
+ 	<detailtitle>Let's finally become humans of 4D</detailtitle> 	
+	<content>
+		This is item eight
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+	</content>
+		<more8>
+		<readme>
+			<url>http://www.google.com</url>
+			<text>Search</text>
+		</readme>
+	</more8>	
+ </item> 
+</channel> 

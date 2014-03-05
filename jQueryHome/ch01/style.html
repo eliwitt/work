@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Select a paragraph based on style</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        //$("p.second").addClass("striped");
+      });
+
+      function stripe() {
+        $('div p.second').toggleClass("striped");
+      }
+    </script>
+    <style>
+      p.second {
+        font-weight: plaint;
+      }  
+      p.striped {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+
+  <body>
+  <h1>Select a paragraph based on style</title>
+</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p class="second">This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" value="Stripe"
+   onclick="stripe()"
+   </input>
+  </form>
+  </body>
+</html>

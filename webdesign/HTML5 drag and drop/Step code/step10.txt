@@ -1,0 +1,1 @@
+function dragEnterHandler(event) {    	// cancel the event if the drag contains data of our type    	if (event.dataTransfer.types.contains(internalDNDType)){      	event.preventDefault();   	 }      }

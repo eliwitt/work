@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+<title>html 5 scrolling</title>
+<script type="text/javascript" src="../../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/jquery.scrolling-parallax.js"></script>
+<script type="text/javascript">
+$(function() {
+	$.scrollingParallax('../../images/Garden1.jpg', {
+		staticSpeed : .8,
+		loopIt : true,
+		staticScrollLimit : false,
+		bgHeight : '200px',
+		bgWidth : '250px',
+		disableIE6 : true
+		});
+	$.scrollingParallax('../../images/Garden2.jpg', {
+		staticSpeed : 1.7,
+		loopIt : true,
+		staticScrollLimit : false,
+		bgHeight : '100px',
+		bgWidth : '150px',
+		disableIE6 : true
+		});	
+	// the main background image goes last in this list
+	$.scrollingParallax('../../images/ridge1.jpg', {
+		staticSpeed : .17,
+		loopIt : true,
+		bgHeight : '900px',
+		disableIE6Animation : false
+		});		
+});
+</script>
+<style type="text/css">
+#content {
+			min-height: 1500px;
+			text-align: center;
+			position: relative;
+			}
+
+#inner-content {
+			width: 500px;
+			margin: 50px auto;
+			position: relative;
+			z-index: 10;
+			padding: 5px 10px 5px 10px;
+			background-color: #333;
+			color: #fff;
+			}
+			
+#inner-footer {
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			width: 100%;
+			}
+</style>
+</head>
+<body>
+<div id="content">
+	<div id="inner-content">
+		<h1>Parallax Scrolling Demo</h1>
+		<p>Scroll down to see the Parallax action</p>
+	</div>
+	To be or not
+	<div id="inner-footer">
+		<h1>Bottom of page</h1>
+	</div>
+</div>
+</body>
+</html>

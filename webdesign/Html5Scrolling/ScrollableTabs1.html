@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Silde Show</title>
+    <!-- include the Tools -->
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+      href="css/slideshow.css"/>
+<style type="text/css">
+body {
+	padding:50px 80px;
+	font-family:"Lucida Grande","bitstream vera sans","trebuchet ms",sans-serif,verdana;
+}
+
+/* get rid of those system borders being generated for A tags */
+a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+}
+
+	/* some styling for triggers */
+	#triggers {
+		text-align:center;
+	}
+	
+	#triggers img {
+		cursor:pointer;
+		margin:0 5px;
+		background-color:#fff;
+		border:1px solid #ccc;
+		padding:2px;
+	
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		
+	}
+	
+	
+	
+	/* styling for elements inside overlay */
+	.details {
+		position:absolute;
+		top:715px;
+		right:15px;
+		font-size:11px;
+		color:#fff;
+		width:150px;
+	}
+	
+	.details h3 {
+		color:#aba;
+		font-size:15px;
+		margin:0 0 -10px 0;
+	}
+</style>
+<body>
+<content>
+<header>
+<h1>My slide show</h1>
+</header>
+<!-- "previous slide" button -->
+<a class="backward">prev</a>
+<!-- container for the slides -->
+<header class="images">
+	<!-- first slide -->
+	<div>
+	<img src="../../images/pikepeak1.jpg" width="600" height="250" alt="pikes" style="float:left;margin:0 30px 20px 0" />
+	</div>
+	<!-- second slide -->
+	<div>
+	<img src="../../images/smokeyswinter1.jpg" width="550" height="200" alt="smokie" style="float:left;margin:0 30px 20px 0" />
+	</div>
+	<!-- third slide -->
+	<div>
+	<img src="../../images/Garden1.jpg" width="600" height="250" alt="god one" style="float:left;margin:0 30px 20px 0" />
+	</div>
+	<!-- forth slide -->
+	<div>
+	<img src="../../images/Garden2.jpg" width="600" height="250" alt="god two" style="float:left;margin:0 30px 20px 0" />
+	</div>	
+
+</header>
+<!-- the tabs -->
+<div class="slidetabs">
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</div> 
+<!-- "next slide" button -->
+<a class="forward">next</a><p>
+
+<p />
+<button onClick='$(".slidetabs").data("slideshow").play();'>Play</button>
+<button onClick='$(".slidetabs").data("slideshow").stop();'>Stop</button><p />
+<hr /><p />
+</content>
+<script language="Javascript">
+// jQuery examples
+// jQuery Slideshow plugin for the tabs
+// and Overlays
+$(function() {
+
+$(".slidetabs").tabs(".images > div", {
+
+	// enable "cross-fading" effect
+	effect: 'fade',
+	fadeOutSpeed: "slow",
+
+	// start from the beginning after the last tab
+	rotate: true
+
+// use the slideshow plugin. It accepts its own configuration
+}).slideshow();
+
+// $(".slidetabs").data("slideshow").play();
+
+// $("img[rel]").overlay();
+
+});
+</script>
+</body>
+</html>

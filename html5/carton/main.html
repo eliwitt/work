@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>My html 5 template</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--[if lt IE 9]>
+<srcipt src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- enable th jQuerry -->
+</head>
+<body>
+
+    <div id="header">
+        <div id="center">
+            <h1>WittSmart</h1>
+                <ul id="nav">
+                    <li><a href="#home"><p>Home</p></a></li>
+                    <li><a href="#about"><p>About</p></a></li>
+                    <li><a href="#gallery"><p>Gallery</p></a></li>
+                    <li class="last"><a href="#contact"><p>Contact</p></a></li>
+                </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="container">
+            <div id="home" class="page">
+            <section class="main">
+                        <h1>Home</h1>
+<p>My first shot using the Killersites demo</p>
+ <p>You have successfully communicated with the service.</p>
+<p>
+We can create what is called a “Self-hosting” application that starts up the WCF service.  Self-hosting is the simplest way to host services.  You write the code necessary to initialize the ServiceHost and manage the service’s lifetime.  Console, WinForm, WPF, and windows services are examples of the types of projects that I am talking about.
+For this project you have to add references to all three libraries from above.  The System.ServiceModel, interface DemoInterfaces, and DemoCustomerBz are the libraries.
+</p>
+</section>
+<img src="../../images/vwlogo.jpg" width="160" height="210" alt="VW USA" />
+            </div>
+            <div id="about" class="page">
+            About
+
+            </div>
+            <div id="gallery" class="page">
+            Gallery
+            </div>
+            <div id="contact" class="page">
+            <h1>Contact</h1>
+            <form id="contactinfo">
+                <label>Name:</label><br />
+                <input type="text" name="name" required class="textfields" /><br />
+                <label>Email:</label><br />
+                <input type="text" name="email" required class="textfields" /><br />
+                <label>Comment:</label><br />
+                <textarea name="comment" cols="" rows="10"></textarea><br />
+                <input type="submit" id="button" />
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

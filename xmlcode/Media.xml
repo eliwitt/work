@@ -1,0 +1,11 @@
+<?xml version ="1.0"?>
+<Media xmlns=''>
+   <Book Author='John' Title='Fish are my friends' />
+   <Book Author='Dave' Title='Fish are my enemies' />
+   <Book Author='Jane' Title='Fish are my food' />
+   <CD Artist='Jane' Title='Fish sing well' />
+   <DVD Director='John' Title='Fish: The Movie'>
+       <Author>Jane</Author>
+       <Actor>Dave</Actor>
+   </DVD>
+</Media>

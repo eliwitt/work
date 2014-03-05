@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Binding event handlers to events</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+        $('#target')
+          .bind('click',function(event) {
+            alert('Hello!');
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Binding event handlers to events</h1>
+    <h1>Click the flower...</h1>
+    <img id="target" src="Image1.jpg"/>
+  </body>
+</html>

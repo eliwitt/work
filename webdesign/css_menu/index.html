@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="css-menu" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Menu Demo</title>
+	<script src="modernizr-1.5.min.js"></script>
+	
+	<style>
+		/*
+			CSS Menu Demo
+			
+			Copyright (c) 2010   Faruk Ates
+			Website:             http://farukat.es/
+		
+			=COLORS:
+			
+			Green:        #274a4d
+			Light green:  #2e686e
+			Black:        #141414
+			White:        #fafafa
+			
+			I find it useful to keep a list of my common colors at the top of my CSS.
+			
+			
+			CSS Flags index (prefix with = ):
+			
+			COLORS  - List of common colors
+			BASE    - Base page styles
+			HEADER  - Header graphic and title
+			MENU    - Primary menu styles
+			ANIMS   - Animated menu styles
+			CONTENT - Content styles
+			FOOTER  - Footer styles
+		*/
+		
+		/* YUI 3 reset.css (trimmed down to relevant bits) */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+		address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+		li {list-style:none;}
+		h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+		/* Just a few HTML5 element defaults */
+		header,footer,hgroup,nav,article {display: block;}
+		
+		/* =BASE : Base page styles 
+		----------------------------------- */
+		/* NOTE:
+		   I have my CSS properties in alphabetical order inside each rule, because debugging tools alphabetize them and this way
+		   you have a consistent experience between writing & debugging your CSS. Additionally, it disambiguates where properties
+		   should go if you're working with a team. No one will ever write properties in a confusing order this way.
+		*/
+		html {
+			background: #141414 url('bg_27scanline.png') 0 0 repeat;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+		body {
+			color: #fafafa;
+			color: rgba(250,250,250, .666);
+			font: 16px/20px Baskerville, Georgia, serif;
+			margin: 0 auto;
+			padding: 40px 0;
+			width: 728px;
+		}
+		a:link,
+		a:visited {
+			color: #fafafa;
+			color: rgba(250,250,250, .66);
+			
+			/* I like keeping my vendor-prefixed properties separate from regular ones, so I isolate them at the bottom of a rule */
+			-webkit-transition: color .25s ease-out;
+			-moz-transition: color .25s ease-out;
+			-o-transition: color .25s ease-out;
+			transition: color .25s ease-out;                  /* Always have the non-prefixed version last! */
+		}
+		a:focus,
+		a:hover {
+			color: #fff;
+		}
+		a:active {
+			color: #ccc;
+		}
+		/* Remember the order: Link, Visited, Focus, Hover, Active. The mnemonic I use: Lord Vader's Former Handle: Anakin */
+		
+		/* =HEAD : Header graphic & title
+		----------------------------------- */
+		header {
+			background: url('header.jpg') 0 0 no-repeat;
+			height: 200px;
+			position: relative;
+		}
+		header h1 {
+			bottom: 1.5em;
+			font: normal normal normal 36px/36px Impact, Arial Black, sans-serif;
+			left: 50px;
+			opacity: .42;
+			position: absolute;
+			text-shadow: #000 0 1px 0;
+			
+			/* Webkit text rendering hack/adjustment (I like this better for Impact). Not really needed for other browsers */
+			-webkit-text-stroke: 1px transparent;
+		}
+		
+		/* =MENU : Primary menu styles
+		----------------------------------- */
+		nav ul {
+			bottom: 2px;
+			font: 13px/16px Helvetica Neue, Helvetica, Verdana, sans-serif;
+			left: 50px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+		}
+		nav a {
+			text-align: center;
+			text-decoration: none;
+			text-shadow: #000 0 1px 0;
+			
+			-webkit-transition: background-color .25s ease-out, color .25s ease-out;
+			-moz-transition: background-color .25s ease-out, color .25s ease-out;
+			-o-transition: background-color .25s ease-out, color .25s ease-out;
+			transition: background-color .25s ease-out, color .25s ease-out;
+		}
+		nav li.parent {
+			display: inline;
+			margin: 0 20px 0 0;
+			padding: 0;
+			position: relative;
+		}
+		/* I try not to create classes for end-of-list elements (e.g. the li's themselves), but if there is an inheritence risk
+		   or you may use the same styles elsewhere in the page you should always use classes. */
+		nav li.parent a.primary {
+			background: #274a4d url('bg_27scanline.png') 0 0 repeat;
+			display: inline-block;
+			font-weight: bold;
+			padding: 6px 0 4px;
+			width: 80px;
+			
+			/* Opera implemented border-radius without prefix right away, so we don't have to do an -o- version */
+			-webkit-border-radius: 5px 5px 0 0;
+			-moz-border-radius: 5px 5px 0 0;
+			border-radius: 5px 5px 0 0;
+		}
+		nav li.parent a:focus,
+		nav li.parent a:hover {
+			background-color: #2e686e;
+			color: rgba(250,250,250, 1);
+		}
+		nav li.parent ol {
+			left: 0;
+			opacity: 0;
+			margin: 0 0 0 -40px;
+			padding: 0 30px 30px;                             /* The padding provides some leeway for the cursor to go out of bounds */
+			position: absolute;
+			width: 100px;
+			
+			-webkit-transition: opacity .3s ease-out, z-index .2s linear;
+			-moz-transition: opacity .3s ease-out, z-index .2s linear;
+			-o-transition: opacity .3s ease-out, z-index .2s linear;
+			transition: opacity .3s ease-out, z-index .2s linear;
+			
+		}
+		nav li.parent:hover ol {
+			opacity: 1;
+			z-index: 10;
+		}
+		nav ol li a {
+			background: #274a4d;
+			background: rgba( 39, 73, 77, .82);
+			color: #fafafa;
+			color: rgba(250,250,250, .82);
+			display: block;
+			font-size: 11px;
+			margin: 5px 0;
+			padding: 2px 0;
+			width: 100px;
+			
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+		}
+		nav ol li a:hover {
+			background: rgba( 46,103,110, .82);
+			color: #fff;
+		}
+		
+		/* =ANIMS : Animated menu styles
+		----------------------------------- */
+		/* The big ugly downside of using CSS Animations in a forward-compatible way: writing keyframes 4 times. */
+		@-webkit-keyframes slideLTR {
+			  0% { left: -50px; }
+			100% { left: 0; }
+		}
+		@-webkit-keyframes slideRTL {
+			  0% { left: 50px; }
+			100% { left: 0; }
+		}
+		@-moz-keyframes slideLTR {
+			  0% { left: -50px; }
+			100% { left: 0; }
+		}
+		@-moz-keyframes slideRTL {
+			  0% { left: 50px; }
+			100% { left: 0; }
+		}
+		@-o-keyframes slideLTR {
+			  0% { left: -50px; }
+			100% { left: 0; }
+		}
+		@-o-keyframes slideRTL {
+			  0% { left: 50px; }
+			100% { left: 0; }
+		}
+		@keyframes slideLTR {
+			  0% { left: -50px; }
+			100% { left: 0; }
+		}
+		@keyframes slideRTL {
+			  0% { left: 50px; }
+			100% { left: 0; }
+		}
+		.cssanimations nav ol li a {
+			left: 50px;
+			opacity: 0;
+			position: relative;
+			-webkit-transition: left .2s ease-out, opacity .2s ease-out, background-color .2s ease-out;
+			-moz-transition: left .2s ease-out, opacity .2s ease-out, background-color .2s ease-out;
+			-o-transition: left .2s ease-out, opacity .2s ease-out, background-color .2s ease-out;
+			transition: left .2s ease-out, opacity .2s ease-out, background-color .2s ease-out;
+		}
+		.cssanimations nav ol li:nth-child(even) a {
+			left: -50px;
+		}
+		.cssanimations nav li.parent:hover ol li a {
+			left: 0;
+			opacity: 1;
+			-webkit-animation: slideLTR .3s ease-out;
+			-moz-animation: slideLTR .3s ease-out;
+			-o-animation: slideLTR .3s ease-out;
+			animation: slideLTR .3s ease-out;
+		}
+		.cssanimations nav li.parent:hover ol li:nth-child(even) a {
+			-webkit-animation: slideRTL .3s ease-out;
+			-moz-animation: slideRTL .3s ease-out;
+			-o-animation: slideRTL .3s ease-out;
+			animation: slideRTL .3s ease-out;
+		}
+		
+		
+		
+		/* =CONTENT : Content styles 
+		----------------------------------- */
+		#content {
+			background: #000;
+			border: 2px solid #274a4d;
+			border-top: none;
+			padding: 40px;
+			position: relative;
+			z-index: 1;
+		}
+		q {
+			font-style: oblique;
+			position: absolute;
+			quotes: '“' '”';
+			right: 60px;
+			text-align: right;
+			top: 60px;
+		}
+		
+		/* =FOOTER : Footer styles 
+		----------------------------------- */
+		footer {
+			background: url('bg_footer.png') 0 0 no-repeat;
+			color: #aaa;
+			font-family: Helvetica Neue, Helvetica, Verdana, sans-serif;
+			font-size: 11px;
+			height: 28px;
+			margin: -2px auto 0;
+			position: relative;
+			text-align: center;
+			width: 339px;
+			z-index: 2;
+		}
+		footer i {
+			color: #666;
+			font-family: Baskerville;
+			font-size: 14px;
+			position: relative;
+			top: 1px;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+		<h1>My Favorite Sci-Fi Things</h1>
+		<nav>
+			<ul>
+				<li class="parent"><a href="#movies" class="primary">Movies</a>
+					<ol>
+						<li><a href="#">Star Wars</a></li>
+						<li><a href="#">Serenity</a></li>
+						<li><a href="#">The Matrix</a></li>
+						<li><a href="#">Titan A.E.</a></li>
+						<li><a href="#">Galaxy Quest</a></li>
+					</ol>
+				</li>
+				
+				<li class="parent"><a href="#books" class="primary">Books</a>
+					<ol>
+						<li><a href="#">The HHGTTG</a></li>
+						<li><a href="#">Dune</a></li>
+						<li><a href="#">Ender’s Game</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Sphere</a></li>
+					</ol>
+				</li>
+				
+				<li class="parent"><a href="#tvshows" class="primary">TV Shows</a>
+					<ol>
+						<li><a href="#">Firefly</a></li>
+						<li><a href="#">SG:U</a></li>
+						<li><a href="#">Dollhouse</a></li>
+						<li><a href="#">Star Trek TNG</a></li>
+						<li><a href="#">Stargate SG-1</a></li>
+					</ol>
+				</li>
+				
+				<li class="parent"><a href="#games" class="primary">Games</a>
+					<ol>
+						<li><a href="#">Starcraft II</a></li>
+						<li><a href="#">Metroid Prime</a></li>
+						<li><a href="#">Unreal</a></li>
+						<li><a href="#">Half Life</a></li>
+						<li><a href="#">Chrono Trigger</a></li>
+					</ol>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<article id="content">
+		<q>Look sir, planets!</q>
+		<p><img src="two-planets.jpg" width="640" height="320" alt="Two Planets"></p>
+		<p><img src="pink-planet.jpg" width="640" height="320" alt="Pink Planet"></p>
+	</article>
+	
+	<footer>
+		Art, design <i>&amp;</i> code — Copyright © 2010 <a href="http://farukat.es/?dn">Faruk Ateş</a>
+	</footer>
+	
+</body>
+</html>

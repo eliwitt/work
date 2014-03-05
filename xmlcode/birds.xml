@@ -1,0 +1,44 @@
+<?xml version ="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/work/xmlcode/Bird.xslt"?>                                             
+<DOCUMENT>
+    <SIGHTING>
+        <BIRD>
+            Robin
+        </BIRD>
+        <DATE>
+            March 2
+        </DATE>
+    </SIGHTING>
+    <SIGHTING>
+        <BIRD>
+            Sparrow
+        </BIRD>
+        <DATE>
+            April 10
+        </DATE>
+    </SIGHTING>
+    <SIGHTING>
+        <BIRD>
+            Eagle
+        </BIRD>
+        <DATE>
+            June 23
+        </DATE>
+    </SIGHTING>
+    <SIGHTING>
+        <BIRD>
+            Owl
+        </BIRD>
+        <DATE>
+            July 11
+        </DATE>
+    </SIGHTING>
+    <SIGHTING>
+        <BIRD>
+            Finch
+        </BIRD>
+        <DATE>
+            August 3
+        </DATE>
+    </SIGHTING>
+</DOCUMENT>

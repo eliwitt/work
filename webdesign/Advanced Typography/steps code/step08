@@ -1,0 +1,18 @@
+﻿h1 span{
+
+	display:		inline-block;
+	position:		relative;
+
+	text-shadow:		-1px 1px 0px #fff, -3px 3px 0px #666;
+			
+	-webkit-text-shadow:-1px 1px 0px #fff, -3px 3px 0px #666;
+			
+	-moz-text-shadow:	-1px 1px 0px #fff, -3px 3px 0px #666; 
+		
+}
+
+h1 {
+
+	border-bottom:		4px groove #000;
+			
+}

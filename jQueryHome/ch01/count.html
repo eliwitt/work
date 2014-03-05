@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Count paragraphs</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>    <script type="text/javascript">
+     function count()
+     {
+       alert("There are " + $("p").size() + " paragraphs.");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Count paragraphs</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" value="Count Paragraphs"
+   onclick="count()"
+   </input>
+  </form>
+  </body>
+</html>

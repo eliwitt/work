@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=http://fonts.googleapis.com/css?family=Crimson+Text|Lobster" />
+    	<link rel="stylesheet" type="text/css" href="http://localhost/work/webdesign/Advanced%20Typography/styles/completed.css" />
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/lettering.js"></script>
+		<script type="text/javascript" >
+			$(document).ready(function(){
+				// Code to create per-word/per-character styles in here...
+				$("p.first").css({lineHeight:0});
+				$(".fancy_title").lettering("lines");
+				$(".em1").lettering("words");
+				$("p.first").lettering("lines");
+				$("p.second").lettering("lines");
+			});
+		</script>
+		<title>Typography Matters</title>
+	</head>
+	<body>
+		<article>
+			<h1 class="fancy_title">Typography<br />matters</h1>
+			<p class="first">"There was once a typeface<br />
+			that had the reputation of being<br />
+			<span class="em1">more legible and functional</span><br />
+			than all the others.</p>
+			<p class="second">It was used everywhere and for<br /> 
+			everything,<br />
+			from signs to logos.<br />
+			Then one day readers couldn't stand seeing it anymore and decided to stop reading it – despite its superior legibilty. Bit by bit designers forgot about it and it was only used by lay people. Then it was rediscovered for a while and in fashion again. Even books were published about it."</p>
+			<p class="attrib">— Ruedi Baur</p>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Create new elements</title>
+
+    <script type="text/javascript"  
+src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+
+    <script type="text/javascript">
+      $(function() 
+      {
+        $("<p>And here's another one!</p>")
+          .insertAfter("#first");
+
+        $("<p>And me too!</p>")
+          .insertAfter("#first");
+
+        $("<p>Me too!</p>").insertAfter("#first");
+
+        $("<p>I'm a new &lt;p&gt; element!</p>")
+          .insertAfter("#first");
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Creating new elements</h1>
+
+    <p id="first">A new element is coming up...</p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Using the jQuery serializeArray() function</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function checker()
+      {
+          $("div").load("poster.asp", $("#targetForm").serializeArray());
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Using the jQuery serializeArray() function</h1>
+    <form id="targetForm">
+    Enter a 1 or 2: 
+    <input type="text" name="data" id="data"></input>
+   <input type = "button" value="Check data"
+   onclick="checker()"
+    </form>
+    <br>
+    Got this from the server: <div></div>
+  </body>
+</html>

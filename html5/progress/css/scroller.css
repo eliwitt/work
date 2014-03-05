@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* scroller css */
+*
+{
+    margin: 0px;
+    padding:0px;
+}
+
+address, article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, nav, menu, nav, section, summary 
+{
+    display: block;
+}
+
+@font-face 
+{
+    font-family:MS Sans Serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body 
+{
+    background-color:#B2B883;
+}
+
+/* container holding articles */
+.srcoll_item 
+{
+    width: 100%!important;
+}
+
+/* container for scroll items */
+article {
+	width:960px;
+	margin: 0 auto;
+}
+
+.main {
+	display:inline;
+	float:right;
+	width:640px;
+	padding: 30px 20px 20px 20px;
+	background-color:#E0DABE;
+}
+
+/* float inserted after the article */
+.mod::after {
+	content:".";
+	display:block;
+	height: 0;
+	clear:both;
+	visibility:hidden;
+}
+
+
+nav 
+{
+    background-image:url(../../images/vwlogo.jpg);
+    background-repeat:no-repeat;
+	top:30px;
+	width: 255px;
+	float: left;
+	display: inline;
+	position: fixed;
+    padding: 270px 0 0 0;
+}
+
+
+nav li {
+	margin:0 20px 10px 20px;
+	text-align:center;
+    list-style:none;	
+}
+
+
+nav a {
+	background:#ededed;
+	color:#3A1F21;
+	display:block;
+	font-family:Arial, Sans-Serif;
+	font-weight:bold;
+	font-size:14px;
+	padding: 10px 10px;
+	text-decoration:none;
+	text-transform: uppercase;
+	border-radius:20px;
+	-moz-border-radius:20px; /* for FireFox */
+}
+
+nav a:hover 
+{
+    background:#dedede;
+    	border-radius:20px;
+	-moz-border-radius:20px; /* for FireFox */
+}
+/* active state (current page state) */
+nav .current a {
+	background:#D7683F;
+	color:#ededed;
+    border-radius:20px;
+	-moz-border-radius:20px; /* for FireFox */
+} 	
+
+.current 
+{
+   	background:#D7683F;
+    border-radius:20px;
+	-moz-border-radius:20px; /* for FireFox */
+}
+
+.main p 
+{
+    font-family:Georgia, Times New Roman Baltic, Serif;
+    font-size:19px;
+    margin-bottom:30px;
+    line-height:23px;
+    color:#3A1F21;
+}
+
+.main h1
+{
+    font-family:Impact, Arial Black, Georgia, Sans-Serif;
+    text-transform:uppercase;
+    font-size:62px;
+    font-weight:normal;
+    color:#D7683F;
+}
+nav h1
+{
+    font-family:Impact, Arial Black, Georgia, Sans-Serif;
+    text-transform:uppercase;
+    font-size:62px;
+    font-weight:normal;
+    color:#3A1F21;
+}
+
+
+footer {
+	border-top-color: #CCC;
+	border-top-width: 1px;
+	border-top-style: solid;
+	clear:both;
+	background-color: #B2B883;
+	}
+	
+footer section.first {
+	float:left;
+	width:200px;
+	padding-top:10px;
+	padding-bottom:20px;
+	}
+
+footer section.first p {
+	color:#3A1F21;
+	}	
+	
+footer section {
+	float:left;
+	width:246px;
+	padding-top:10px;
+	padding-bottom:20px;
+	color:#3A1F21;
+	}
+footer section h3 {
+	font-family:'LindenHillItalic', Georgia, "Times New Roman", Times, serif;
+	color:#3A1F21;
+	font-size:16px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #3A1F21;
+	padding-bottom: 0px;
+	text-transform: capitalize;
+	font-weight:normal;
+	}
+		
+footer section p {
+	color:#3A1F21;
+	font-size:10px;
+	line-height:16px;
+	}
+
+.clearing {
+	clear:both;
+}

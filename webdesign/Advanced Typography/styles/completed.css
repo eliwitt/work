@@ -1,0 +1,194 @@
+			body {
+				background:			url(pagebg.gif) repeat top left;
+				color:				#333;
+			}
+			
+			article {
+				position:			relative;
+				width:				760px;
+				margin:				auto;
+				background:			rgba(255,255,255,0.4);	
+				-webkit-box-shadow:	0px 0px 10px #333;
+				-moz-box-shadow:	0px 0px 10px #333;
+				box-shadow:			0px 0px 10px #333;		
+			}
+			
+			h1 {
+				width:				700px;
+				margin:				auto;
+				font-size:			142px;
+				font-family: 		'Lobster', arial, serif;
+				color:				#444;
+				line-height:		120px;
+				margin-bottom:		0;
+				font-weight:		bold;
+				padding-bottom:		20px;
+			}
+			h1 span{
+				display:			inline-block;
+				position:			relative;
+				text-shadow:		-1px 1px 0px #fff, -3px 3px 0px #666;
+				-webkit-text-shadow:-1px 1px 0px #fff, -3px 3px 0px #666;
+				-moz-text-shadow:	-1px 1px 0px #fff, -3px 3px 0px #666;
+			}
+			
+			h1 span.line2 {
+				font-size:			238px;
+				line-height:		140px;
+				color:				#c44032;
+				text-shadow:		-1px 1px 0px #fff, -3px 3px 0px #863027;
+				-webkit-text-shadow:-1px 1px 0px #fff, -3px 3px 0px #863027;
+				-moz-text-shadow:	-1px 1px 0px #fff, -3px 3px 0px #863027;
+			}
+			
+			h1 {
+				border-bottom:		4px groove #000;
+			}
+			
+
+			p {
+				width:				700px;
+				
+				text-align:			left;
+				text-transform:		uppercase;
+				margin:				auto;
+				font-family: 		'Crimson Text', serif;
+        		font-size: 			48px;
+				margin-bottom:		20px;
+				margin-top:			20px;
+				padding-bottom:		10px;
+				border-bottom:		4px groove #000;
+			}
+			
+			p span {
+				margin:				0;
+				padding:			0;
+				display:			block;
+			}
+			
+			p.first span.line1 {
+				margin-left:		-20px;
+				font-size:			46px;
+				line-height:		36px;
+			}
+			
+			p.first .line2 {
+				font-size:			36px;
+				line-height:		32px;
+			}
+			
+			p.first .line3 {
+				font-size:			18px;
+				line-height:		40px;
+			}
+			
+			p.first .line3 span {
+				display:			inline-block;
+				position:			relative;
+			}
+			
+			p.first .line3 .word1 {
+				font-size:			49px;
+				color:				#c44032;
+				text-shadow:		-1px 1px 0px #863027;
+				-webkit-transition:	all 0.2s ease-out;
+			}
+			
+			p.first .line3 .word1:hover {
+				top:				5px;	
+			}
+			
+			p.first .line3 .word2 {
+				font-size:			49px;
+				color:				#4584be;
+				text-shadow:		-1px 1px 0px #2f597f;
+				-webkit-transition:	all 0.2s ease-out;
+			}
+			
+			p.first .line3 .word2:hover {
+				top:				5px;	
+			}
+			
+			p.first .line3 .word3 {
+				display:			inline-block;
+				font-weight:		bold;
+				width:				1em;
+				text-align:			right;
+				font-size:			15px;
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}
+			
+			p.first .line3 .word4 {
+				font-size:			49px;
+				color:				#5da028;
+				text-shadow:		-1px 1px 0px #427021;
+				-webkit-transition:	all 0.2s ease-out;
+			}
+			
+			p.first .line3 .word4:hover {
+				top:				5px;	
+			}
+			
+			p.first .line4 {
+				font-size:			60px;	
+				line-height:		32px;
+			}
+			
+			p.second .line1 {
+				font-size:			37px;
+				line-height:		10px;
+			}
+			
+			p.second .line2 {
+				font-size:			160px;
+				line-height:		130px;
+				font-family:		'Lobster', arial, serif;
+				color:				#4584be;
+				text-transform:		capitalize;
+			}
+			
+			p.second .line3 {
+				font-size:			52px;
+				color:				#333;
+				margin-bottom:		20px;
+				padding-top:		5px;
+				padding-bottom:		5px;
+				border-top:			2px dashed #333;
+				border-bottom:		2px dashed #333;
+			}
+			
+			p.second .line4 {
+				font-size:			24px;
+				line-height:		30px;
+				text-align:			justify;
+				padding:			10px;
+				padding-top:		20px;				
+				-moz-border-radius:		15px;
+				-webkit-border-radius:		15px;
+				border-radius:		15px;
+				border:				2px solid #fff;
+				color:				#fff;
+				background:			#c44032;
+				text-shadow:		-1px 1px 0px #863027;
+				-webkit-transform: rotate(-3deg);
+				-moz-transform: rotate(-3deg);
+				transform: rotate(-3deg);
+				-webkit-box-shadow:			-3px 3px 0px #863027;
+				-moz-box-shadow:			-3px 3px 0px #863027;
+				box-shadow:			-3px 3px 0px #863027;
+				-webkit-transition:	all 0.2s ease-out;
+			}
+			
+			p.second .line4:hover {
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			
+			p.attrib {
+				text-align:			right;
+				color:				#5da028;
+				border-bottom:		none;
+			}

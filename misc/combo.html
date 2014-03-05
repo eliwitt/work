@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>ie4 & nn4</title>
+<script language="JavaScript">
+
+var browser, version;
+browser = navigator.appName;
+version = navigator.appVersion;
+
+
+var ie4 = (browser.indexOf("Explorer") >= 0) && (version.indexOf('4.0') >= 0);
+
+function product() {
+
+	prod1 = (ie4) ?document.all.gc1.style : document.lgc1
+	prod2 = (ie4) ?document.all.gc2.style : document.lgc2
+	mydiv = new Array();
+	mydiv[1] = prod1
+	mydiv[2] = prod2
+}
+
+// this function handles the browser differences
+function showit(prod) {
+
+	if (ie4 == true) {
+		mydiv[prod].display = "block";
+	} else {
+		mydiv[prod].visibility = "show";
+	}
+
+}
+
+// this function will hide text
+function hideit(prod) {
+
+	if (ie4 == true) {
+		mydiv[prod].display = "none";
+	} else {
+		mydiv[prod].visibility = "hide";
+	}
+
+}
+
+</script>
+</head>
+<body onload="product()">
+<form>
+Place your text and pictures here and if that is not enough then press the More button.<br>
+<!-- Here are buttons -->
+<input type=button value="More" onclick="showit(1)">
+<br>and then you could even add another button.<br>
+<input type=button value="More" onclick="showit(2)">
+
+</form>
+
+<LAYER NAME=lgc1 visibility=hide position=absolute top=100 left=5>
+
+<!-- If your in ie4 then the following is used -->
+<nolayer><div id=gc1 class=LAYER1 style="display:none"></nolayer>
+<!-- the div tag is ignored in nn4 browsers using the nolayer tag -->
+
+<h3>Prod info [class 1] </h3>
+<p>blablabla</p>
+<p>blablabla</p>
+<form><input type=button value="ok" onclick="hideit(1)"></form>
+<nolayer></div></nolayer>
+</LAYER>
+
+<LAYER NAME=lgc2 visibility=hide position=absolute top=100 left=200>
+
+<!-- If your in ie4 then the following is used -->
+<nolayer><div id=gc2 class=LAYER2 style="display:none"></nolayer>
+<!-- the div tag is ignored in nn4 browsers using the nolayer tag -->
+
+<h3>Prod info [class 2] </h3>
+<p>blablabla</p>
+<p>blablabla</p>
+<form><input type=button value="ok" onclick="hideit(2)"></form>
+<nolayer></div></nolayer>
+</LAYER>
+</body>
+</html>

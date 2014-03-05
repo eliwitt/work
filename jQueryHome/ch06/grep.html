@@ -1,0 +1,35 @@
+<html>
+  <head>
+   <title>Filtering arrays</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function()
+      {
+    
+        var array = [1, 2, 3, 4, 5, 6, 7, 8];
+        $("#div1").text("Original array: " + array.join(", "));
+
+        array = $.grep(array, function(n, i)
+        {
+          return (i > 4);
+        });
+        $("#div2").text("Filtered i > 4: " + array.join(", "));
+
+        array = $.grep(array, function (n) 
+        {
+          return n != 7;
+        });
+        $("#div3").text("Filtered n != 7: " + array.join(", "));
+      });
+    </script>
+  </head>
+
+  <body>
+   <h1>Filtering arrays</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+  </body>
+</html>

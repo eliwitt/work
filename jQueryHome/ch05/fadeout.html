@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Fading an image out</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function fade()
+      {
+        $('#target').fadeOut(2000);
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Fading an image out</h1>
+    <img id="target" src="Image1.jpg"/>
+    <br>
+    <form>
+    <input type="button" value="Fade Out" onclick="fade()"></input>
+    </form>
+  </body>
+</html>

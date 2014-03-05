@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>CSS Visual Effects 4: Transform</title> 
+ 
+	<!-- stylesheets --> 
+	<link rel="stylesheet" href="css/screen.css" type="text/css" /> 
+	
+	<!-- javascripts --> 
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+
+<style type="text/css"> 
+#scaler img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: scale(1); 
+}
+#scaler img:hover { 
+  -webkit-transform: scale(1.2); 
+}
+#rotator { 
+	-webkit-transition: all 1s linear;
+}
+#rotator:hover { 
+	-webkit-transform: rotate(90deg); 
+}
+#text-rotator { 
+	-webkit-transition: all 1s linear;
+}
+#text-rotator:hover { 
+	-webkit-transform: rotate(20deg); 
+}
+#skewer img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: skew(0deg); 
+}
+#skewer img:hover { 
+  -webkit-transform: skew(10deg, 20deg); 
+}
+#translator img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: translate(0px); 
+}
+#translator img:hover { 
+  -webkit-transform: translate(50px,-20%); 
+}
+</style> 
+
+
+</head> 
+ 
+<body> 
+<header id="header"> 
+		<h1>CSS Visual Effects</h1> 
+		<nav class="nav"> 
+			<ul> 
+				<li><a href="index.html">1: Transitioning a Link Color</a></li> 
+				<li><a href="step2.html">2: Multiple Transition Properties</a></li> 
+				<li><a href="step3.html">3: Motion</a></li> 
+				<li><a href="step4.html" class="active">4: Transform</a></li> 
+				<li><a href="step5.html">5: Animation</a></li> 
+			</ul> 
+		</nav> 
+</header> 
+ 
+<div class="content">	
+ 
+ 
+<div class="section clearfix"> 
+	<h2>Transform</h2> 
+	<p>Below are examples of some of the various Transform properties.</p>
+</div> 
+ 
+<div class="section clearfix"> 
+	<h2>Scale</h2> 
+	<div class="explanation"> 
+<code><pre> 
+#scaler img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: scale(1); 
+}
+#scaler img:hover { 
+  -webkit-transform: scale(1.2); 
+}</pre></code> 
+	</div> 
+ 
+	<div class="example"> 
+		<div id="scaler"><img src="img/robot.jpg" alt="robot"/></div> 
+	</div> 
+</div> 
+ 
+<div class="section clearfix"> 
+	<h2>Rotate</h2> 
+	<div class="explanation"> 
+<code><pre> 
+#rotator { 
+	-webkit-transition: all 1s linear;
+}
+#rotator:hover { 
+	-webkit-transform: rotate(90deg); 
+}
+</pre></code> 
+	<h3 id="text-rotator">You can rotate block text too!</h3> 
+	</div> 
+	
+	<div class="example"> 
+		<img id="rotator" src="img/robot.jpg" alt="robot"/> 
+	</div> 
+ 
+</div> 
+ 
+<div class="section clearfix"> 
+	<h2>Skew</h2> 
+	<div class="explanation"> 
+<code><pre> 
+#skewer img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: skew(0deg); 
+}
+#skewer img:hover { 
+  -webkit-transform: skew(10deg, 20deg); 
+}
+</pre></code> 
+	</div> 
+	<div class="example"> 
+			<div id="skewer"><img src="img/robot.jpg" alt="robot"/></div> 
+	</div> 
+ 
+</div> 
+ 
+<div class="section clearfix"> 
+	<h2>Translate</h2> 
+	<div class="explanation"> 
+<code><pre> 
+#translator img { 
+  -webkit-transition: all 1s linear;
+  -webkit-transform: translate(0px); 
+}
+#translator img:hover { 
+  -webkit-transform: translate(50px,-20%); 
+}
+</pre></code> 
+	</div> 
+ 
+	<div class="example"> 
+			<div id="translator"><img src="img/robot.jpg" alt="robot"/></div> 
+	</div> 
+ 
+</div> 
+ 
+ 
+ 
+<div id="footer"> 
+<p>Code by <a href="http://paravelinc.com">Paravel</a></p> 
+</div> 
+</div> 
+</body> 
+</html>

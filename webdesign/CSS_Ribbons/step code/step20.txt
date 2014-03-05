@@ -1,0 +1,1 @@
+/css/ie.css filebody { 	background-color: #f8f8f8;}.register input {  	padding: 8px 15px 0 18px; }input#signup { 	padding: 6px;}p.already_member {	padding-top: 22px;}div.left_folded_back, div.right_folded_back {    top: 40px;}

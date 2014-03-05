@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Sliding elements up</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function slideup() 
+      {
+        $('#first').slideUp("slow");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Sliding elements up</h1>
+    <div>
+      <p id="first">Here is some text.</p>
+      <p>This is also text.</p>
+      <p>And here's some more text.</p>
+    </div>
+  <form>
+   <input type = "button" 
+     value="Slide up"
+     onclick="slideup()"
+   </input>
+  </form>
+
+  </body>
+</html>

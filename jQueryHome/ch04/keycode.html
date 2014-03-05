@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Capturing key events</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+      $('#target').bind('keyup', typer);
+      });
+
+      function typer(event)
+      {
+    $('#p1').text('Character: '
+    + String.fromCharCode(event.keyCode));
+      }
+    </script>
+  </head>
+
+  <body id="target">
+    <h1>Capturing key events</h1>
+    <p id="p1"></p>
+  </body>
+</html>

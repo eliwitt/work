@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Editing the value attribute
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function inserter() 
+      {
+      	$("#myLabel").val($("#target").val());
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Editing the value attribute</h1>
+    <br>
+    <form>
+	<input type = "text"  id="myLabel" value="I am a label" readonly><br />
+    <input type = "text" id="target">
+    </input>
+    <input type = "button" 
+      value="Insert new text"
+      onclick="inserter()"
+    </input>
+    </form>
+  </body>
+</html>

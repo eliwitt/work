@@ -1,0 +1,10 @@
+﻿$(".fancy_title").lettering("lines");
+			
+$(".em1").lettering("words");
+			
+$("p.first").lettering("lines"); // split the .em1 span before splitting the paragraph
+$(".fancy_title").lettering("lines");
+			
+$(".em1").lettering("words");
+			
+$("p.first").lettering("lines"); // split the .em1 span before splitting the paragraph

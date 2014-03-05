@@ -1,0 +1,1 @@
+<script>    var internalDNDType = 'Text'; // set this to something specific to your site    var dragged; //used for item in basket styling</script>

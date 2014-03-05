@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Content Carousel with jQuery &amp; XML</title>
+        <meta charset="UTF-8" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <!-- Google fonts -->      
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <!-- scripts -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <!-- the Carousel script -->
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
+        <script type="text/javascript">
+            <!-- XML script -->
+           // 
+           //  When the document is ready load the xml using ajax
+           //
+           $(document).ready(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "content.xml",
+                    dataType: "xml",
+                    success: manipulateXml 
+                });		
+                
+            });
+		  		//
+		  		//  this function will loop through the item collection
+		  		//  and create an entry for each
+		  		//
+          function manipulateXml(data){
+          			var theText="";
+                $(data).find("item").each(function(){
+                     var output = "<div class='item item-" + $(this).attr("number") + "'>";
+                    output += "  <div class='item-main'>";
+                    output += "    <div class='img'></div>";
+                    output += "    <h3>" + $(this).find("Title").text() + "</h3>";
+                    output += "    <p class='price'>" + $(this).find("price").text() + "</p>";
+                    output += "    <h4>";
+                    output += "         <span class='quote'>&ldquo;</span>";
+                    output += "         <span>" + $(this).find("quote").text() + "</span>";
+                    output += "    </h4>";
+                    output += "    <a href='#' class='more'>more...</a>";
+                    output += "  </div>";
+                    output += "  <div class='content-wrapper'>";
+                    output += "     <div class='content'>";
+                    output += "         <h6>" + $(this).find("detailtitle").text() + "</h6>";
+                    output += "         <a href='#' class='close'>close</a>";
+                    output += "         <div class='content-text'>";
+                    output += "          <p>" + $(this).find("content").text() + "</p>";
+                    output += "         </div>";
+                    output += "         <ul>";
+                    $(this).find("more" + $(this).attr("number")).each(function(){
+                    	$(this).find("readme").each(function(){
+                   			output += "             <li><a href='" + $(this).find("url").text() + "'>" + $(this).find("text").text() + "</a></li>";
+                   		});
+                   	});
+                    output += "         </ul>";
+                    output += "     </div>";
+                    output += "  </div>";
+                    output += "</div>";
+                    theText += output;
+             
+                });
+                //alert(theText);
+								$(".wrapper").append($(theText));
+								//
+								//  make this call after the creation of the wrapper
+								//
+								$('#container').contentcarousel();
+            }  
+        </script>
+
+    </head>
+    <body>
+        <div class="main-container">
+
+            <header class="header">
+                <h1>Content Carousel with <span>jQuery &amp; XML</span></h1>	
+            </header>
+
+            <section id="container" class="container">
+                <div class="wrapper">
+                </div><!-- END wrapper -->
+            </section><!-- END container -->
+
+            <h5>Collected Quotes from Albert Einstein</h5>
+
+        </div><!-- END container -->
+    </body>
+</html>

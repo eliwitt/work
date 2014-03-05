@@ -1,0 +1,1 @@
+//send data as a delimited string   	 var valStr = event.target.textContent+"||"+event.target.getAttribute('data-value'); //use || as a serporater - commers no use as they might be used	event.dataTransfer.setData(internalDNDType, valStr);

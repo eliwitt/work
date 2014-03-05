@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Showing and hiding images</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+    
+      $("button").click(function() 
+      {
+        $("h2").toggle();
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <h1>Toggling visibility</h1>
+
+    <h2>Now you see me.</h2>
+    <h2 style="display: none">Now you don't.</h2>
+
+    <button>Toggle the text</button>
+  </body>
+</html>

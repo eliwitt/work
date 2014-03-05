@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>My html 5 template</title>
+</head>
+<body>
+<canvas id="mycanvas" width="400" height="400" />
+<script language="javascript">
+var mycanvas = document.getElementById('mycanvas');
+var context = mycanvas.getContext('2d');	
+context.fillStyle = 'blue';
+context.fillRect(50,50,150,150);
+navigator.geolocation.getCurrentPosition(showposition);
+
+function showposition(position) {
+	alert("In showposition");
+	alert("You are located at latitude " + position.coords.latitude 
+	+ " and longitude " + position.coords.longitude);
+}
+</script>
+</body>
+</html>

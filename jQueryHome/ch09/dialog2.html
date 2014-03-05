@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Getting data from a dialog</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+  <script type="text/javascript">
+  $(document).ready(function(){
+$("#dialog").dialog({
+buttons: {"Ok": function() { $(this).dialog("close"); } }, 
+   beforeclose: function(event, ui) { 
+   $("#results").text("You entered " + 
+   $("#text").val()) 
+   }
+});
+  });
+  </script>
+</head>
+<body style="font-size:65%;">
+  <h1>Getting data from a dialog</h1>
+<div id="dialog" title="Dialog Title">Enter some text and close me.
+<input type="text" id="text"></input>
+</div>
+<div id="results"></div>
+</body>
+</html>

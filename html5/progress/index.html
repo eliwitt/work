@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>My html 5 template</title>
+<script src="modernizr-2.5.3.js"></script>
+  <script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+      href="css/slideshow.css"/>
+<link href="css/overlay-basics.css" rel="stylesheet" type="text/css">      
+<link href="style.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<srcipt src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- enable th jQuerry -->
+<script language="javascript">
+// What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
+$(function() {
+	
+$(".slidetabs").tabs(".images > div", {
+	 //enable the "crass-fading" effect
+	 effect:'fade',
+	 fadeOutSpeed: "slow",
+	 
+	 // start from the befinning after the last tab
+	 rotate: true
+//use the slideshow plugin. It accepts its own configuration 
+}).slideshow();
+$(".slidetabs").data("slideshow").play();
+
+$("img[rel]").overlay();
+});
+</script>
+</head>
+<body>
+	<content>
+	<!--  the body content goes in here -->
+		<header>
+		<a href="#" id="logo">Home</a>
+		<h1>HTML5, CSS3, and jQuery</h1>
+		<p>My first shot using the Killersites demo</p>
+		</header>
+
+
+		<header class="images">
+			<div>
+				<!-- first slide -->
+		<img src="../images/sailboat.jpg" width="940" height="250" alt="Toad">
+	</div>
+	<!-- second slide -->
+	<div>
+	<img src="../images/smokeyswinter1.jpg" width="940" height="250" alt="smokie" style="float:left;margin:0 30px 20px 0" />
+	</div>
+	<!-- third slide -->
+	<div>
+	<img src="../images/Garden1.jpg" width="940" height="250" alt="god one" style="float:left;margin:0 30px 20px 0" />
+	</div>
+	<!-- forth slide -->
+	<div>
+	<img src="../images/Garden2.jpg" width="940" height="250" alt="god two" style="float:left;margin:0 30px 20px 0" />
+	</div>	
+
+</header>
+<!-- the tabs -->
+<div class="slidetabs">
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</div> 
+
+		<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="About.html">About</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Clients</a></li>
+			<li><a href="#">Employment</a></li>
+			<li><a href="#">Contact</a></li>
+	  </ul>
+		</nav>
+
+		<article>
+			<h2>Detail text goes here</h2>
+			
+    <!-- trigger elements -->
+    <div id="triggers">
+    <img src="../images/overlay/frog_thumb1.jpg" rel="#frog1">
+	<img src="../images/overlay/frog_thumb2.jpg" rel="#frog2">
+    <img src="../images/overlay/frog_thumb3.jpg" rel="#frog3">
+	</div>
+	
+    <!-- overlays -->
+    <div class="simple_overlay" id="frog1">
+     	<img src="../images/overlay/frog_over1.jpg">
+        <div class="details">
+        <h3>KillerFrog1</h3>
+        <p>dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+        </p>
+        </div>
+    </div>
+    
+     <div class="simple_overlay" id="frog2">
+     	<img src="../images/overlay/frog_over2.jpg">
+        <div class="details">
+        <h3>KillerFrog2</h3>
+        <p>dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+        </p>
+        </div>
+    </div>
+    
+     <div class="simple_overlay" id="frog3">
+     	<img src="../images/overlay/frog_over3.jpg">
+        <div class="details">
+        <h3>KillerFrog3</h3>
+        <p>dolor sit amet consectetur adipiscing elit. Nulla id nulla risus, vitae consequat dui. Quisque vehicula tellus sed nisl feugiat adipiscing ut in neque.
+        </p>
+        </div>
+    </div>
+
+			
+			<p>Detail text goes into this section called "article".</p>
+				<h3>This is a sub headline</h3>
+				<p>Your text would goe here</p>
+			<section class="leftfloat">
+				<h3>My nested section left</h3>
+				<p>With the text for it.</p>
+			</section>
+			<section class="rightfloat">
+				<h3>nested section right</h3>
+				<p>And the text that goes with it.</p>
+			</section>
+			<h3>I can do all things</h3>
+			<p>It is stated by several people daily.</p>
+		</article>
+
+		<footer>
+			<section class="first">
+				<p>&copy;John S. Witt</p>
+			</section>
+			<section>
+				<h3>Testing</h3>
+				<p>Testing 1, 2, 3 and 4
+			</section>
+			<section>
+				<h3>Coding</h3>
+				<p>I love coding and have done this all of my life</p>
+			</section>
+			<section>
+				<h3>Running</h3>
+				<p>Running is not my thing</p>
+			</section>			
+			<br class="clearing">
+		</footer>
+
+	</content>
+</body>
+</html>

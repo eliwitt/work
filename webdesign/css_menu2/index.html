@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="css-menu" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Menu Second Demo</title>
+
+	<style>
+	    /*  reset work  */
+	    #nav, .nav, #nav .nav li { margin:0px; padding:0px; }
+	        
+	    #nav li 
+		{
+			float:left;
+			display:inline; /* horizontal nav remove for vertical ones */
+			cursor:pointer;
+			padding:0px 10px 0 px 10px;
+			/* border:1px #000 solid; */
+			background:gray;
+			margin:0px 5px 0px 0px;
+			position:relative;
+			list-style:none;
+		}
+		#nav li ul.first 
+		{
+			left:-1px;
+			top:100%;
+		}
+		li, li a 
+		{
+			color:#000;
+		}
+	    #nav .nav li 
+		{
+			width:100%; text-indent:10p; line-height:30px; margin-right:10px;
+			/* border-top:1px #000 solid; border-bottom:1px #000 solid; */ 
+			border-left:none;
+			border-right:none; background:#fff; 
+		}	
+		#nav li a {
+            display:block;
+            width:inherit;
+            height:inherit;
+		}	
+		/*  hide the sub-menus  */
+		ul.nav { display:none; }
+		
+		/* when the parent has hover then display the sub */
+		#nav li:hover > a, #nav li:hover { color:#fff; background:#000; }
+		#nav .nav li:hover > a, #nav .nav li:hover { background:Gray; }
+		li:hover > .nav { display:block; position:absolute; width:200px; top:-2px;
+		                  left:50%; z-index:1000; /* border:1px #000 solid; */ }
+		li:hover { position:relative; z-index:2000; }
+
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+		<h1>My Menu Things</h1>
+		<nav>
+			<ul id="nav">
+				<li>Movies
+				    <ul class="nav first">
+				        <li><a href="#Comdey" >Comdies</a></li>
+				        <li><a href="#Action" >Action Adventures</a></li>
+				        <li><a href="#SciFi" >Sci Fi</a></li>
+				    </ul>
+				</li>
+				
+				<li><a href="#books" >Books</a></li>
+				
+				<li><a href="#tvshows" >TV Shows</a></li>
+				
+				<li><a href="#games" >Games</a></li>
+			</ul>
+		</nav>
+	</header>
+	<br />
+    
+	<article id="movies">
+	<h1>Articles</h1>
+	    <div id="Comdey">
+	        <b>Who's on first!</b>
+		    <p>Any of the Abbot and Costello movies.</p>  
+		    <p>
+		    It is daid that there was once life there I sure hope they find something after spending all of that money.
+		    </p>
+		    <p>Earth the third rock from the sun.  Where I live with some 6 plus billion people.
+		    </p>
+	    </div>
+	    <div id="Action">
+		    <b>Let's get real!</b>
+		    <p>I find if funny when people like Martin and Will try action.</p>  
+		    <p>
+		    It is daid that there was once life there I sure hope they find something after spending all of that money.
+		    </p>
+		    <p>Earth the third rock from the sun.  Where I live with some 6 plus billion people.
+		    </p>
+		</div>
+		<div id="SciFi">
+		    <b>I'll be back!</b>
+		    <p>Aronld just can not going away espiecally now that he is a daddy.</p>  
+		    <p>
+		    It is daid that there was once life there I sure hope they find something after spending all of that money.
+		    </p>
+		    <p>Earth the third rock from the sun.  Where I live with some 6 plus billion people.
+		    </p>
+		</div>
+	</article>
+	
+	<article id="books">
+	<h1>Books</h1>
+		<b>Look sir, planets!</b>
+		<p>Red Planet, slow to start and long on the finish!!
+		</p>
+		<p>How to tame your Dragon, child like.
+		</p>
+	</article>
+
+	<article id="tvshows">
+	<h1>Shows</h1>
+		<b>Look sir, planets!</b>
+		<p>Mars which is the forth planet from the sun.  It is daid that there was once life there I sure hope they find something after spending all of that money.
+		</p>
+		<p>Earth the third rock from the sun.  Where I live with some 6 plus billion people.
+		</p>
+	</article>
+	
+	<article id="games">
+	<h1>Games</h1>
+		<b>Look sir, planets!</b>
+		<p>ATV, I have played it and never can get the hang of it.
+		</p>
+		<p>Pong, more my speed.
+		</p>
+	</article>
+		
+	<footer>
+		Test of CSS3/HTML5 designs <i>&amp;</i> code — Copyright © 2010 
+	</footer>
+	
+</body>
+</html>

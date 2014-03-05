@@ -1,0 +1,8 @@
+﻿<script>
+
+$(document).ready(function(){
+// Code to create per-word/per-character styles in here...
+			$(".fancy_title").lettering("lines");
+			
+});
+</script> 

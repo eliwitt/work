@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Using the jQuery $.ajax() function</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+$.ajax({
+  type: "GET",
+  url: "message.txt",
+  success: callback
+});
+     });
+function callback(data, status)
+{
+    $("div").text(data);
+}
+    </script>
+  </head>
+
+  <body>
+    <h1>Using the jQuery $.ajax() function</h1>
+    Got this from the server: <div></div>
+  </body>
+</html>

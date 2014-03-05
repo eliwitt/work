@@ -1,0 +1,15 @@
+		$("#barcharts").hover(function(){
+			// you moved over the bar charts
+			$("#areacharts").stop().animate({opacity:0.5});
+		}, function(){
+			// you moved out the bar charts	
+			$("#areacharts").stop().animate({opacity:1});
+		});
+		
+		$("#areacharts").hover(function(){
+			// you moved over the bar charts
+			$("#barcharts").stop().animate({opacity:0.5});
+		}, function(){
+			// you moved out the bar charts	
+			$("#barcharts").stop().animate({opacity:1});
+		});

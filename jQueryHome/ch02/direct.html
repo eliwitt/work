@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Selecting direct descendants
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function setStyle() 
+      {
+        $('div > p').css("font-style", "italic");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Selecting direct descendants</h1>
+  <div>
+  <span>
+  <p>This is paragraph 1.</p>
+  </span>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <p>This is paragraph 5.</p>
+  <form>
+   <input type = "button" 
+     value="Select"
+   onclick="setStyle()"
+   </input>
+  </form>
+  </body>
+</html>

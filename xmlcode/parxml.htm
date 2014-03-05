@@ -1,0 +1,62 @@
+<html>
+  <head> 
+    <title>An Ajax/jQuery example</title> 
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+function getdata(Datasource) 
+{ 
+
+            $.ajax({
+                type: "GET",
+                url: Datasource,
+                dataType: "xml",
+                success: processSuccess,
+                error: processError
+            });
+
+}
+
+function processSuccess(data, status, req, xml, xmlHttpRequest, responseXML)
+{
+	var myobj = new Array();
+	//console.log(req.responseXML);
+	$(req.responseXML).find('Rag').find('Article').each(function(){
+		$('#targetDiv').append(
+			'<b>Magazine</b> ' + $(this).find('Magazine').text() + '<br><br>' +
+			'<b>Issue Date</b> ' + $(this).find('IssueDate').text() + '<br><br>' +
+			'<b>Headline</b> ' + $(this).find('Headline').text() + '<br><br>' +
+			'<b>Deck</b> ' + $(this).find('Deck').text() + '<br><br>' +
+			'<b>Byline</b> ' + $(this).find('Byline').text() + '<br><br>' +
+			$(this).find('ArticleText').text() + '<br><br>' +
+			'<font color=green>Bio</font> ' + $(this).find('BIOGRAPHY').text() + '<br><br>' +
+			'<hr>'
+		);
+	});
+
+}
+
+function processError(data, status, req) {
+        //alert(req.responseText + " " + status);
+        console.log(data);
+        console.log(status);
+        console.log(req);
+}  
+
+</script>
+  </head> 
+
+  <body>
+
+    <H1>An Ajax/jQuery example</H1>
+
+    <form>
+<input id="Filename" size=40 value="north.xml"> <br />
+      <input type ="button" value ="Get the articles" onclick="getdata(Filename.value)">&nbsp;<input type=button value="Back" onClick="history.back()"> 
+    </form>
+
+    <div id="targetDiv">
+      <p>The fetched message will appear here.</p> 
+    </div> 
+</body>
+</html>

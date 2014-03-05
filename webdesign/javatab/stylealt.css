@@ -1,0 +1,7 @@
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+font-family: Arial,sans-serif/*{ffDefault}*/;
+font-weight: bold/*{fwDefault}*/;
+}
+#tabs>ul>li>a{
+ color: Orange;
+}

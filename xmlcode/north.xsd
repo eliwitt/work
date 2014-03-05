@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Rag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Article">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Magazine" type="xs:string" />
+              <xs:element name="IssueDate" type="xs:string" />
+              <xs:element name="Headline" type="xs:string" />
+              <xs:element name="Deck" type="xs:string" />
+              <xs:element name="Byline" type="xs:string" />
+              <xs:element name="ArticleText">
+                <xs:complexType mixed="true">
+                  <xs:sequence minOccurs="0">
+                    <xs:element maxOccurs="unbounded" name="Subhead">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ID" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="CODE" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="BIOGRAPHY">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="Author" type="xs:string" />
+                    <xs:element maxOccurs="unbounded" name="Book" type="xs:string" />
+                    <xs:element minOccurs="0" name="Publisher" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

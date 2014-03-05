@@ -1,0 +1,103 @@
+body {
+
+    font-family: Verdana, Arial;
+    font-size: 13px;
+    color: #333;
+    background: url('../images/bg_2.png');
+
+}
+
+
+/* CSS3 - borders */
+
+#wrapper, #map {
+
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background: url('../images/body_bg.png');
+}
+
+/* CSS3 - shadows */
+
+#wrapper {
+
+    box-shadow: 0px 5px 26px -8px #333;
+}
+#wrapper {
+
+    margin: 50px auto;
+    width: 960px;
+    background: #fff;
+    height: 600px;
+
+}
+#logo {
+
+    font-family: 'Rosario', sans-serif;
+    font-size: 25px;
+    color: #666;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+header {
+
+    height: 100px;
+    width: 900px;
+    border-bottom: 1px dotted #333;
+    margin: 10px;
+    position: relative;
+}
+nav {
+
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    /*    border: 1px solid #f00;*/
+}
+nav li{
+
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+nav li a{
+    text-decoration: none;
+}
+
+#map {
+
+    height: 400px;
+    width: 500px;
+    margin: 50px 0 0 10px;
+    border: 2px solid #666;
+   
+}
+
+aside {
+    
+    float: right;
+    margin: 50px 100px 50px;
+    position: relative;
+}
+
+.divider {
+    
+    background: url('../images/divider.png') no-repeat;
+    height: 400px;
+    width: 10px;
+    position: absolute;
+    top: 0px;
+    right: 235px;
+}
+
+h3 { margin-left: 38px;}
+
+.address li, .address2 {
+    
+    list-style: none;
+}
+
+.address2 { font-weight: bold;}

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		     <script src="http://code.jquery.com/jquery-latest.js" />
+
+		<title>Checkout</title>
+	</head>
+	<body>
+	<span id="results"></span>
+<script type="text/javascript">
+function showValues() { 
+      var fields = $(":productId").serializeArray(); 
+
+      jQuery.each(fields, function(i, field){ 
+        $("#results").append(field.value + " "); 
+      }); 
+} 
+ $("#results").append("Start");
+showValues();
+$("#results").append("End");
+</script>	
+	</body>
+</html>

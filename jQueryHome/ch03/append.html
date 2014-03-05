@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Appending content to a page</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function addContent() 
+      {
+    $("p").append("<b>$1,000,000!</b>");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Appending content to a page</h1>
+    <p>You have won </p>
+    <form>
+    <input type = "button" 
+      value="See how much you've won"
+      onclick="addContent()"
+    </input>
+    </form>
+  </body>
+</html>

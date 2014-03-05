@@ -1,0 +1,1 @@
+// add elements to the DOM   	 	document.getElementById('dropzone').appendChild(dt);   		 document.getElementById('dropzone').appendChild(dd);

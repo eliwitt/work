@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Silde Show</title>
+<!-- jQuery Library + ALL jQuery Tools -->
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+    href="css/slideshow.css"/>
+    <link href="css/overlay-basics.css" rel="stylesheet" type="text/css"/>
+<script language="Javascript">
+// jQuery examples
+// jQuery Slideshow plugin for the tabs
+// and Overlays
+$(function() {
+
+$(".slidetabs").tabs(".images > div", {
+
+	// enable "cross-fading" effect
+	effect: 'fade',
+	fadeOutSpeed: "slow",
+
+	// start from the beginning after the last tab
+	rotate: true
+
+// use the slideshow plugin. It accepts its own configuration
+}).slideshow();
+
+$(".slidetabs").data("slideshow").play();
+
+$("img[rel]").overlay();
+
+});
+</script>
+<body>
+<content>
+<header>
+<h1>My slide show</h1>
+</header>
+<!-- container for the slides -->
+<header class="images">
+	<!-- first slide -->
+	<div>
+	<img src="../../images/pikepeak1.jpg" width="940" height="250" alt="pikes"/>
+	</div>
+	<!-- second slide -->
+	<div>
+	<img src="../../images/Bent Creek9.jpg" width="940" height="250" alt="smokie" style="float:left;margin:0 30px 20px 0"/>
+	</div>
+	<!-- third slide -->
+	<div>
+	<img src="../../images/Garden1.jpg" width="940" height="250" alt="god one" style="float:left;margin:0 30px 20px 0"/>
+	</div>
+	<!-- forth slide -->
+	<div>
+	<img src="../../images/Garden2.jpg" width="940" height="250" alt="god two" style="float:left;margin:0 30px 20px 0"/>
+	</div>
+</header>
+<!-- the tabs -->
+<div class="slidetabs">
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</div>
+
+<!-- trigger elements -->
+<div id="triggers">
+	<img src="../../images/Garden1.jpg" width="300" height="250" rel="#Garden1"/>
+	<img src="../../images/Garden2.jpg" width="300" height="250" rel="#Garden2"/>
+</div>
+<!-- overlays -->
+<div class="simple_overlay" id="Garden1">
+	<img src="../../images/Garden1.jpg" width="600" height="250"  />
+
+	<div class="details">
+		<h3>The Garden of the Gods</h3>
+
+		<h4>Joshua and the Crack</h4>
+
+		<p>
+			In the Garden of the Gods there is a rock formation that has a crack so big that a small person such as my grandson can wlak through it.
+		</p>
+
+	</div>
+</div>
+
+<div class="simple_overlay" id="Garden2">
+	<img src="../../images/Garden2.jpg" width="600" height="250" />
+	<div class="details">
+		<h3>The Garden of the Gods</h3>
+
+		<h4>Family rock</h4>
+
+		<p>
+			At another location in the Garden of the Gods there is a rock where we took a family picture.
+		</p>
+
+		<p>
+			I had a great time with my family.
+		</p>
+	</div>
+</div>
+</content>
+</body>
+</html>

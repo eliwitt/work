@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS3 Font effects</title>
+<style type="text/css">
+@font-face
+{
+	font-family: Alfphabet;
+	src: url('CSS/fonts/Alfphabet-IV.ttf'),
+	     url('CSS/fonts/Alfphabet-IV.oet') format("opentype"); /* IE */
+}
+
+div.customFont {
+	font-family: Alfphabet;
+	font-weight: bold;
+	font-size: 70px;
+	color: #999;
+	text-shadow: -1px -1px 1px #666;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="JS/jquery.textshadow.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("div.customFont").textShadow();
+	});
+	</script>
+</head>
+<body>
+
+<div class="customFont">
+	<span></span>Lorem ipsum dolor sit amet,
+</div>
+
+</body>
+</html>

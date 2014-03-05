@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Getting mouse click coordinates</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+      $('#target').bind('click', clicker);
+      });
+
+      function clicker(event)
+      {
+    $('#p1').text('(screenX, screenY) = ('
+    + event.screenX + ', ' + event.screenY +  
+    ')');
+    $('#p2').text('(pageX, pageY) = ('
+    + event.pageX + ', ' + event.pageY +  
+    ')');
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Getting mouse click coordinates</h1>
+    <h1>Click the flower...</h1>
+    <img id="target" src="Image1.jpg"/>
+    <p id="p1"></p>
+    <p id="p2"></p>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SVG Interactive Header Graphic</title>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<script src="snap.svg-min.js"></script>
+<style>
+	svg{
+		display: block;
+		margin: 0 auto;		
+	}
+	#Dojo{
+		font-family: 'Lobster', cursive;
+	}
+	#Designs{
+		font-family: 'Lobster', cursive;
+	}
+	#Strapline{
+		font-family: 'Lobster', cursive;
+	}
+	@-webkit-keyframes wave{
+		0% {
+			-webkit-transform: rotate(0deg);
+		}
+		50% {
+			-webkit-transform: rotate(30deg);
+		}
+		100% {
+			-webkit-transform: rotate(0deg);
+		}
+	}
+	@-moz-keyframes wave{
+		0% {
+			-moz-transform: rotate(0deg);
+		}
+		50% {
+			-moz-transform: rotate(30deg);
+		}
+		100% {
+			-moz-transform: rotate(0deg);
+		}
+	}
+	.arm {
+		-webkit-transform-origin: 808px 273px;
+		-webkit-transition: -webkit-transform .4s;
+		-moz-transform-origin: 808px 273px;
+		-moz-transition: -moz-transform .4s;
+	}
+	.arm.animating {
+		-webkit-animation: wave .4s infinite;
+		-moz-animation: wave .4s infinite;
+	}
+</style>
+<script>
+var dojo, designs, strap, chick, bear, dog, tie, face, arm;
+var timer;
+window.onload = function () {
+	var s = Snap(960, 400);
+	Snap.load("scene.svg", function(f) {
+		dojo = f.select("#Dojo");
+		designs = f.select("#Designs");
+		strap = f.select("#Strapline");
+		dojo.attr({opacity: 0, transform: "scale(0.1, 0.1)" });
+		designs.attr({opacity: 0, transform: "scale(0.1, 0.1)" });
+		strap.attr({opacity: 0});
+		dojo.animate({opacity:1, transform: "scale(1, 1)"},800, mina.elastic);
+		timer = setTimeout(designIn, 500);
+		function designIn() {
+			clearTimeout(timer); 
+			designs.animate({opacity:1, transform: "scale(1, 1)"},800, mina.elastic);	
+			strap.animate({opacity:1}, 1500);
+		} 
+		chick = f.select("#chick");
+		bear = f.select("#bear");
+		dog = f.select("#dog");
+		tie = f.select("#bowtie");
+		face = f.select("#face");
+		arm = f.select("#arm");
+
+		chick.attr({opacity: 0});
+		bear.attr({opacity: 0});
+		dog.attr({opacity: 0});
+		arm.attr({'class': 'arm'});
+		s.append(f);
+		
+		dog.hover(dogOver, dogOut);
+		function dogOver() {
+			tie.animate({ transform:"t0,0r360"}, 400);				
+		}
+		function dogOut() {
+			tie.animate({transform:"t0,0r0"}, 0);
+		}
+		
+		bear.hover(bearOver, bearOut);
+		function bearOver() {
+			face.animate({ transform:"t0,0s1.5"}, 400, mina.elastic);				
+		}
+		function bearOut() {
+			face.animate({transform:"t0,0s1"}, 200, mina.backin);				
+		}
+		
+		chick.hover(chickOver, chickOut);
+		function chickOver() {
+			arm.attr({'class': 'arm animating'});	
+		}
+		function chickOut() {
+			arm.attr({'class': 'arm'});			
+		}
+	});
+};
+</script>
+
+</head>
+<body>
+</body>
+</html>

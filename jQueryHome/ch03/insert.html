@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Inserting elements
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function inserter() 
+      {
+        $("#target").before("<p>This is paragraph 1.5</p>");
+        $("#target").after("<p>This is paragraph 2.5</p>");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Inserting elements</h1>
+    <p>This is paragraph 1.</p>
+    <p id="target">This is paragraph 2.</p>
+    <p id="source">This is paragraph 3.</p>
+    <p>This is paragraph 4.</p>
+    <br>
+    <form>
+    <input type = "button" 
+      value="Insert new paragraphs"
+      onclick="inserter()"
+    </input>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Capturing hover events</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+      $('#target').hover(over, out);
+      });
+
+      function over(event)
+      {
+    $('#target').css("font-style", "italic");
+      }
+
+      function out(event)
+      {
+    $('#target').css("font-style", "normal");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Capturing hover events</h1>
+    <p id="target">Here is the text!</p>
+  </body>
+</html>
+

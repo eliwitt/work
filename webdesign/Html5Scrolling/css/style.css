@@ -1,0 +1,260 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, content, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+@font-face {
+	font-family: 'LindenHillRegular';
+    src: url('../fonts/lindenhill-webfont.eot');
+    src: url('../fonts/lindenhill-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lindenhill-webfont.woff') format('woff'),
+         url('../fonts/lindenhill-webfont.ttf') format('truetype'),
+         url('../fonts/lindenhill-webfont.svg#LindenHillRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LindenHillItalic';
+    src: url('../fonts/lindenhill-italic-webfont.eot');
+    src: url('../fonts/lindenhill-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lindenhill-italic-webfont.woff') format('woff'),
+         url('../fonts/lindenhill-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lindenhill-italic-webfont.svg#LindenHillItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JunctionRegular';
+    src: url('../fonts/junction_02-webfont.eot');
+    src: url('../fonts/junction_02-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junction_02-webfont.woff') format('woff'),
+         url('../fonts/junction_02-webfont.ttf') format('truetype'),
+         url('../fonts/junction_02-webfont.svg#JunctionRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+	background-color: #353535;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	background-image: url(../images/dots.png);
+}
+
+h1, h2, h3 {
+	font-family:'LindenHillRegular', Georgia, "Times New Roman", Times, serif;
+	}
+
+
+content{
+	width:940px;
+	margin-top:20px;
+	margin-right:auto;
+	margin-bottom:20px;
+	margin-left:auto;
+	position:relative;
+	background-color:#f2f3ed;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+header {
+	border-bottom-color: #CCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+header h1 {
+	padding:20px 20px 20px 97px;
+	color:#353535;
+	font-size:42px;
+	}
+	
+header p {
+	color:#353535;
+	font-family:'LindenHillItalic', Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	position: absolute;
+	right: 0px;
+	top: 33px;
+	}
+	
+
+#logo { 
+	position: absolute; 
+	top: 12px; 
+	left: 20px; 
+	background: url(../images/logo_small.png) no-repeat; 
+	width: 61px; 
+	height: 62px;
+	text-indent:-9999px;
+	
+	/* css3 transition */
+	-webkit-transition:-webkit-transform 1s;
+	-o-transition-property:-o-transform;
+	-o-transition-duration:1s;
+	-moz-transition-property:-o-transform;
+	-moz-transition-duration:1s;
+	transition-property:transform;
+	transition-duration:1s;
+	}
+	
+#logo:hover
+{
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}	
+
+header#anim {
+	height:250px;
+	}
+	
+nav {
+	float:left;
+	width:200px;
+}
+
+nav li{
+	list-style-type:none;
+}
+
+nav li a{
+	font-family:'LindenHillRegular', Georgia, "Times New Roman", Times, serif;
+	text-decoration:none;
+	display:block;
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:10px;
+	padding-left:20px;
+	font-size:18px;
+}
+
+nav li a:link{
+	color:#333;
+	
+}
+nav li a:visited{
+	color:#333;
+}
+nav li a:hover{
+	font-family:'LindenHillItalic', Georgia, "Times New Roman", Times, serif;
+	color:#FFF;
+	background-color:#5b9819;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888; /* Safari */
+}
+nav li a:active{
+	color:#333;
+	background-color:#666;
+}
+
+article {
+	width:739px;
+	float:right;
+	border-left-color: #CCC;
+	border-left-width: 1px;
+	border-left-style: solid;
+	box-shadow: 0px 0px 5px #888;
+	-webkit-box-shadow: 0px 0px 5px #888; /* Safari */
+	
+	}
+
+article h2, h3, p {
+	margin-left:20px;
+	margin-right:20px;
+	padding-top:10px;
+	
+	}
+	
+article p {
+	padding-top:4px;
+	padding-bottom:20px;
+	line-height:18px;
+	}
+		
+article h2{
+	color:#353535;
+	font-size:28px;
+	text-transform: capitalize;
+}
+
+article h3{
+	color:#353535;
+	font-size:20px;
+	text-transform: capitalize;
+}
+
+article .leftfloat{
+	width:50%;
+	float:left;
+	}
+	
+article .rightfloat{
+	width:50%;
+	float:right;
+	}
+	
+footer {
+	border-top-color: #CCC;
+	border-top-width: 1px;
+	border-top-style: solid;
+	clear:both;
+	background-color: #407a01;
+	background-image: url(../images/bg_gradient.png);
+	border-bottom-right-radius:25px;
+	border-bottom-left-radius:25px;
+	-moz-border-bottom-right-radius:25px;
+	-moz-border-bottom-left-radius:25px;
+	
+	}
+	
+footer section.first {
+	float:left;
+	width:200px;
+	padding-top:10px;
+	padding-bottom:20px;
+	}
+
+footer section.first p {
+	color:#f2f3ed;
+	}	
+	
+footer section {
+	float:left;
+	width:246px;
+	padding-top:10px;
+	padding-bottom:20px;
+	color:#96C;
+	}
+footer section h3 {
+	font-family:'LindenHillItalic', Georgia, "Times New Roman", Times, serif;
+	color:#f2f3ed;
+	font-size:16px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #F2F3ED;
+	padding-bottom: 0px;
+	text-transform: capitalize;
+	font-weight:normal;
+	}
+		
+footer section p {
+	color:#333;
+	font-size:10px;
+	line-height:16px;
+	}
+
+.clearing {
+	clear:both;
+}

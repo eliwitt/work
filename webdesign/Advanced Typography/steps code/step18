@@ -1,0 +1,39 @@
+﻿p.second .line1 {
+	
+	font-size:			37px;
+	
+	line-height:			10px;
+		
+}
+
+p.second .line2 {
+		
+	font-size:			160px;
+	
+	line-height:			130px;
+	
+	font-family:			'Lobster', arial, serif;
+	
+	color:				#4584be;
+			
+	text-transform:		capitalize; 
+			
+}
+
+p.second .line3 {
+			
+	font-size:			52px;
+		
+	color:				#333;
+		
+	margin-bottom:		20px;
+		
+	padding-top:			5px;
+	
+	padding-bottom:		5px;
+	
+	border-top:			2px dashed #333;
+	
+	border-bottom:		2px dashed #333; 
+		
+}

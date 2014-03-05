@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- JavaScript shim for IE 7-8 to recognise and style the HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <!-- main styles -->
+        <link rel="stylesheet" href="css/styles.css" />
+        
+        <!-- Google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Rosario&v2' rel='stylesheet' type='text/css'>
+        
+        <!-- Leaflet CSS --> 
+        <link rel="stylesheet" href="dist/leaflet.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="dist/leaflet.ie.css" /><![endif]-->
+
+        <!-- Leaflet JavaScript -->
+        <script src="dist/leaflet.js"></script>
+        
+        
+
+
+        <title>Leaflet map</title>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <header>
+
+                <div id="logo"><h1>My Leaflet map</h1></div>
+
+                <nav>
+
+                    <ul>
+
+                        <li><a href="">home</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">portfolio</a></li>
+                        <li><a href="">blog</a></li>
+                        <li><a href="">contact</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </header>
+            
+              <aside>
+                  
+                <div class="divider"></div>
+                <h3>Our address</h3>
+                <ul class="address">
+                    
+                    <li>101 our super duper street</li>
+                    <li>Not on this planet</li>
+                    <li>Over there..-></li>
+                    <li>No!...over there... <-</li>
+                    <li>CO2 4U2</li>
+                    
+                </ul>
+                <ul class="address2">
+                   
+                    <li>Tel :08900 033784</li>
+                </ul>
+                    
+  
+                </ul>
+
+            </aside>
+            
+           
+
+            <section id="map">
+
+
+
+            </section>
+
+          
+
+            <div id="footer">
+
+
+
+            </div>
+
+        </div><!-- END wrapper -->
+        
+        <script type="text/javascript">
+            
+          
+			var map = new L.Map('map');	
+			var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/3dff762cf2e9463191d9bf9cb89d37c0/997/256/{z}/{x}/{y}.png';
+    	    var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18});
+			
+			var essex = new L.LatLng(35.208768,-85.16656);
+			map.setView(essex, 11).addLayer(cloudmade); 
+			
+			
+			// 35.027006,-85.188329 lee hwy gps
+			// 35.208768,-85.16656 oldaker
+			// 51.889941, 0.899506 original gps
+			var colchester = new L.LatLng(35.208768,-85.16656);
+
+			var marker = new L.Marker(colchester);
+			map.addLayer(marker);
+			marker.bindPopup("Home sweet Home!");
+			
+			
+			
+			
+			var circleOptions = {color: '#f0f', opacity: 0.7},
+            circle = new L.Circle(colchester, 1500, circleOptions);
+			circle.bindPopup("Not another pop up!");
+			map.addLayer(circle);
+			
+			
+			
+			/*var point1 = new L.LatLng(51.901, 0.913),
+				point2 = new L.LatLng(51.880, 0.940),
+				point3 = new L.LatLng(51.879, 0.883),
+				polygonPoints = [point1, point2, point3];
+			
+			var polygonOptions = {color: '#f00', opacity: 0.7},
+            polygon = new L.Polygon(polygonPoints, polygonOptions);
+			map.addLayer(polygon);
+			polygon.bindPopup("Hey, this is a polygon");*/
+
+
+			/*map.on('click', onMapClick);
+        
+			var popup = new L.Popup();
+					
+			function onMapClick(e) {
+				var latlngStr = '(' + e.latlng.lat.toFixed(3) + ', ' + e.latlng.lng.toFixed(3) + ')';
+						
+				popup.setLatLng(e.latlng);
+				popup.setContent("You clicked the map at " + latlngStr);
+				map.openPopup(popup);
+				
+			}*/
+            
+        </script>
+
+    </body>
+</html>
+

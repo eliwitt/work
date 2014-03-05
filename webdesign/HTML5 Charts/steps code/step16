@@ -1,0 +1,5 @@
+	$("#chart1_bar1").animate({height:bar1height},2000);
+		$("#chart1_bar2").animate({height:bar2height},2000);
+		$("#chart2_bar1").animate({height:bar3height},2000);
+		$("#chart2_bar2").animate({height:bar4height},2000);
+		

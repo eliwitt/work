@@ -1,0 +1,1 @@
+<a href="index.html"><img src="images/logo.png" height="112" width="298" id="logo" /></a><img src="images/latest_line.png" height="24" width="900" id="latest_line" />

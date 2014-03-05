@@ -1,0 +1,9 @@
+
+
+	/* Interactive Infographic */
+	
+	$(document).ready(function(){
+		// Code here will execute once the page has loaded
+		
+		
+	});

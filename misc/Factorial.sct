@@ -1,0 +1,26 @@
+<scriptlet>
+
+<Registration
+	Description="Factorial"
+	ProgID="Factorial.Scriptlet"
+	Version="1.00"
+	ClassID="{b5020e50-e9c1-11d1-9c29-00c04fbe2423}"
+>
+</Registration>
+
+<implements id=Automation type=Automation>
+	<method name=Calculate>
+		<PARAMETER name=num/>
+	</method>
+</implements>
+
+<script language=JScript>
+
+function Calculate(num) {
+	if (num < 2) return 1;
+	return num*Calculate(num-1);
+}
+
+</script>
+</scriptlet>
+

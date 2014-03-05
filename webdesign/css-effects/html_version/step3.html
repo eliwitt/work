@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>CSS Visual Effects 3: Motion</title> 
+ 
+	<!-- stylesheets --> 
+	<link rel="stylesheet" href="css/screen.css" type="text/css" /> 
+	
+	<!-- javascripts --> 
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+ 
+ <style type="text/css"> 
+	#mover {
+		width:100%;
+		height: 298px;
+		background: url(img/robot.jpg) no-repeat left;
+		display: block;
+		-webkit-transition: background-position 0.6s ease-out;
+	}
+	#mover:hover {
+		background-position-x: right;
+	}
+</style> 
+
+</head> 
+ 
+<body> 
+<header id="header"> 
+		<h1>CSS Visual Effects</h1> 
+		<nav class="nav"> 
+			<ul> 
+				<li><a href="index.html">1: Transitioning a Link Color</a></li> 
+				<li><a href="step2.html">2: Multiple Transition Properties</a></li> 
+				<li><a href="step3.html" class="active">3: Motion</a></li> 
+				<li><a href="step4.html">4: Transform</a></li> 
+				<li><a href="step5.html">5: Animation</a></li> 
+			</ul> 
+		</nav> 
+</header> 
+ 
+<div class="content">	
+ 
+ 
+ 
+<div class="section clearfix"> 
+	<h2>Move the Robot.</h2> 
+	<div class="explanation"> 
+<code><pre> 
+a#mover {
+  display: block;
+  width:100%;
+  height: 298px;
+  background-image: url(img/robot.jpg);
+  background-repeat:no-repeat;
+  background-position-x: left;
+  -webkit-transition: background-position 0.6s ease-out;
+}
+a#mover:hover {
+  background-position-x: right;
+}
+</pre></code> 
+	
+	</div> 
+	
+		<div class="example"> 
+		<a id="mover"></a> 
+	</div> 
+ 
+</div> 
+ 
+<div id="footer"> 
+<p>Code by <a href="http://paravelinc.com">Paravel</a></p> 
+</div> 
+</div> 
+</body> 
+</html>

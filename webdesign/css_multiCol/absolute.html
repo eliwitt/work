@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Absolute positioning</title>
+<style type="text/css">
+/*<![CDATA[*/
+	
+	* {
+	padding: 0; margin:0;
+	}
+	
+	body {
+	font: 14px/20px Arial, sans-serif;
+	padding: 20px;
+	}
+	
+	h1, h2 {
+	margin-bottom: 10px;
+	}
+	
+	p {
+	margin-bottom: 20px;
+	}
+	
+	#wrapper {
+	margin: 0 auto;
+	width: 940px;
+	background: #cccccc;
+	}
+
+    #columnWrapper {
+	position: relative;
+	height: 300px;
+	background: red;
+	margin-bottom: 20px;
+	}
+	
+	#leftColumn, #middleColumn, #rightColumn {
+	width: 300px;	
+	position: absolute;
+	}
+	
+	#leftColumn {
+	background: yellow;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	}
+	
+	#middleColumn {
+	background: pink;
+	top: 10px;
+	bottom: 10px;
+	left: 320px;
+	}
+	
+	#rightColumn {
+	width: 300px;
+	background: orange;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	}
+	
+	
+/*]]>*/
+</style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Heading</h1>
+    <p>Integer ac eros arcu, nec fringilla augue. Vestibulum condimentum elit massa, non fermentum ipsum.</p>
+    <h2>Highlights</h2>
+    <div id="columnWrapper">
+      <div id="leftColumn">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla tempor mollis. Quisque placerat lectus sed erat consectetur eget iaculis elit commodo. Quisque sed. Integer interdum, elit id scelerisque adipiscing, eros leo venenatis velit, quis elementum nulla ante consequat quam. Morbi tempor nisi eu nunc cursus faucibus. Ut ac vitae tellus. Phasellus vel ipsum purus. Suspendisse consequat ipsum sed ante tincidunt sed lobortis velit venenatis. Duis sollicitudin quam a risus placerat dapibus. Integer aliquam tempus eros, et tempus nulla hendrerit eget. Aenean id placerat urna.</p>
+      </div>
+      <div id="middleColumn">
+      <p>Integer ac eros arcu, nec fringilla augue. Vestibulum condimentum elit massa, non fermentum ipsum. Donec at leo sem, a luctus mi. Suspendisse iaculis, sapien eget feugiat aliquet, lectus arcu convallis neque, ut tempor velit orci sit amet leo. Fusce ipsum dolor, mattis in mattis eget, iaculis nec est. Ut nec arcu lacus. Vestibulum cursus mollis arcu eu fringilla. Nullam non mauris est. Maecenas mollis mollis luctus.</p>
+      </div>
+      <div id="rightColumn">
+        <p>Suspendisse vulputate venenatis nibh, mattis rutrum risus tincidunt non. Morbi eget mi nibh. Aliquam facilisis, eros sit amet pharetra consectetur, diam tellus rhoncus nibh, at consectetur turpis quam eu nisi. Sed nec turpis id nulla ultrices viverra sit amet vitae justo. Nam adipiscing diam in turpis adipiscing lacinia. Mauris ac arcu vitae neque imperdiet pretium. Quisque faucibus malesuada urna sit amet faucibus.</p>
+      </div>
+    </div>
+    <div id="moreContent">
+      <p><strong>More content...</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla tempor mollis. Quisque placerat lectus sed erat consectetur eget iaculis elit commodo. Quisque sed feugiat est. </p>
+    </div>
+  </div>
+</body>
+</html>

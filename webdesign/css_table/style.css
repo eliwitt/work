@@ -1,0 +1,139 @@
+body {
+	font: 13px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 20px;
+	}
+		
+table, caption, thead, tfoot, tbody, th, td, h1 {
+	margin: 0;
+	padding: 0;	
+	}
+		
+/* TABLE General */
+		
+table {
+	background: #A7DBD8;
+	border: 1px solid #79B2AF;
+	border-collapse: separate;
+	border-width: 0 1px 1px 0;
+	border-spacing: 4px;
+	color: #333333;
+	margin-top: -20px;
+	max-width: 900px;
+	min-width: 400px;
+	padding: 20px 5px 5px 5px;
+	width: 95%;
+	}
+		
+table, caption {
+	text-align: left;
+	}
+			
+caption h1 {
+	background: #F38630;
+	border: 1px solid #B66A2E;
+	border-width: 0 1px 1px 0;
+	color: #38210e;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	left: -10px;
+	padding: 3px 12px;
+	position: relative;
+	text-shadow: 0 1px 1px #EECAAE;
+	top: 14px;
+	}
+		
+th,
+td {
+	border-width: 5px;
+	padding: 1px 6px;
+	}
+			
+th {
+	color: #31605D;
+	}
+			
+thead,
+td {
+	text-align: center;
+	}
+	
+td:empty {
+	background: #A7DBD8;
+	border: 0;
+	}
+			
+/* THEAD */
+			
+thead th {
+	background: #D3EDEB;
+	background: rgba(255, 255, 255, 0.5);
+	}
+				
+thead tr:nth-of-type(n+2) th {
+	background: #C1E5E3;
+	background: rgba(255, 255, 255, 0.3);
+	}
+			
+/* TFOOT */
+			
+tfoot td {
+	background: #95C4C1;
+	background: rgba(0, 0, 0, 0.1);
+	font-style: italic;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 5px 6px;
+	text-shadow: 0 1px 1px #FFFFFF;	
+	}
+			
+/* TBODY */
+			
+th[scope=row] {
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	}
+									
+tbody td {
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: 0 1px 1px #FFFFFF;
+	background: #E5F2F1;
+	}
+
+tbody tr:nth-child(odd) td {
+	-moz-border-image: url(shadow-odd.png) 5 repeat;
+	-webkit-border-image: url(shadow-odd.png) 5 repeat;
+	border-image: url(shadow-odd.png) 5 repeat;
+	}
+tbody tr:nth-child(even) td {
+	-moz-border-image: url(shadow-even.png) 5 repeat;
+	-webkit-border-image: url(shadow-even.png) 5 repeat;
+	border-image: url(shadow-even.png) 5 repeat;
+	}
+			
+tbody tr:nth-child(odd):hover td,
+tbody tr:nth-child(even):hover td {
+	-moz-border-image: url(shadow-tr-hover.png) 5 5 5 5 repeat;
+	-webkit-border-image: url(shadow-tr-hover.png) 5 5 5 5 repeat;
+	border-image: url(shadow-tr-hover.png) 5 5 5 5 repeat;
+	}
+			
+tbody tr:nth-child(odd) td:hover,
+tbody tr:nth-child(even) td:hover {
+	-moz-border-image: url(shadow-td-hover.png) 5 repeat;
+	-webkit-border-image: url(shadow-td-hover.png) 5 repeat;
+	border-image: url(shadow-td-hover.png) 5 repeat;
+	}
+			
+/* BORDER RADIUS */
+			
+table,
+caption h1,
+thead th,
+tfoot td,
+tbody td {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	}

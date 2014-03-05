@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Wrapping elements
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function wrapper() 
+      {
+        $("p").wrap("<h1></h1>");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Wrapping elements</h1>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <p>This is paragraph 4.</p>
+    <br>
+    <form>
+    <input type = "button" 
+      value="Wrap paragraphs in a header"
+      onclick="wrapper()"
+    </input>
+    </form>
+  </body>
+</html>

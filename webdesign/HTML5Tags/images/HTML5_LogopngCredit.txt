@@ -1,0 +1,7 @@
+This work is attributed to the W3C.
+
+HTML5 Logo by W3C
+http://www.w3.org/
+http://www.w3.org/html/logo/
+
+Suggested markup: <span>HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></span>.

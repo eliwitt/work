@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body {
+	background-image: url(../images/square-tile.jpg);
+	border-top:rgba(165, 53, 54, .9) solid 18px;
+	margin: 0;
+	padding:0;
+}
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}
+#page {
+	width: 720px;
+	margin: auto;
+}
+@font-face {
+/*	font-family: 'XyloSansMedium';
+	src: url('XyloSans-webfont.eot');
+	src: local('☺'), url('XyloSans-webfont.woff') format('woff'), url('XyloSans-webfont.ttf') format('truetype'), url('XyloSans-webfont.svg#webfontctxjUbYs') format('svg');
+	font-weight: normal;
+	font-style: normal;*/
+}
+h1 {
+	font-family:'XyloSansMedium', Arial, sans-serif;
+	font-size: 3em;
+}

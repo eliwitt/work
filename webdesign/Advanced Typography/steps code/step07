@@ -1,0 +1,15 @@
+﻿h1 span.line2 {
+
+font-size:		238px;
+
+line-height:		140px;
+
+color:			#c44032;
+
+text-shadow:		-1px 1px 0px #fff, -3px 3px 0px #863027;
+
+-webkit-text-shadow:-1px 1px 0px #fff, -3px 3px 0px #863027;
+	
+-moz-text-shadow:	-1px 1px 0px #fff, -3px 3px 0px #863027; 
+		
+} 

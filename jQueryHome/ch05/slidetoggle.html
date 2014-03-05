@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Toggling slide operations</title>
+  <script src="http://code.jquery.com/jquery-latest.js">
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+    
+    $("button").click(function () {
+      $("#first").slideToggle("slow");
+    });
+
+  });
+  </script>
+</head>
+
+<body>
+  <h1>Toggling slide operations</h1>
+    <div>
+      <p id="first">Here is some 
+        text.</p>
+      <p>This is also text.</p>
+      <p>And here's some more text.</p>
+    </div>
+  <form>
+    <button>Toggle</button>
+  </form>
+</body>
+</html>

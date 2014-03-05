@@ -1,0 +1,1 @@
+<dl id="dropzone" class="dropzone floatfix"   	 	ondragenter="dragEnterHandler(event)"   	 	ondragover="dragOverHandler(event)"   	 	ondrop="dropHandler(event)"></dl>

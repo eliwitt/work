@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Partially fading an image</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function fade()
+      {
+        $('#target').fadeTo(2000, 0.333);
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Partially fading an image</h1>
+    <img id="target" src="Image1.jpg"/>
+    <br>
+    <form>
+    <input type="button" value="Fade" onclick="fade()"></input>
+    </form>
+  </body>
+</html>

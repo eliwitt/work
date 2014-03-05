@@ -1,0 +1,14 @@
+#cart { font-size:1em; width:260px; position:relative; }
+#cart p { margin:10px 10px 10px 20px; float:left; }
+#opener { margin:14px 20px 0 0; float:right; }
+#contents { display:none; position:absolute; left:5px; width:250px; }
+#contents ul { margin-top:10px; list-style-type:none; padding-left:0; }
+#contents ul li { font-size:11px; margin-bottom:10px; padding-left:10px; }
+#contents ul img { float:left; margin-right:10px; }
+#contents ul p { float:left; margin:10px 10px 0 0; }
+#contents ul span { float:right; margin-top:10px; }
+#contents ul a { float:right; color:#e12424; font-weight:bold; text-decoration:none; margin:5px 10px 0 10px; font-size:16px; }
+#contents ul a:hover { color:#e17b7b; }
+#cart p#cost { float:none; text-align:right; margin-bottom:20px; }
+#clearAll { float:left; margin:0 10px 10px; font-size:13px; }
+#checkout { float:right; position:relative; right:5px; bottom:5px; }

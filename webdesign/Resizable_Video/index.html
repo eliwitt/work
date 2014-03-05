@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fullscreen multi-video YouTube Player</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+$('#tabs div').hide();
+$('#tabs div:first').show();
+$('#tabs ul li:first').addClass('active');
+$('#tabs ul li a').click(function(){ 
+$('#tabs ul li').removeClass('active');
+$(this).parent().addClass('active'); 
+var currentTab = $(this).attr('href'); 
+$('#tabs div').hide();
+$(currentTab).show();
+return false;
+});
+});
+</script>
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;}
+
+#tabs {
+font-size: 90%;
+margin: 5px 0px 0px 0px;}
+
+#tabs ul {
+float: left;
+width: 100%;
+background-color: #FFF;}
+
+#tabs li {
+margin-left: 8px;
+list-style: none;}
+
+#tabs li, #tabs li a {
+float: left;}
+
+#tabs ul li.active {
+background: #999;}
+
+#tabs ul li.active a {
+color: #333333;}
+
+#tabs div {
+height: 85%;
+width: 100%;
+left: 0px;
+position: absolute;
+z-index: 1;
+top: 100px;
+background: #FFFFCC;
+border-top: 5px solid #999;}
+
+#tabs div h3 {
+margin-bottom: 12px;}
+
+#tabs div p {
+line-height: 150%;}
+
+#tabs ul li a {
+text-decoration: none;
+padding: 8px;
+color: #000;
+font-weight: bold;}
+
+.thumbs {
+float:left;
+border:#000 solid 1px;
+margin-bottom:20px;
+margin-right:20px;}
+
+-->
+</style>
+</head>
+<body>
+
+<div id="container">
+  
+<div id="tabs">
+<ul>
+<li><a href="#tab-1"><img src="IntroHTML5.jpg" alt="Introduction to HTML5" title="Introduction to HTML5" width="130" height="70" /></a></li>
+<li><a href="#tab-2"><img src="DW5.jpg" alt="Dreamweaver CS5 HTML 5 Pack" title="Dreamweaver CS5 HTML 5 Pack " width="130" height="70" /></a></li>
+<li><a href="#tab-3"><img src="HTMLvsFlash.jpg" alt="HTML 5 Demo vs Flash" title="HTML 5 Demo vs Flash" width="130" height="70" /></a></li>
+<li><a href="#tab-4"><img src="canvas.jpg" alt="html5canvas" title="html5canvas" width="130" height="70" /></a></li>
+<li><a href="#tab-5"><img src="Canvas Flower.jpg" alt="HTML5 Canvas Flower Animation" title="HTML5 Canvas Flower Animation" width="130" height="70" /></a></li>
+<li><a href="#tab-6"><img src="video130.jpg" alt="The Planets HTML5 Test" title="The Planets HTML5 Test " width="130" height="70" /></a></li>
+<li><a href="#tab-7"><img src="video130.jpg" alt="JSFFT - HTML5 Audio Data API Demo" title="JSFFT - HTML5 Audio Data API Demo" width="130" height="70" /></a></li>
+<li><a href="#tab-8"><img src="video130.jpg" alt="Doctor Who titles in CSS" title="Doctor Who titles in CSS" width="130" height="70" /></a></li>
+<li><a href="#tab-9"><img src="video130.jpg" alt="HTML5 Video Tag" title="HTML5 Video Tag" width="130" height="70" /></a></li>
+<li><a href="#tab-10"><img src="video130.jpg" alt="HTML5 & CSS3 with Dreamweaver CS5 - Part 1" title="HTML5 & CSS3 with Dreamweaver CS5 - Part 1" width="130" height="70" /></a></li>
+</ul>
+    
+<div id="tab-1">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/siOHh0uzcuY" frameborder="0" allowfullscreen></iframe>
+</div>
+    
+<div id="tab-2">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/soNIxy2sj0A" frameborder="0" allowfullscreen></iframe>
+</div>
+    
+<div id="tab-3">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/K_RBY23OxBM" frameborder="0" allowfullscreen></iframe>
+</div>
+    
+<div id="tab-4">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/wyo3jchVDZ4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-5">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/K8r5tb--y34" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-6">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/28YfYQuZvn8" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-7">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/LrZ4S4BNv08" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-8">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/E2kz8NQuLBo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-9">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/vuxuK8JKfcU" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="tab-10">
+<iframe width="100%" height="100%" src="http://www.youtube.com/embed/vabpQhJD3FA" frameborder="0" allowfullscreen></iframe>
+</div>
+    
+</div><!--end #tabs -->
+
+</div><!--end #container -->
+
+</body>
+</html>
+<!--original script supplied by www.papermashup.com -->

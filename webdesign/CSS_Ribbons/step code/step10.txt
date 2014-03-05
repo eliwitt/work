@@ -1,0 +1,1 @@
+.register {     float: right;    margin: 40px 0;    padding: 15px 30px 30px 30px;    width: 353px;}.register form {	margin-top: 30px;} 

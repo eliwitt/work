@@ -1,0 +1,1 @@
+dt.textContent = textValue;dd.textContent = '1';

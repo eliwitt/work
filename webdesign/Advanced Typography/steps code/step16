@@ -1,0 +1,86 @@
+﻿ p.first .line3 span {
+			
+	display:			inline-block;
+		
+	position:			relative;
+		
+}
+
+p.first .line3 .word1 {
+		
+	font-size:			49px;
+	color:				#c44032;
+	
+	text-shadow:			-1px 1px 0px #863027;
+	
+	-webkit-transition:		all 0.2s ease-out;
+		
+}
+
+p.first .line3 .word1:hover {
+	
+	top:				5px;	
+
+}
+	
+
+p.first .line3 .word2 {
+		
+	font-size:			49px;
+		
+	color:				#4584be;
+	
+	text-shadow:			-1px 1px 0px #2f597f;
+	
+	-webkit-transition:		all 0.2s ease-out;
+	
+}
+
+
+p.first .line3 .word2:hover {
+		
+	top:				5px;	
+	
+}
+	
+
+p.first .line3 .word3 {
+		
+	display:			inline-block;
+		
+	font-weight:			bold;
+		
+	width:				1em;
+		
+	text-align:			right;
+		
+	font-size:			15px;
+		
+	-webkit-transform: 		rotate(-90deg);
+
+	-moz-transform: 		rotate(-90deg);
+		
+	transform: 			rotate(-90deg);
+	
+}
+	
+
+p.first .line3 .word4 {
+		
+	font-size:			49px;
+	
+	color:				#5da028;
+		
+	text-shadow:			-1px 1px 0px #427021;
+
+	-webkit-transition:		all 0.2s ease-out;
+	
+}
+	
+
+p.first .line3 .word4:hover {
+		
+	top:				5px;	
+	
+}
+	

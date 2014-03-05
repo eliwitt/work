@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Handling Ajax errors</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+$.ajax({
+  type: "GET",
+  url: "getterr.php",
+ data: {data: 1},
+  success: callback,
+  error: err
+});
+     });
+function callback(data, status)
+{
+    $("div").text(data);
+}
+function err(xhr, reason, ex)
+{
+    $("div").text(reason);
+}
+    </script>
+  </head>
+
+  <body>
+    <h1>Handling Ajax errors</h1>
+    Got this in response: <div></div>
+  </body>
+</html>

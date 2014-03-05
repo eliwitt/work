@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Getting event target</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+      $('#figure1').bind('click', clicker);
+      });
+
+      function clicker(event)
+      {
+    $('#p1').text("ID of target element: "
+    + event.target.id);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Getting event target</h1>
+    <h1>Click the flower...</h1>
+    <img id="figure1" src="Image1.jpg"/>
+    <p id="p1"></p>
+  </body>
+</html>

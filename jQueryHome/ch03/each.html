@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Adding an alt attribute
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function addAlt() 
+      {
+        $("img").each(function(m){
+          this.alt="Image " + (m + 1);
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Adding an alt attribute</h1>
+    <img src="image1.jpg"></img>
+    <img src="image2.jpg"></img>
+    <img src="image3.jpg"></img>
+    <img src="image4.jpg"></img>
+    <br>
+    <form>
+    <input type = "button" 
+      value="Add alt attributes"
+      onclick="addAlt()"
+    </input>
+    </form>
+  </body>
+</html>

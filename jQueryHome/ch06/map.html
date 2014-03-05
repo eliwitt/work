@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+    
+        var array = [1, 2, 3, 4, 5];
+        $("#div1").text("Original: " + array.join(", "));
+
+    array = jQuery.map(array, function (a) { 
+      return a + a; 
+    });
+
+        $("#div2").text("Doubled: " + array.join(", "));
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Mapping an array</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+  </body>
+</html>

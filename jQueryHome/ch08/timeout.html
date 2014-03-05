@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Handling Ajax timeouts</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+$.ajax({
+  type: "GET",
+  url: "poster.asp",
+ data: {data: 1},
+  success: callback,
+  timeout: 10,
+  error: err
+});
+     });
+function callback(data, status)
+{
+    $("div").text(data);
+}
+function err(xhr, reason, ex)
+{
+    $("div").text(reason);
+}
+    </script>
+  </head>
+
+  <body>
+    <h1>Handling Ajax timeouts</h1>
+    Got this in response: <div></div>
+  </body>
+</html>

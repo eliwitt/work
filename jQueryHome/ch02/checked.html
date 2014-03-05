@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Counting checked checkboxes
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function count() 
+      {
+        alert("You checked " + $("input:checked").length + " items.");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Counting checked checkboxes</h1>
+  <form>
+   <input type = "checkbox">
+   Check 1
+   </input>
+   <input type = "checkbox">
+   Check 2
+   </input>
+   <input type = "checkbox">
+   Check 3
+   </input>
+   <input type = "checkbox">
+   Check 4
+   </input>
+   <br>
+   <input type = "button" 
+     value="Count"
+   onclick="count()"
+   </input>
+  </form>
+  </body>
+</html>

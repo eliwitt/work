@@ -1,0 +1,9 @@
+﻿ p.second .line4:hover {
+	
+	-webkit-transform: 		rotate(0deg);
+	
+	-moz-transform: 		rotate(0deg);
+
+	transform: 			rotate(0deg);
+
+}  

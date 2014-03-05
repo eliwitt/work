@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en_US">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Comment Form</title>
+	<style>
+body {
+	margin: 2em auto;
+	width:60%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+legend {
+	font-family:Arial, Helvetica, sans-serif;
+}
+label, input, select, textarea {
+	display:block;
+}
+input, select, textarea {
+	margin-bottom: 1em;
+	border:1px solid #ccc;
+}
+textarea {
+	width:40%;
+	min-height:100px;
+}
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+input:required {
+	position:relative;
+}
+input[required]:after {
+	content:"* ";
+	position:absolute;
+	right:-10px;
+
+}
+</style>    
+</head>
+<body>
+    <form id="respond" action="comments.php">
+        <fieldset> 
+            <legend>Leave a comment</legend> 
+            
+            <div>
+              <label for="name">Name:</label>
+              <input name="name" id="name" type="text" placeholder="Your name" required autofocus>
+            </div>
+            
+            <div>
+              <label for="email">Email:</label>
+              <input name="email" id="email" type="email" placeholder="Your email address" required>
+            </div>	
+            
+            <div>
+              <label for="email">URL:</label>
+              <input name="url" id="url" type="url" placeholder="Your website">
+            </div>
+            
+            <div>
+              <label for="comment">Your Comment:</label>
+              <textarea name="comment" id="comment"></textarea>
+            </div>	
+
+            <div>
+              <input name="submit" type="submit" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

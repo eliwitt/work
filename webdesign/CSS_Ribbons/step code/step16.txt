@@ -1,0 +1,1 @@
+<div class="left_folded_back"></div> <!-- the left folded_back part --><h3>   <span class="left"></span><!-- the left triangle for the 3D effect --><span class="right"></span><!-- the left triangle for the 3D effect -->   Ten seconds and you are in a new world. It's free!</h3><div class="right_folded_back"></div><!-- the right folded_back part -->

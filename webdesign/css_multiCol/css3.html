@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Multi-column example</title>
+<style type="text/css">
+/*<![CDATA[*/
+  
+  * {
+  padding: 0;
+  margin: 0;
+  }
+  
+  body {
+  font: 14px/20px Georgia, serif;
+  }
+  
+  #multiColumn p+p, #multiColumn img+p {
+  text-indent: 20px;
+  }
+  
+  #multiColumn {
+  margin: 20px auto;
+  width: 682px;
+  text-align: justify;
+
+  column-count: 3;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+  column-width: 200px;
+        -webkit-column-width: 200px;
+        -moz-column-width: 200px;
+  column-gap: 41px;
+        -webkit-column-gap: 41px;
+        -moz-column-gap: 41px;
+  column-rule: 1px solid #ccc;
+        -webkit-column-rule: 1px solid #ccc;
+        -moz-column-rule: 1px solid #ccc;
+  }
+  
+  img.fr {
+  float: right;
+  display: block;
+  margin: 10px 0 10px 20px;
+  }
+  
+/*]]>*/
+</style>
+</head>
+<body>
+  <div id="multiColumn">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor enim, fringilla eget molestie dignissim, imperdiet ultrices lorem.</p>
+    <p>Sed faucibus erat eget nisl tempor eu eleifend erat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis luctus adipiscing tempor.</p>
+    <p>Quisque a augue eu auctor ornare, est nibh ligula ut ante elementum rhoncus sed consectetur diam. Aenean arcu tortor, consectetur in accumsan a, tincidunt sit amet est.</p><img class="fr" src="netmag.jpg" alt=".net cover" width="90" height="117" />
+    <p>Mauris gravida porta mi, vel varius urna luctus nec. Aenean ultrices mattis magna, vitae porta ante lobortis at. Sed pharetra gravida auctor. Pellen vestibulum congu tesque.</p>
+    <p>Bibendum, accumsan est eget iaculis augue justo sit amet elit duis quis diam tellus, vitae sagittis nisl. Aliquam erat volutpat. Proin nisi lectus, venenatis at tempor vitae, semper ut erat. Sed et mauris vel arcu vestibulum suscipit.</p>
+    <p>Quisque vestibulum congue bibendum. Nulla gravida nibh vitae fringilla eget tellus vehicula auctor. Proin cursus ultrices lacinia. Pellentesque in dignissim magna. Pellentesque id turpis ac nisl fermentum pharetra nec sit amet lorem.</p>
+    <p>Nunc vel est nibh, ut fermentum velit.</p>
+  </div>
+</body>
+</html>

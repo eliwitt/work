@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="assets/scripts/jquery.js"></script>
+<style type="text/css">
+label {
+	display: block;
+	margin-top: 9px;
+}
+    *{   
+        margin:0;   
+        padding:0;   
+        font:bold 12px "Lucida Grande", Arial, sans-serif;   
+    }   
+    body {   
+        padding: 10px;   
+    }   
+    #status{   
+        width:50%;   
+        padding:10px;   
+        outline:none;   
+        height:36px;   
+    }   
+    .focusField{   
+        border:solid 2px #73A6FF;   
+        background:#EFF5FF;   
+        color:#000;   
+    }   
+    .idleField{   
+        background:#EEE;   
+        color: #6F6F6F;   
+        border: solid 2px #DFDFDF;   
+    }
+    .completedField{   
+        background:white;   
+        color: #000;   
+        border: solid 2px black;   
+    }     
+</style>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        $('input[type="text"]').addClass("idleField");
+        $('input[type="text"]').focus(function() {
+            $(this).removeClass("idleField");
+            $(this).removeClass("completedField");
+            $(this).addClass("focusField");
+            if (this.value == this.defaultValue) {
+                this.value = '';
+            }
+            if (this.value != this.defaultValue) {
+                this.select();
+            }
+        });
+
+        $('input[type="text"]').blur(function() {
+            if ($.trim(this.value) == '') {
+                this.value = (this.defaultValue ? this.defaultValue : '');
+                $(this).removeClass("focusField").addClass("idleField");
+            } else {
+                $(this).removeClass("focusField").addClass("completedField");
+            }
+        });
+        /*  textarea */
+        $('textarea').addClass("idleField");
+        $('textarea').focus(function() {
+            $(this).removeClass("idleField");
+            $(this).removeClass("completedField");
+            $(this).addClass("focusField");
+            if (this.value == this.defaultValue) {
+                this.value = '';
+            }
+            if (this.value != this.defaultValue) {
+                this.select();
+            }
+        });
+        $('textarea').blur(function() {
+            //            $(this).removeClass("focusField").addClass("idleField");
+            if ($.trim(this.value) == '') {
+                this.value = (this.defaultValue ? this.defaultValue : '');
+                $(this).removeClass("focusField").addClass("idleField");
+            } else {
+                $(this).removeClass("focusField").addClass("completedField");
+            }
+        });
+    });  
+</script>
+</head>
+<body>
+<div id="page">
+  <header>
+    <h1>demo :: focus</h1>
+  </header>
+  <article>
+  <form>
+  <label for="firstName">First Name: </label><input name="firstName" type="text" value="john" />
+  <label for="lastName">Last Name: </label><input name="lastName" type="text" value="witt" />
+  <label for="comment">Comment: </label><textarea name="comment" cols="18" rows="5" /></textarea>
+  </form>
+</article>
+</div>
+</body></html>

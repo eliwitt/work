@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Counting selected items
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function count() 
+      {
+       alert("You selected " + $("select option:selected").length + " items.");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Counting selected items</h1>
+  <form>
+   <select size="4" multiple="true">
+     <option>Item 1</option>
+     <option>Item 2</option>
+     <option>Item 3</option>
+     <option>Item 4</option>
+   </select>
+   <br>
+   <input type = "button" 
+     value="Count"
+   onclick="count()"
+   </input>
+  </form>
+  </body>
+</html>

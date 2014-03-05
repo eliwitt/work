@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Range Example</title>
+	<style>
+body {
+	margin: 2em auto;
+	width:60%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+h1, legend {
+	font-family:Arial, Helvetica, sans-serif;
+}
+label, input, select, textarea {
+	display:block;
+}
+input, select, textarea {
+	margin-bottom: 1em;
+	border:1px solid #ccc;
+}
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+input[type="checkbox"] {
+	display:inline;
+	border:none;
+}
+input[type="range"] {
+	border:none;
+}
+.range {
+	margin-bottom:1em;
+}	
+output {
+	margin-bottom:1em;
+}
+	</style>	
+</head>
+<body>
+<form id="range">
+<h1>Input type="range" example</h1>
+  <fieldset> 
+
+	<div>
+		<label>Flying Skill level (1 low - 100 high)
+		<input id="skill" name="skill" type="range" min="0" max="100" value="0">
+		<output name="output" onforminput="value=skill.value">0</output>
+		</label>
+	</div> 
+    
+    <div>
+		<label>Flying Skill level #2 (1 low - 100 high)
+		<input id="skill2" name="skill2" type="range" min="0" max="100" value="0" style="height:100px; width:50px;">
+		<output name="output2" onforminput="value=skill2.value">0</output>
+		</label>
+	</div>    
+  </fieldset>
+
+</form> 
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>Final Revision</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="application/x-javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="application/x-javascript" src="tabbed-interface.jquery.min.js"></script>
+    <script type="application/x-javascript">
+    $(document).ready(function(){
+     $('#tabs1').tabbed_interface();
+     $('#tabs2').tabbed_interface({auto_switch: false});
+     $('#tabs3').tabbed_interface({switch_duration: 1000, auto_switch_delay: 5000 });
+    });
+    </script>
+</head>
+<body>
+ <div id="tabs1" class="tabbed-interface">
+  <ul>
+    <li><a href="#tabs1_tab1" class="active">Tab 1</a></li>
+    <li><a href="#tabs1_tab2">Tab 2</a></li>
+    <li><a href="#tabs1_tab3">Tab 3</a></li>
+  </ul>
+  <div id="tabs1_tab1">
+   <h1>Tab 1</h1>
+   <p>Some example content can go here.</p>
+  </div>
+  <div id="tabs1_tab2">
+   <h1>Tab 2</h1>
+   <p>Some example content can go here.</p>
+  </div>
+  <div id="tabs1_tab3">
+   <h1>Tab 3</h1>
+   <p>Some example content can go here.</p>
+  </div>
+  <p></p>
+ </div>
+
+ <div id="tabs2" class="tabbed-interface">
+  <ul>
+    <li><a href="#tabs2_tab1" class="active">&bull;</a></li>
+    <li><a href="#tabs2_tab2">&bull;</a></li>
+    <li><a href="#tabs2_tab3">&bull;</a></li>
+  </ul>
+  <div id="tabs2_tab1">
+   <h1>Tab 1</h1>
+   <p>Some example content can go here.</p>
+  </div>
+  <div id="tabs2_tab2">
+   <h1>Tab 2</h1>
+   <p>Some example content can go here.</p>
+  </div>
+  <div id="tabs2_tab3">
+   <h1>Tab 3</h1>
+   <p>Some example content can go here.</p>
+  </div>
+ </div>
+
+ <div style="clear: both"></div>
+
+ <div id="tabs3" class="tabbed-interface">
+  <div id="tabs3_tab1" style="background: url(ec3a862a32048ec0c9a694a270e669b8b4a297b0.jpg)"></div>
+  <div id="tabs3_tab2" style="background: url(0cf97ce8f0ad7510dc491645363432229b4efc28.jpg)"></div>
+  <div id="tabs3_tab3" style="background: url(ba3f8fc17a36882524921a73e3f799806fc66811.jpg)"></div>
+  <ul>
+    <li><a href="#tabs3_tab1" class="active">1</a></li>
+    <li><a href="#tabs3_tab2">2</a></li>
+    <li><a href="#tabs3_tab3">3</a></li>
+  </ul>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Selecting the third child
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function setStyle() 
+      {
+        $('p:nth-child(3)').css("font-style", 
+          "italic");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Selecting the third child</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" 
+     value="Select"
+   onclick="setStyle()"
+   </input>
+  </form>
+  </body>
+</html>

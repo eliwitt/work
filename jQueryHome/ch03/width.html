@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Setting image width and height
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function resize() 
+      {
+        $("img").width(486);
+        $("img").height(365);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Setting image width and height</h1>
+    <img src="image1.jpg" 
+      alt="This is an image of flowers.">
+    </img>
+    <img src="image2.jpg" 
+      alt="This is also an image of flowers.">
+    </img>
+    <br>
+    <form>
+    <input type = "button" 
+      value="Resize"
+      onclick="resize()"
+    </input>
+    </form>
+  </body>
+</html>

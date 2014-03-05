@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Using $.ajax() to get XML</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+$.ajax({
+  type: "GET",
+  url: "sandwiches.xml",
+  dataType: "xml",
+  success: callback
+});
+     });
+function callback(data, status)
+{
+            var sandwiches 
+              = 
+data.getElementsByTagName("sandwich");
+            listSandwiches(sandwiches);
+}
+
+      function listSandwiches (sandwiches)
+      {
+        var loopIndex;
+        var selectControl = document.getElementById('sandwichList');
+
+        for (loopIndex = 0; loopIndex < sandwiches.length; loopIndex++)
+        {
+            selectControl.options[loopIndex] = new 
+               Option(sandwiches[loopIndex].firstChild.data);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Using $.ajax() to get XML</h1>
+    <form>
+      <select size="1" id="sandwichList">
+        <option>Select a sandwich</option>
+      </select>
+    </form>
+  </body>
+</html>

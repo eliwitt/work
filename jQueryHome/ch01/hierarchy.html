@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Selecting elements in a hierarchy</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+
+    <script type="text/javascript">
+
+      function toggle() 
+      {
+        $('body div:first p').toggleClass('striped');
+      }
+    </script>
+
+    <style>
+      p.striped {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Selecting elements in a hierarchy</h1>
+    <div>
+      <p>This is paragraph 1.</p>
+      <p>This is paragraph 2.</p>
+</div><div>
+      <p id="third">This is paragraph 3.</p>
+      <p>This is paragraph 4.</p>
+    </div>
+    <p>This is paragraph 5.</p>
+
+    <form>
+      <input type = "button" value="Toggle Class"
+        onclick="toggle()"
+      </input>
+    </form>
+  </body>
+</html>

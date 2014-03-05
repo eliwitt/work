@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Selecting one of a set
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function setStyle() 
+      {
+        $("p:eq(2)").css("font-style", 
+          "italic");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Selecting one of a set</h1>
+  <div>
+  <p id="p1">This is paragraph 1.</p>
+  <p id="p2">This is paragraph 2.</p>
+  <p id="p3">This is paragraph 3.</p>
+  <p id="p4">This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" 
+     value="Select"
+   onclick="setStyle()"
+   </input>
+  </form>
+  </body>
+</html>

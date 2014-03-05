@@ -1,0 +1,1 @@
+body {		background-color: #babaa9;	font-family: Verdana, Geneva, sans-serif;	font-size: 12px;	}#wrapper {		width: 960px;	height: 1000px;	margin: 0 auto;	background: url('images/bg.png')repeat-x;		}header {		width: 900px;	}  

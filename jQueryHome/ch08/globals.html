@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Handling Ajax events</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+ $("#starting").hide();
+ $("#sending").hide();
+ $("#success").hide();
+ $("#somplete").hide();
+ $("#starting").bind("ajaxStart", function(){
+   $(this).show();
+ });
+ $("#sending").bind("ajaxSend", function(){
+   $(this).show();
+ });
+ $("#success").bind("ajaxSuccess", function(){
+   $(this).show();
+ });
+ $("#complete").bind("ajaxComplete", function(){
+   $(this).show();
+ });
+$.ajax({
+  type: "GET",
+  url: "poster.asp",
+ data: {data: 1},
+  success: callback,
+  error: err
+});
+     });
+function callback(data, status)
+{
+    $("#results").text(data);
+}
+function err(xhr, reason, ex)
+{
+    $("div").text(reason);
+}
+    </script>
+  </head>
+
+  <body>
+    <h1>Handling Ajax events</h1>
+    <div id="starting">Starting...</div>
+    <div id="sending">Sending...</div>
+    <div id="success">Successful...</div>
+    <div id="complete">Complete...</div>
+    Got this in response: <div id="results"></div>
+  </body>
+</html>

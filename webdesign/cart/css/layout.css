@@ -1,0 +1,8 @@
+.page-link { display:block; margin-bottom:20px; }
+#cart { float:right; }
+.details, #products { float:left; height:200px; }
+#products img { float:left; margin-right:30px; }
+#products h2 { margin-top:0; }
+#products ul { padding-left:0; list-style-type:none; }
+#products dt, #products dd { float:left; margin:0; }
+#products dd { margin-left:10px; }

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Using $.ajax() to get data</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+$.ajax({
+  type: "GET",
+  url: "poster.asp",
+ data: {data: 1},
+  success: callback
+});
+     });
+function callback(data, status)
+{
+    $("div").text(data);
+}
+    </script>
+  </head>
+
+  <body>
+    <h1>Using $.ajax() to get data</h1>
+    Got this from the server: <div></div>
+  </body>
+</html>

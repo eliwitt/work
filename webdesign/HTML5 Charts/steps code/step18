@@ -1,0 +1,5 @@
+	
+		$("#barcharts").mouseover(function(){
+			// you moved over the bar charts
+			alert("mouseover!");
+		});

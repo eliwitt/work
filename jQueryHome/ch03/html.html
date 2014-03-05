@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Rewriting three &lt;div&gt; elements</title>
+  <script src="http://code.jquery.com/jquery-latest.js">
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+    $("div").html("<span class='blue'>" +
+    "Here is a new &lt;span&gt; element.</span>");
+  });
+  </script>
+  <style>
+  .blue { color:blue; }
+  </style>
+</head>
+
+<body>
+  <h1>Rewriting three &lt;div&gt; elements</h1>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

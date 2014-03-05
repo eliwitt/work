@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Showing and hiding images</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function showImage()
+      {
+        $('#target').show();
+      }
+
+      function hideImage()
+      {
+        $('#target').hide();
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Showing and hiding images</h1>
+    <img id="target" src="Image1.jpg"/>
+    <br>
+    <form>
+    <input type="button" value="Show" onclick="showImage()"></input>
+    <input type="button" value="Hide" onclick="hideImage()"></input>
+    </form>
+  </body>
+</html>

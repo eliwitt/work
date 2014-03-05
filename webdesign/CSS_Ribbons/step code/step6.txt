@@ -1,0 +1,2 @@
+MARKUP:
+<header>			<h1 id="logo"><a href="#">CSS3 Ribbon</a></h1></header>STYLE:h1#logo { 	padding: 10px 0 25px 0; 	font-family: 'Yanone Kaffeesatz', sans-serif; 	font-size: 90px; 	text-align: center; }h1#logo a { 	color: #b0d03d; 	text-shadow: 3px 3px 0px #e2ebc1; 	border-bottom: 6px solid #b0d03d;	border-top: 6px solid #b0d03d;}h1#logo a:hover {	text-decoration: none;	color: #b2e109;		text-shadow: none; 	border-bottom: 6px solid #b2e109;	border-top: 6px solid #b2e109;}

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Selecting elements by attribute
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function setStyle() 
+      {
+        $('p[language]').css("font-style", 
+          "italic");
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Selecting elements by attribute</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p language="English">This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" 
+     value="Select"
+   onclick="setStyle()"
+   </input>
+  </form>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<TITLE>Listing One</TITLE>
+</HEAD>
+<body>
+<P>Enter a filename<BR>
+<INPUT id="Filename" size=40 value="http://localhost/work/xmlcode/north.xml"> Enter a file like http://localhost/work/xmlcode/north.xml
+<br /><br />
+<INPUT TYPE = "BUTTON"
+    Name = "ParseButton"     
+    VALUE = "Parse XML File"
+    onClick = "Parse(Filename.value)">
+
+<input type=button value="Back" onClick="history.back()">
+<br />
+
+<div id="myDiv"></div>
+<SCRIPT>                
+var Page;                        
+//
+//  find the xml object to use
+//
+function createXHR() {
+   try { return new XMLHttpRequest(); } catch(e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); } catch (e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); } catch (e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {}
+   try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {}
+   alert("XMLHttpRequest not supported");   
+   return null;
+}
+//
+// get the xml file
+//
+function Parse(xmlFilename)
+{
+
+    var xhr = createXHR();
+    if (xhr) {
+      xhr.open("GET",xmlFilename,true);
+      xhr.onreadystatechange = function(){handleResponse(xhr);};
+      xhr.send(null);
+     }
+
+}
+//
+// is the response back?
+//
+function handleResponse(xhr)
+{
+
+  if (xhr.readyState == 4  && xhr.status == 200) {
+	xmlParse(xhr.responseXML);
+    }
+
+}
+//
+//  parse the response
+//
+function xmlParse(xhr)
+{
+	var responseOut = document.getElementById("xmlResults");
+
+    //BrowserWin = window.open("", "XMLReport");
+    Page = responseOut;
+
+ 	var xmlStart = xhr.getElementsByTagName("Magazine");
+	console.log(xmlStart.length);
+	console.log(xmlStart);
+	//var x=xmlStart;
+
+	//for (i=0;i<x.length;i++)
+	//{
+	//	Page.innerHTML += x[i].nodeName;
+	//	Page.innerHTML += ": ";
+	//	console.log(x[i].childNodes[0].textContent);
+	//	txt = x[i].childNodes[0].textContent;
+	//	Page.innerHTML += txt;
+	//	Page.innerHTML += "<br>";
+	//}
+	displayTree(xhr, 1);                     
+}
+//
+// loop through the xml tree
+//
+function displayTree(docObject, N) {
+    var child;
+    var i, length;
+    var indentStr;
+    var A, Attr, AttrList;
+	//console.log("In displaytree");
+
+    // Indent string for displaying child nodes
+    indentStr = "";
+    for (i = 1; i <= N; i++)
+       indentStr = indentStr + "&nbsp;";
+	//console.log(indentStr);
+
+	//console.log(docObject.children);
+    // Get the number of child elements 
+    if (docObject.children != null) 
+       length = docObject.children.length;
+    else
+       length = 0;
+    
+//  Display the element information, indenting child nodes.
+
+//  Only display elements
+    if (docObject.nodeType == 1) {
+       Page.innerHTML += indentStr + "=====";
+       Page.innerHTML += indentStr + "Element Type: " + GetTypeStr(docObject.nodeType);
+       Page.innerHTML += indentStr + "Tag Name: " + docObject.tagName;
+
+//  This only looks for "ID" attributes
+       Attr = docObject.getAttribute("id");    
+       Page.innerHTML += indentStr + "Attribute: " + Attr;
+
+       Page.innerHTML += indentStr + "Number of Children: " + length;
+//  skip text for root node
+       if (docObject.parent != null)           
+          Page.innerHTML += indentStr + "Text: " + docObject.text;
+       Page.innerHTML += indentStr + "=====<BR>";
+     }
+
+// If the element has children, call displayTree recursively
+    if (docObject.children != null) {
+
+          for (i = 0; i < docObject.children.length; i++) {
+            if (N = length)
+               N = N + 1;
+            child = docObject.children.item(i);
+            displayTree(child, N);
+        }
+    }
+}
+//
+// what type is this node
+//
+function GetTypeStr(type) {
+
+  if (type == 0)
+    return "ELEMENT";
+
+  if (type == 1)
+    return "TEXT";
+
+  if (type == 2)
+    return "COMMENT";
+
+  if (type == 3)
+    return "DOCUMENT";
+
+  if (type == 4)
+    return "DTD";
+  else
+    return "OTHER";
+}
+</script>
+<div id="xmlResults"></div>
+</BODY>
+</HTML>

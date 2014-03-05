@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Running code when a page is ready</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        $("p.second").addClass("striped");
+      });
+    </script>
+    <style>
+      p.second {
+        font-weight: plaint;
+      }  
+      p.striped {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+
+  <body>
+  <h1>Running code when a page is ready</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p class="second">This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  </body>
+</html>

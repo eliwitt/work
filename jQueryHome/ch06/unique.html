@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Eliminating duplicate elements</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(document).ready(function(){
+    
+        var array = $("p").get();
+
+        array = array.concat($(".duplicateMe").get());
+        $("p:eq(1)").text("There are " + array.length + " elements.");
+
+        array = jQuery.unique(array);
+        $("p:eq(2)").text("There are " + array.length + " unique elements.");
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Eliminating duplicate elements</h1>
+    <p class="duplicateMe"></p>
+    <p class="duplicateMe"></p>
+    <p class="duplicateMe"></p>
+    <p></p>
+  </body>
+</html>

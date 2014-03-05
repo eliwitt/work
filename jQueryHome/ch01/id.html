@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Select a paragraph</title>
+
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+
+    <script type="text/javascript">
+      function stripe() {
+        $('#third').toggleClass('striped');;
+      }
+      function selectElement() {
+        $('p')[0].innerHTML =
+		"<i>Hello There!</i>";
+      }
+    </script>
+
+    <style>
+      p.striped {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Select a paragraph</h1>
+
+    <div>
+      <p>This is paragraph 1.</p>
+      <p>This is paragraph 2.</p>
+      <p id="third">This is paragraph 3.</p>
+      <p>This is paragraph 4.</p>
+    </div>
+
+    <form>
+     <input type = "button" value="Stripe"
+       onclick="stripe()"
+     </input>
+
+     <input type = "button" value="Select"
+       onclick="selectElement()"
+     </input>
+    </form>
+  </body>
+</html>

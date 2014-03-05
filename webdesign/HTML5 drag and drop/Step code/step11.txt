@@ -1,0 +1,1 @@
+function dragOverHandler(event) {   	 	event.dataTransfer.dropEffect = 'move';   	 	event.preventDefault();  }

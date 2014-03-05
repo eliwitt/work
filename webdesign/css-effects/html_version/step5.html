@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>CSS Visual Effects 5: Animation</title> 
+ 
+	<!-- stylesheets --> 
+	<link rel="stylesheet" href="css/screen.css" type="text/css" /> 
+	
+	<!-- javascripts --> 
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+
+<style type="text/css"> 
+#robot img {
+  opacity:1;
+  -webkit-animation-name: hello-robot;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+}
+ 
+@-webkit-keyframes hello-robot {
+  0% {
+    opacity:0;
+  }
+  20% {
+    opacity:.4;
+  }
+  40% {
+    opacity:.1;
+  }
+  60% {
+    opacity:.6;
+  }
+  80% {
+    opacity:.4;
+  }
+  100% {
+    opacity:1;
+  }
+}
+ 
+#robot:hover img {
+  opacity:0;
+  -webkit-animation-name: goodbye-robot;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+}
+ 
+ 
+@-webkit-keyframes goodbye-robot {
+  0% {
+    opacity:1;
+  }
+  20% {
+    opacity:.6;
+  }
+  40% {
+    opacity:.9;
+  }
+  60% {
+    opacity:.4;
+  }
+  80% {
+    opacity:.6;
+  }
+  100% {
+    opacity:0;
+  }
+}
+ 
+</style> 
+ 
+</head> 
+ 
+<body> 
+<header id="header"> 
+		<h1>CSS Visual Effects</h1> 
+		<nav class="nav"> 
+			<ul> 
+				<li><a href="index.html">1: Transitioning a Link Color</a></li> 
+				<li><a href="step2.html">2: Multiple Transition Properties</a></li> 
+				<li><a href="step3.html">3: Motion</a></li> 
+				<li><a href="step4.html">4: Transform</a></li> 
+				<li><a href="step5.html" class="active">5: Animation</a></li> 
+			</ul> 
+		</nav> 
+</header> 
+ 
+<div class="content">	
+ 
+ 
+<div class="section clearfix"> 
+<h2>Robot Keyframe Animation</h2> 
+<div class="explanation"> 
+<code><pre> 
+@-webkit-keyframes appear {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+</pre></code> 
+ 
+<code><pre> 
+#robot img {
+  opacity:1;
+  -webkit-animation-name: hello-robot;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+}
+ 
+@-webkit-keyframes hello-robot {
+  0% {
+    opacity:0;
+  }
+  20% {
+    opacity:.4;
+  }
+  40% {
+    opacity:.1;
+  }
+  60% {
+    opacity:.6;
+  }
+  80% {
+    opacity:.4;
+  }
+  100% {
+    opacity:1;
+  }
+}
+</pre></code> 
+ 
+ 
+ 
+<strong>Make the Robot Disappear on Hover</strong> 
+ 
+ 
+<code><pre> 
+@-webkit-keyframes goodbye-robot {
+  0% {
+    opacity:1;
+  }
+  20% {
+    opacity:.6;
+  }
+  40% {
+    opacity:.9;
+  }
+  60% {
+    opacity:.4;
+  }
+  80% {
+    opacity:.6;
+  }
+  100% {
+    opacity:0;
+  }
+}
+</pre></code> 
+</div> 
+ 
+	<div class="example"> 
+		<a id="robot"><img src="img/robot.jpg" alt="paravel robot"/></a> 
+	</div> 
+</div> 
+ 
+ 
+<div id="footer"> 
+<p>Code by <a href="http://paravelinc.com">Paravel</a></p> 
+</div> 
+</div> 
+</body> 
+</html>

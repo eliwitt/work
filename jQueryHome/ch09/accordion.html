@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Using an accordion</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+  <script >
+  $(document).ready(function(){
+    $("#accordion").accordion();
+  });
+  </script>
+</head>
+<body style="font-size:65%;">
+  <h1>Using an accordion</h1>
+<div id="accordion">
+	<h3><a href="#">Section 1</a></h3>
+	<div>
+		<p>
+This is the first section.
+		</p>
+	</div>
+	<h3><a href="#">Section 2</a></h3>
+	<div>
+		<p>
+This is the second section.
+		</p>
+	</div>
+	<h3><a href="#">Section 3</a></h3>
+	<div>
+		<p>
+This is the third section.
+		</p>
+		<ul>
+			<li>List item one</li>
+			<li>List item two</li>
+			<li>List item three</li>
+		</ul>
+	</div>
+	<h3><a href="#">Section 4</a></h3>
+	<div>
+		<p>
+This is the fourth section.
+		</p>
+	</div>
+</div>
+
+</body>
+</html>

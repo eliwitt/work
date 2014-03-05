@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Select the first of a set of elements
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+//    example of setting the first paragraph's style
+      function setStyle() 
+      {
+        $('p:first').css("font-style", "italic");
+      }
+//    example of setting the third paragraph
+	function stripe() {
+		$('#third')
+		.toggleClass('striped');;
+	}
+    </script>
+<style>
+	p.striped{
+		background-color:cyan;
+}
+</style>
+  </head>
+
+  <body>
+  <h1>Select the first of a set of elements</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p id="third">This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" 
+     value="Style first paragraph"
+   onclick="setStyle()"
+   </input>
+   <input type = "button" 
+     value="Style on the Third paragraph"
+   onclick="stripe()"
+   </input>
+  </form>
+  </body>
+</html>

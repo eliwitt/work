@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Setting an alt attribute
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function setAlt() 
+      {
+        $("img:first").attr("alt", "These are flowers.");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Setting an alt attribute</h1>
+    <img src="image1.jpg">
+    </img>
+    <img src="image2.jpg">
+    </img>
+    <br>
+    <form>
+    <input type = "button" 
+      value="Set alt attribute"
+      onclick="setAlt()"
+    </input>
+    </form>
+  </body>
+</html>

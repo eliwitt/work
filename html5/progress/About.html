@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>About Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<srcipt src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style rel="stylesheet" type="text/css">
+header#rectangle {
+	background: #6d6e72;
+	height: 50px;
+	width: 970px;  /*  380px */
+	position: relative;
+	left:-15px;
+	top: 10px;
+	float: left;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	z-index: 100; 
+}
+
+header#rectangle h2 {
+	font-size: 30px;
+	color: #fff;
+	padding-top: 6px;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.left_tri {
+	border-color: transparent #333 transparent transparent;
+	border-style:solid;
+	border-width:15px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: -30px;
+	top: 45px;
+	z-index: -1;  /* displayed under rectangle  */
+}
+
+.right_tri {
+	border-color: transparent transparent transparent #333;
+	border-style:solid;
+	border-width:15px;
+	height:0px;
+	width:0px;
+	position: relative;
+	left: 940px;   /*  350px */
+	top: 15px;
+	z-index: -1; 
+}
+</style>
+</head>
+<body>
+	<content>
+	<!--  the body content goes in here -->
+		<header>
+		<a href="index.html" id="logo">Home</a>
+		<h1>HTML5, CSS3, and jQuery</h1>
+		<p>My first shot using the Killersites demo</p>
+		</header>
+
+
+		<header id="rectangle">
+			<h2 id="ribbon">What is this site all about?</h2>
+		</header>
+			<div class="left_tri"></div>
+			<div class="right_tri"></div>
+		
+
+		<nav>
+		<ul>
+			<li><a class="nav1" href="index.html">Home</a></li>
+			<li><a href="About.html">About</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Clients</a></li>
+			<li><a href="#">Employment</a></li>
+			<li><a href="#">Contact</a></li>
+	  </ul>
+		</nav>
+
+		<article>
+			<h2>About</h2>
+			<p>This site is about learning new HTML5, CSS3, and jQuery.</p>
+				<h3>HTML5</h3>
+				<p>What are the new features and how can we use them in Biz.</p>
+			<section class="leftfloat">
+				<h3>CSS3</h3>
+				<p>What features in CSS3 to use and in which browsers will they work.</p>
+			</section>
+			<section class="rightfloat">
+				<h3>jQuery</h3>
+				<p>jQuery has a lot of features we can use and have.</p>
+			</section>
+			<br class="clearing">
+			<h3>Putting it all Together</h3>
+			<p>Take the new features and build something.</p>
+		</article>
+
+		<footer>
+			<section class="first">
+				<p>&copy;John S. Witt</p>
+			</section>
+			<section>
+				<h3>Testing</h3>
+				<p>Testing 1, 2, 3 and 4
+			</section>
+			<section>
+				<h3>Coding</h3>
+				<p>I love coding and have done this all of <a href="http://www.msn.com">my life</a>.</p>
+			</section>
+			<section>
+				<h3>Running</h3>
+				<p>Running is not my thing</p>
+			</section>			
+			<br class="clearing">
+		</footer>
+
+	</content>
+</body>
+</html>

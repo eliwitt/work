@@ -1,0 +1,1 @@
+.presentation { 	width: 520px; 	float: left; 	margin-top: 40px; }.presentation h2 { 	font-size: 46px; 	text-shadow: 2px 2px 0px #eee; 	padding-right: 50px;}.presentation p { 	font-size: 20px; 	color: #bbb; 	margin-top: 30px; 	line-height: 1.5em; 	padding-right: 50px; }a.text_cta {	color: #49c4da;}a.text_cta2 {	color: #f9bc4b;}

@@ -1,0 +1,1 @@
+//add the class to the item dragged in to give user feedback  dragged.className = 'in';

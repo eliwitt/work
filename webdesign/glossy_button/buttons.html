@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	<title>Button Examples</title>
+	<style type='text/css'>
+		#css3 a {
+		
+			/* style the label */
+			font: bold 14px Helvetica, Verdana, Arial, sans-serif;
+			text-decoration: none;
+			color: #FFFFFF;
+			
+			/* give button dimension */
+			display: inline-block;	
+			padding: 0px 14px;
+			line-height: 30px;
+			background-color: #00a9e4;
+		
+			/* rounded corners */
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+		
+			/* inset shadow */
+			text-shadow: -1px -1px 1px rgba(0,0,0,.3);
+		
+			/* drop shadow */
+			-webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+			-moz-box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+			box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+		
+			/* add gloss */
+			background-image: -webkit-gradient(linear, 
+				0 45%, 
+				0 55%, 
+				from(rgba(255,255,255,.4)), 
+				to(rgba(255,255,255,0)));
+			background-image: -moz-linear-gradient(270deg, 
+				rgba(255,255,255,.4) 45%, 
+				rgba(255,255,255,.0) 55%);
+			-webkit-animation-delay:45s;
+			-webkit-animation-name: call_to_action;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-direction:alternate;			
+			-webkit-animation-iteration-count:infinite;			
+			-webkit-animation-timing-function:ease-in-out;			
+		}
+		
+		/* call to action css3 logic */
+		@-webkit-keyframes call_to_action
+		{
+		    0% {-webkit-transform:scale(1); background-color:Aqua; }
+		    100% {-webkit-transform:scale(2); background-color:Yellow; }
+		}
+	</style>
+</head>
+	<body>
+		
+		<h3>CSS3</h3>
+		<p id='css3'><a href='http://bkwld.com'>Visit BKWLD</a></p>
+
+		<h3>HTML5 canvas</h3>
+		<canvas id='button' width='120' height='36'>
+			<a href="http://bkwld.com">Visit BKWLD</a>
+		</canvas>
+		<script language='javascript'>
+		
+			//get context
+			var el = document.getElementById('button');
+			var context = el.getContext('2d');
+
+			//add button action
+			el.style.cursor = 'pointer';
+			el.onclick = function() {
+				window.location = 'http://bkwld.com';
+			}
+
+			//size vars
+			var w = 115;
+			var h = 30;
+
+			//draw oval
+			context.beginPath();
+			context.arc(h/2, h/2, h/2, Math.PI/2, Math.PI*3/2, false);
+			context.lineTo(w-h/2, 0);
+			context.arc(w-h/2, h/2, 15, Math.PI*3/2, Math.PI/2, false);
+			context.lineTo(h/2, h);
+
+			//add base color and shadow
+			context.fillStyle = '#00a9e4';
+			context.shadowOffsetX = context.shadowOffsetY = 2;
+			context.shadowBlur = 4;
+			context.shadowColor = 'rgba(0,0,0,.3)';
+			context.fill();
+
+			//create gloss
+			var gradient = context.createLinearGradient(0, 0, 0, h);
+			gradient.addColorStop(.45, 'rgba(255,255,255, .4)');
+			gradient.addColorStop(.55, 'rgba(255,255,255, 0)');
+			context.fillStyle = gradient;
+			context.shadowColor = null;
+			context.fill();
+
+			//add text
+			context.font = 'bold 14px Helvetica, Verdana, Arial, sans-serif';
+			context.shadowOffsetX = context.shadowOffsetY = -1;
+			context.shadowBlur = 1;
+			context.shadowColor = 'rgba(0,0,0,.3)';
+			context.fillStyle = '#FFFFFF';
+			context.textAlign = 'center';
+			context.textBaseline = 'middle';
+			context.fillText('Visit BKWLD', w/2, h/2);
+		
+		</script>
+	</body>
+</html>

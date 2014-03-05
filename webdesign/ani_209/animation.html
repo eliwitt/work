@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>.net CSS3 demotron: *ON*</title>
+<style type="text/css">
+/*<![CDATA[*/
+
+/* Hello, viewers! */
+
+* {
+padding: 0; margin: 0;
+}
+body {
+background: #000000;
+padding-top: 40px;
+font: 16px Arial, sans-serif;
+color: #aaaaaa;
+}
+#wrapper {
+margin: 0 auto;
+text-align: center;
+width: 400px;
+padding: 20px;
+border: 1px dotted #666;
+}
+h1 {
+font-size: 20px; margin-bottom: 10px;
+}
+h2 {
+font-size: 16px; margin-bottom: 10px;
+}
+
+.demo {
+text-align: center;
+padding: 20px 40px;
+margin: 0 -20px;
+border-top: 1px dotted #666;
+background: #000;
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.1s;
+}
+.demo img {
+display: block;
+margin: 0 auto;
+}
+.demo:hover {
+cursor: pointer;
+background: #222;
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.1s;
+}
+
+.nh:hover {
+cursor: auto;
+background: none;
+}
+
+/* 
+This is the animation section. 
+For brevity, we've gone for WebKit, but you can often use -moz- and -o- for Moz/Opera. 
+Note: keyframing currently requires WebKit.
+Also, WebKit shorthand-a-go-go examples at http://webkit.org/blog/138/css-animation/
+More on the working draft at http://www.w3.org/TR/css3-animations/
+*/
+
+.fade-in img {
+opacity: 0.2;
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.8s;
+}
+.fade-in:hover img {
+opacity: 1; 
+-webkit-transition-timing-function: ease-in;
+-webkit-transition-duration: 0.2s;
+}
+
+.scale-anim img {
+-webkit-transform: scale(1);
+-webkit-transition-timing-function: ease-in;
+-webkit-transition-duration: 0.3s;
+}	
+.scale-anim:hover img {
+-webkit-transform: scale(0.1);
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.3s;
+}
+	
+.slide-anim img {
+opacity: 0.2;
+margin-right: auto;
+-webkit-transition-timing-function: ease-in;
+-webkit-transition-duration: 0.3s;
+}	
+.slide-anim:hover img {
+opacity: 1;
+margin-right: -200px;
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.3s;
+}	
+
+.combo img {
+opacity: 1;
+margin-right: auto;
+-webkit-transform: scale(1);
+-webkit-transition-timing-function: ease-in;
+-webkit-transition-duration: 0.3s;
+}	
+.combo:hover img {
+opacity: 0.1;
+margin-right: -200px;
+-webkit-transform: scale(0.1);
+-webkit-transition-timing-function: ease-out;
+-webkit-transition-duration: 0.3s;
+}	
+	
+@-webkit-keyframes fidgetlogo {
+0% {padding-left: 0; -webkit-transform: rotate(0deg);}
+15% {padding-left: 250px; -webkit-transform: rotate(30deg);}
+70% {padding-left: 0; -webkit-transform: rotate(0deg);}
+80% {padding-left: 100px; -webkit-transform: rotate(-75deg);}
+100% {padding-left: 0; -webkit-transform: rotate(0deg);}
+}
+
+.keyframe-demo:hover img {
+-webkit-animation-name: fidgetlogo;
+-webkit-animation-duration: 3s;
+-webkit-animation-iteration-count: infinite;
+}
+	
+/*]]>*/
+</style>
+</head>
+<body>
+  <div id="wrapper">
+  <h1>.net CSS3 animation effects demo&mdash;open in a WebKit browser</h1>
+    <div class="demo fade-in">
+    <h2>Quick fade-in, slow fade-out</h2>
+      <img src="netmag-logo.png" alt=".net logo" width="256" height="133" />
+    </div>
+    <div class="demo scale-anim">
+    <h2>Scale demo</h2>
+      <img src="netmag-logo.png" alt=".net logo" width="256" height="133" />
+    </div>
+    <div class="demo slide-anim">
+    <h2>Slide demo</h2>
+      <img src="netmag-logo.png" alt=".net logo" width="256" height="133" />
+    </div>
+    <div class="demo combo">
+    <h2>Super combo! Run and hide, .net logo!</h2>
+      <img src="netmag-logo.png" alt=".net logo" width="256" height="133" />
+    </div>
+    <div class="demo keyframe-demo">
+    <h2>Mr. Keyframe</h2>
+      <img src="netmag-logo.png" alt=".net logo" width="256" height="133" />
+    </div>
+    <div class="demo nh">
+    <h2>That's all, folks!</h2>
+    <p>No, really. Want more? <em>Experiment!</em></p>
+    </div>
+  </div>
+</body>
+</html>

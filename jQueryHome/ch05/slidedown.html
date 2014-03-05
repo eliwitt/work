@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Sliding elements up and 
+      down</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function slideup() 
+      {
+        $('#first').slideUp("slow");
+      }
+      function slidedown() 
+      {
+        $('#first').slideDown("slow");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Sliding elements up and down</h1>
+    <div>
+      <p id="first">Here is some text.</p>
+      <p>This is also text.</p>
+      <p>And here's some more text.</p>
+    </div>
+  <form>
+   <input type = "button" 
+     value="Slide up"
+     onclick="slideup()"
+   </input>
+
+   <input type = "button" 
+      value="Slide down"
+     onclick="slidedown()"
+   </input>
+  </form>
+
+  </body>
+</html>

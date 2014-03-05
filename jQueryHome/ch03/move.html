@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Moving elements</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      function addContent() 
+      {
+    $("p:last").append($("p:first"));
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Moving elements</h1>
+    <p>The first shall be last.</p>
+    <p>The last shall be first.</p>
+    <form>
+    <input type = "button" 
+      value="Move"
+      onclick="addContent()"
+    </input>
+    </form>
+  </body>
+</html>

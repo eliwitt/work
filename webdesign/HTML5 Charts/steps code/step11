@@ -1,0 +1,23 @@
+
+
+	/* Interactive Infographic */
+	
+	$(document).ready(function(){
+		// Code here will execute once the page has loaded
+		
+		// Set the values for the different charts and labels
+		
+		
+		$("#chart1_bar2 .label").text($("#td2_2").text());
+		$("#chart2_bar2 .label").text($("#td2_3").text());
+		$("#chart1_bar1 .label").text($("#td3_2").text());
+		$("#chart2_bar1 .label").text($("#td3_3").text());
+		$("#2009total").text(parseInt($("#td2_2").text())+parseInt($("#td3_2").text()));
+		$("#2010total").text(parseInt($("#td2_3").text())+parseInt($("#td3_3").text()));
+		$("#2009aid").text("$"+$("#td4_2").text()+"m");
+		$("#2010aid").text("$"+$("#td4_3").text()+"m");
+		
+		
+		
+		
+	});

@@ -1,0 +1,15 @@
+﻿h1 {
+	
+width:			700px;
+margin:		auto;
+font-size:		142px;
+font-family: 		'Lobster', arial, serif;
+
+color:			#444;
+
+line-height:		120px;
+margin-bottom:	0;
+font-weight:		bold;
+padding-bottom:	20px;
+}
+ 

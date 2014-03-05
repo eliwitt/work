@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Hide and show paragraphs</title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function hide() 
+      {
+        $('p:first').hide();
+      }
+
+      function show() 
+      {
+        $('p:first').show();
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Hide and show paragraphs</h1>
+  <div>
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" value="Hide paragraph"
+   onclick="hide()"
+   </input>
+   <input type = "button" value="Show paragraph"
+   onclick="show()"
+   </input>
+  </form>
+  </body>
+</html>

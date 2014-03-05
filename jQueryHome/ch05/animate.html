@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  
+    <script>
+      function animator()
+      {
+        $("#target").animate({ 
+          width: "80%",
+          opacity: 0.333,
+          fontSize: "26pt", 
+          marginLeft: "0.5in",
+          borderWidth: "15px"
+        }, 2000 );
+      }
+    </script>
+
+    <style>
+      div { 
+        background-color:cyan; 
+        width:100px; 
+        border:1px solid blue;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Creating custom animation</h1>
+    <div id="target">Expand me</div>
+    <br>
+    <form>
+    <button onclick="animator()">Animate</button>
+    </form>
+  </body>
+</html>

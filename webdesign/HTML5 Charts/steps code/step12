@@ -1,0 +1,22 @@
+
+		
+		// Store the values from the table
+		
+		bar1 = parseInt($("#td2_2").text());
+		bar2 = parseInt($("#td2_3").text());
+		bar3 = parseInt($("#td3_2").text());
+		bar4 = parseInt($("#td3_3").text());
+		
+		area1 = parseFloat($("#td4_2").text());
+		area2 = parseFloat($("#td4_3").text());
+		
+		// Find the biggest value for the bar chart
+		
+		biggestbar = bar1;
+		if (bar2>biggestbar)
+			biggestbar = bar2;
+		if (bar3>biggestbar)
+			biggestbar = bar3;
+		if (bar4>biggestbar)
+			biggestbar = bar4;
+		

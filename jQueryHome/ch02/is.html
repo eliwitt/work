@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Checking the types of matches
+    </title>
+    <script type="text/javascript"  
+      src="http://code.jquery.com/jquery-latest.js">  
+    </script>
+    <script type="text/javascript">
+      function checkType() 
+      {
+        if($('#p1').is('p')){
+          alert("The element with ID p1 is a <p> element");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+  <h1>Checking the types of matches</h1>
+  <div>
+  <p id="p1">This is paragraph 1.</p>
+  <p id="p2">This is paragraph 2.</p>
+  <p id="p3">This is paragraph 3.</p>
+  <p id="p4">This is paragraph 4.</p>
+  </div>
+  <form>
+   <input type = "button" 
+     value="Select"
+   onclick="checkType()"
+   </input>
+  </form>
+  </body>
+</html>

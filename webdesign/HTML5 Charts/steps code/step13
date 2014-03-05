@@ -1,0 +1,25 @@
+		// Find the biggest value for the bar chart
+		
+		biggestbar = bar1;
+		if (bar2>biggestbar)
+			biggestbar = bar2;
+		if (bar3>biggestbar)
+			biggestbar = bar3;
+		if (bar4>biggestbar)
+			biggestbar = bar4;
+		
+		// Get the relative heights
+		
+		maxheight = 350;
+		
+		bar1height = (bar1/biggestbar) * maxheight;
+		bar2height = (bar2/biggestbar) * maxheight;
+		bar3height = (bar3/biggestbar) * maxheight;
+		bar4height = (bar4/biggestbar) * maxheight;
+		
+		// Set the height using CSS
+		
+		$("#chart1_bar1").css({height:bar1height});
+		$("#chart1_bar2").css({height:bar2height});
+		$("#chart2_bar1").css({height:bar3height});
+		$("#chart2_bar2").css({height:bar4height});

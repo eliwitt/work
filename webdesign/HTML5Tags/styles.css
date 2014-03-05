@@ -1,0 +1,176 @@
+/* CSS reset - best to start from scratch */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	
+}
+
+ol, ul, li{
+	list-style: none;
+}
+
+/***************************************************
+ these tags below have to be declared as block level elements
+for browsers to render them (E.g - bloody IE!)
+****************************************************/
+
+header, nav, footer, section {
+	
+	display: block;	
+		
+	
+}
+
+/**********************/
+
+body {
+	
+	background-color: #babaa9;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;	
+}
+
+#wrapper {
+	
+	width: 960px;
+	height: 1000px;
+	margin: 0 auto;
+	background: url('images/bg.png')repeat-x;
+		
+}
+
+header {
+	
+	width: 900px;	
+}
+
+#logo {
+	
+	margin: 0 0 0 15px;
+}
+
+nav {
+	
+	float: right;
+	width: 550px;
+	height: 45px;
+	margin: 40px -120px 0 0;
+	background: url('images/navbar.png')no-repeat;	
+}
+
+nav li {
+	
+	display: block;
+	float: left;
+	margin-top: -5px;
+	font-size: 14px;
+	text-transform: capitalize;
+		
+}
+
+nav li a {
+
+	text-decoration: none;
+	margin-left: 23px;
+	padding-right: 23px;
+	color: #b4b492;	
+	font-weight: bold;
+}
+
+nav li a:hover { color: #635c49; font-weight: bold;}
+
+.current {
+	
+	color: #635c49; 	
+}
+
+#latest_line {
+	
+	margin: 25px 0 0 25px;	
+}
+
+section {
+	
+	float: left;
+	width: 500px;
+}
+
+#tag_line {
+	
+	float: left;
+    margin: 60px 0 0 20px;		
+}
+
+blockquote {
+	
+	float: left;
+	margin: 15px 0 0 25px;
+	width: 375px;
+	padding: 45px 45px 35px 90px;
+	background:url('images/quotes.png') no-repeat 20px 20px rgba(178,178,169,0.2);
+	min-height:90px;
+	
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+}
+
+blockquote, h1 {
+	
+	font-family: Century Gothic, "Courier New", Courier, monospace;
+	font-size: 18px;
+	font-weight: none;
+	color: #999;	
+}
+
+.client { 
+
+	
+	font-size: 13px;
+	float: right;
+	margin-top: 50px;
+	color: #693;
+}
+
+
+aside {
+	
+	background: url('images/sidebar_design.png') no-repeat;
+	float: right;
+	height: 495px;
+	width: 353px;
+	margin: 30px 30px 120px 0; 
+}
+
+
+
+footer {
+	
+	background: url('images/footer_bg.png')repeat-x;
+	width: 960px;
+	height: 229px;
+	clear: both;
+	
+}
+
+#footer_logo {
+	
+	float: right;
+	margin: 100px 50px;
+	font-size: 9px;
+		
+}
+
+#HTML5_Logo {
+	
+	background: url('images/HTML5_Logo.png')no-repeat;
+	height: 64px;
+	width: 64px;
+	float: left;
+	margin: 100px 50px;	
+}
+

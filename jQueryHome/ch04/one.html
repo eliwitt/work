@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Allowing event handlers to be called only once</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+  
+    <script>
+      $(function(){
+        $('#target')
+          .one('click',function(event) {
+            alert('Hello!');
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Allowing event handlers to be called only once</h1>
+    <h1>Click the flower...</h1>
+    <img id="target" src="Image1.jpg"/>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Bills</title>
+	<script type="text/javascript" language="JavaScript">
+	//
+	// this function handles the skipping of fields when the correct
+	// length to determine the jump is passed to it.
+	//
+	function jump2(element, content, next)
+	{
+	    //alert('element ' + element.maxLength + ' content ' + content + ' next ' + next);
+		switch(window.event.keyCode) {
+			case 9:
+				break
+			case 16:
+				break
+			default:
+			if (content.length==element.maxLength) {
+				if (next<document.forms["RegPayment"].elements.length) {
+					document.forms["RegPayment"].elements[next].focus()
+				}		
+			}
+		}
+	}
+
+	//var objDivStyle = eval('document.all.regCheck.style');
+	//alert('What is the style for check ' + objDivStyle.visibility);
+	//objDivStyle.visibility = 'visible';
+	function openCCtbl()
+	{
+	document.all.regCheck.style.visibility = 'hidden';
+	document.all.regbut.style.visibility = 'hidden';
+	document.all.regcc.style.visibility = 'visible';
+	}
+	function openChecktbl()
+	{
+	document.all.regCheck.style.visibility = 'visible';
+	document.all.regbut.style.visibility = 'hidden';
+	document.all.regcc.style.visibility = 'hidden';
+	}
+	function reset2Top()
+	{
+	//
+	// this function resets everything back to the top
+	// should the users want to clear additional fields
+	// you would do it here.
+	//
+	document.all.regbut.style.visibility = 'visible';
+	document.all.regCheck.style.visibility = 'hidden';
+	document.all.regcc.style.visibility = 'hidden';
+	document.all.firstname.value = '';	
+	document.all.lastname.value = '';
+	document.all.address1.value = '';
+	document.all.address2.value = '';
+	document.all.city.value = '';
+	document.all.state.value = '';
+	document.all.zip.value = '';
+	document.all.phonenu.value = '';
+	document.all.email.value = '';
+	document.all.cctype.value = '0';
+	document.all.ccnum.value = '';
+	document.all.ccmo.value = '';
+	document.all.ccyyyy.value = '';
+	document.all.bankrout.value = '';
+	document.all.acctnu.value = '';
+	document.all.acctType.value = '0';
+	document.all.payCC.checked = false;
+	document.all.payCheck.checked = false;
+	}
+	</script>
+</head>
+<body>
+<form name="RegPayment" action="readme.htm">
+<div id="regbut">
+<table id="regButton" border="0" width="80%">
+	<tbody>
+		<tr>
+			<td>
+			<input type="radio" name="payCC" value="1" onclick="openCCtbl()"/>Credit Card
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="radio" name="payCheck" value="2" onclick="openChecktbl()"/>Checking Account
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" name="butCan" value="Cancel" onclick="history.back();"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!-- ==================Start of the dynamic cc and echeck tables============== -->
+<div id="regcc" style="position:relative;top:-90px;visibility:hidden">
+<table id="regmain" border="0" width="80%">
+	<tbody>
+		<tr>
+			<td colspan="4">
+			Enter the information below as it appears on the credit card billing statement.
+			</td>
+		</tr>
+		<tr><td><br/></td></tr>
+		<tr>
+			<td colspan="2">First Name:</td>
+			<td colspan="2">Last Name:</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="text" name="firstname" size="15" maxlength="15" onkeyup="jump2(this,this.value,4)"/></td>
+			<td colspan="2"><input type="text" name="lastname" size="35" maxlength="35" onkeyup="jump2(this,this.value,5)"/></td>
+		</tr>
+		<tr>
+			<td colspan="4">Street Address:</td>
+		</tr>		
+		<tr>
+			<td colspan="4"><input type="text" name="address1" size="50" maxlength="50" onkeyup="jump2(this,this.value,6)"/></td>
+		</tr>
+		<tr>
+			<td colspan="4">Second Street Address:</td>
+		</tr>		
+		<tr>
+			<td colspan="4"><input type="text" name="address2" size="50" maxlength="50" onkeyup="jump2(this,this.value,7)"/></td>
+		</tr>
+		<tr>
+			<td>City:</td>
+			<td>State:</td>
+			<td align="left">Zip:</td><td></td>
+		</tr>		
+		<tr>
+			<td><input type="text" name="city" onkeyup="jump2(this,this.value,8)"/></td>
+			<td><input type="text" name="state" size="2" maxlength="2" onkeyup="jump2(this,this.value,9)"/></td>
+			<td align="left"><input type="text" name="zip" size="5" maxlength="5" onkeyup="jump2(this,this.value,10)"/></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td colspan="2">Email address:</td>
+		</tr>		
+		<tr>
+			<td><input type="text" name="phonenu" size="14" maxlength="13" onkeyup="jump2(this,this.value,11)"/></td>
+			<td colspan="2"><input type="text" name="email" onkeyup="jump2(this,this.value,12)"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td><td></td>
+			<td>Expiration Date</td>
+		</tr>
+		<tr>
+			<td>Credit Card Type</td>
+			<td colspan="2">Credit Card Number</td>
+			<td>(MM/YY)</td>
+		</tr>
+		<tr>
+			<td><select size="1" name="cctype">
+			    <option value="0"></option>
+				<option value="1">VISA</option>
+				<option value="2">MasterCard</option>
+				</select>
+			</td>
+			<td colspan="2"><input type="text" name="ccnum" size="18" maxlength="16" onkeyup="jump2(this,this.value,14)"/></td>
+			<td>
+				<input type="text" name="ccmo" maxlength="2" size="2" onkeyup="jump2(this,this.value,15)"/>&nbsp;/
+				<input type="text" name="ccyyyy" maxlength="2" size="2" onkeyup="jump2(this,this.value,16)"/>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"  align="right">
+			<input type="submit" name="bntVerify" value="Continue"/>
+			<input type="button" name="bntCan" value="Cancel" onclick="reset2Top();"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!-- ==========================  Middle of the screen ======================== -->
+<div id="regCheck" style="position:relative;top:-460px;visibility:hidden">
+<table border="0" width="80%">
+	<tbody>
+	<tr>
+		<td colspan="2"><u>Enter Bank Account Details:</u></td>
+		<td rowspan="5"><img alt="The check" border="0" src="images\eCheck2.jpg" width="320" height="163"/></td>
+	</tr>
+	<tr>
+		<td><b>Bank Routing Number</b></td>
+		<td><input type="text" name="bankrout" size="15" maxlength="15" onkeyup="jump2(this,this.value,19)"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>United States Banks Only</td>
+	</tr>
+	<tr>
+		<td><b>Checking Account Number</b></td>
+		<td><input type="text" name="acctnu" size="15" maxlength="15" onkeyup="jump2(this,this.value,20)"/></td>
+	</tr>
+	<tr>
+		<td><b>Account Type</b></td>
+		<td><select name="acctType">
+			<option value="0"></option>
+			<option value="23">Test Checking</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" align="right">
+		<input type="submit" name="bntVerify" value="Continue"/>
+		<input type="button" name="bntCan" value="Cancel" onclick="reset2Top();"/>
+		</td>
+	</tr>	
+	</tbody>
+</table>
+</div>
+<!-- ==================End of the dynamic cc and echeck tables============== -->
+</form>
+<script type="text/javascript" language="javascript">
+	//
+	// this code runs at the start of the page and turns on the 
+	// credit card section of the page.
+	//
+	//document.all.regcc.style.visibility = 'visible';
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Using tabs</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabs").tabs();
+  });
+  </script>
+</head>
+<body style="font-size:65%;">
+    <h1>Using tabs</h1>
+<div id="tabs">
+    <ul>
+        <li><a href="#fragment-1"><span>Item one</span></a></li>
+        <li><a href="#fragment-2"><span>Item two</span></a></li>
+        <li><a href="#fragment-3"><span>Item three</span></a></li>
+    </ul>
+    <div id="fragment-1">
+        <p>This is tab one.</p>
+</pre>
+    </div>
+    <div id="fragment-2">
+        <p>This is tab two.</p>
+    </div>
+    <div id="fragment-3">
+        <p>This is tab three.</p>
+    </div>
+</div>
+</body>
+</html>

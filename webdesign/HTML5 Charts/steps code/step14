@@ -1,0 +1,11 @@
+		// Get the relative sizes
+		
+		maxwidth = 400;
+		
+		area1width = parseInt((area1/(area1+area2))*maxwidth);
+		area2width = parseInt((area2/(area1+area2))*maxwidth);
+		
+		// Set the area using CSS
+		
+		$("#chart3_area1").css({height:area1width,width:area1width});
+		$("#chart3_area2").css({height:area2width,width:area2width});

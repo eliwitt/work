@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using a progress bar</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#progressbar").progressbar({ value: 30 });
+  });
+  function increase()
+  {
+$("#progressbar").progressbar('value', 80);
+  }
+  </script>
+</head>
+<body style="font-size:65%;">
+  <h1>Using a progress bar</h1>
+<div id="progressbar"></div>
+   <form>
+    <input type="button" value="Increase" onclick="increase()"></input>
+   </form>
+</body>
+</html>

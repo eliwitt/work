@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>My html 5 template</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="../js/jquery.nav.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/scroller.css"/>
+<!--[if lt IE 9]>
+<srcipt src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- enable th jQuerry -->
+<script language="javascript">
+    $(document).ready(function () {
+        $('nav').onePageNav();
+    });
+</script>
+</head>
+<body>
+<content>
+	<!--  the body content goes in here -->
+<header class="scroll-item" id="section-1">
+
+		<article class="mod">
+        <section class="main">
+		<h1>HTML5, CSS3, and jQuery</h1>
+		<p>My first shot using the Killersites demo</p>
+        <p>
+        You have successfully communicated with the service.
+</p><p>
+We can create what is called a “Self-hosting” application that starts up the WCF service.  Self-hosting is the simplest way to host services.  You write the code necessary to initialize the ServiceHost and manage the service’s lifetime.  Console, WinForm, WPF, and windows services are examples of the types of projects that I am talking about.
+For this project you have to add references to all three libraries from above.  The System.ServiceModel, interface DemoInterfaces, and DemoCustomerBz are the libraries.
+</p>
+
+        </section>
+
+	<nav>
+		<ul>
+            <li class="current"><a href="#section-1">wed designer</a></li>
+			<li><a href="#section-2">News</a></li>
+			<li><a href="#section-3">Products</a></li>
+			<li><a href="#section-4">Services</a></li>
+			<li><a href="#section-5">Clients</a></li>
+	    </ul>
+	</nav>
+
+
+        </article>
+</header>	
+    <!-- overlays -->
+    <div class="scroll-item" id="section-2">
+    	<article class="mod">
+        <section class="main">
+		<h1>My first section of the demo for scroll items</h1>
+        <p>
+        I will place different items here that I feel does not fall into one of the other topics.
+        </p>
+        <p>
+I created a library that holds different classes one of those classes’ uses my customized collection class.  In the “CompareValues” method which you have to implement I compare values from different fields so I have to know the field’s type.
+</p>
+<p>
+ If TypeOf valueOfX Is Double Then
+     Dim myDbl As Double
+     Double.TryParse(ValueToFind.ToString, myDbl)
+     Dim comp As IComparable = CType(valueOfX, IComparable)
+     valCompare = comp.CompareTo(myDbl)
+</P>
+So “valCompare” holds 0=Equal, 1=Greater, or -1=Less which you can then decide with the additional help of a constraint variable to determine if you have a match. Note, you could use this same check in validation.
+
+Hook up an event.
+
+AddHandler Me._operation.ProgressChanged, AddressOf _oper_ProgressChanged
+
+A subreport event handler for an RDLC report.
+
+        </p>
+        </section>
+        </article>
+    </div>
+    
+     <div class="scroll-item" id="section-3">
+     	<article class="mod">
+        <section class="main">
+		<h1>My second section of the demo for scroll items</h1>
+        <p>
+        You can use LINQ with tableadapters.  There are two ways you can do this the first is to use the Field collection that the fill method populates as follows:
+                this.sAP2ChampsRunTableAdapter.Fill(this.sparePartsDS.SAP2ChampsRun);
+var partDt = (from partsrc in this.sparePartsDS.SAP2ChampsRun.AsEnumerable()
+              select partsrc.Field<DateTime>("PartsUpDt")).FirstOrDefault();
+this.tslPartDate.Text = "Parts as of " + partDt.Date.ToShortDateString();
+</p><p>
+Then the other way is to use the datatable and datarow collection that the GetData(type safe) method populates.
+</p><p>
+DataSets.SparePartsDS.SAP2ChampsRunDataTable myParts = this.SAP2ChampsRunTableAdapter.GetData();
+var partII = (from partSrc in myParts.AsEnumerable<DataSets.SparePartsDS.SAP2ChampsRunRow>()
+             select partSrc.PartsUpDt).FirstOrDefault();
+this.lblPartsUpDt.Text = "Parts as of " + partII.Date.ToShortDateString();
+
+
+        </p>
+        </section>
+        </article>
+    </div>
+    
+     <div class="scroll-item" id="section-4">
+        <article class="mod">
+        <section class="main">
+		<h1>My third section of the demo for scroll items</h1>
+        <p>
+        You can use LINQ with tableadapters.  There are two ways you can do this the first is to use the Field collection that the fill method populates as follows:
+                this.sAP2ChampsRunTableAdapter.Fill(this.sparePartsDS.SAP2ChampsRun);
+var partDt = (from partsrc in this.sparePartsDS.SAP2ChampsRun.AsEnumerable()
+              select partsrc.Field<DateTime>("PartsUpDt")).FirstOrDefault();
+this.tslPartDate.Text = "Parts as of " + partDt.Date.ToShortDateString();
+</p><p>
+Then the other way is to use the datatable and datarow collection that the GetData(type safe) method populates.
+
+DataSets.SparePartsDS.SAP2ChampsRunDataTable myParts = this.SAP2ChampsRunTableAdapter.GetData();
+var partII = (from partSrc in myParts.AsEnumerable<DataSets.SparePartsDS.SAP2ChampsRunRow>()
+             select partSrc.PartsUpDt).FirstOrDefault();
+this.lblPartsUpDt.Text = "Parts as of " + partII.Date.ToShortDateString();
+
+</p>
+        </section>
+        </article>
+    </div>
+
+     <div class="scroll-item" id="section-5">
+        <article class="mod">
+        <section class="main">
+		<h1>My forth section of the demo for scroll items</h1>
+<p>        
+        You can use LINQ with tableadapters.  There are two ways you can do this the first is to use the Field collection that the fill method populates as follows:
+                this.sAP2ChampsRunTableAdapter.Fill(this.sparePartsDS.SAP2ChampsRun);
+var partDt = (from partsrc in this.sparePartsDS.SAP2ChampsRun.AsEnumerable()
+              select partsrc.Field<DateTime>("PartsUpDt")).FirstOrDefault();
+this.tslPartDate.Text = "Parts as of " + partDt.Date.ToShortDateString();
+</P><p>
+Then the other way is to use the datatable and datarow collection that the GetData(type safe) method populates.
+
+DataSets.SparePartsDS.SAP2ChampsRunDataTable myParts = this.SAP2ChampsRunTableAdapter.GetData();
+var partII = (from partSrc in myParts.AsEnumerable<DataSets.SparePartsDS.SAP2ChampsRunRow>()
+             select partSrc.PartsUpDt).FirstOrDefault();
+this.lblPartsUpDt.Text = "Parts as of " + partII.Date.ToShortDateString();
+
+</p>
+        </section>
+        </article>
+    </div>
+
+		<footer>
+			<section class="first">
+				<p>&copy;John S. Witt</p>
+			</section>
+			<section>
+				<h3>Testing</h3>
+				<p>Testing 1, 2, 3 and 4
+			</section>
+			<section>
+				<h3>Coding</h3>
+				<p>I love coding and have done this all of my life</p>
+			</section>
+			<section>
+				<h3>Running</h3>
+				<p>Running is not my thing</p>
+			</section>			
+			<br class="clearing">
+		</footer>
+
+	</content>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* slideshow css */
+
+
+/* container for slides */
+.images {
+	background:#fff url(../../images/gradient/h300.png) repeat-x;
+	position:relative;	
+	height:250px;
+	width:940px;
+	float:left;	
+	cursor:pointer;
+	
+}
+
+/* single slide */
+.images div {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;		
+	height:250px;
+	font-size:12px;
+}
+
+/* header */
+.images h3 {
+	font-size:22px;
+	font-weight:normal;
+	margin:0 0 20px 0;
+	color:#456;
+}
+
+/* tabs (those little circles below slides) */
+.slidetabs {
+	position:absolute;
+	top:345px;
+	right:20px;		
+	/*clear:both;
+	margin-left:330px;*/
+}
+
+/* single tab */
+.slidetabs a {
+	width:8px;
+	height:8px;
+	float:left;
+	margin:3px;
+	background:url(../../images/navigator.png) 0 0 no-repeat;
+	display:block;
+	font-size:1px;		
+}
+
+/* mouseover state */
+.slidetabs a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+.slidetabs a.current {
+	background-position:0 -16px;     
+} 	
+

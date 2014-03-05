@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS with Ten Ton training</title>
+<style type="text/css">
+h1 { font-family: Verdana; color: Red; font-size: 15px; }
+h2 { font-family: Verdana; color: Blue; font-size: 12px; }
+p { font-family: Verdana; font-size: 11px; }
+.emphasis { font-family: Courier; color: Red; font-size: 12px; font-weight: bold; }
+.alert{ background: #fff6bf url(images/exclamation.png) center no-repeat; 
+        background-position: 15px 50%; 
+        text-align: left;
+        padding: 5px 20px 5px 45px; 
+        border-top: 2px solid #ffd324; 
+        border-bottom: 2px solid #ffd324;
+        font-style: italic; line-height: 50px;
+        width: 250px;}
+.push { height: 50px; }
+/*  cover the page -50 in the margin allows for the footer  */
+#master { width: 940px; margin: -1px auto -50px auto; border: 1px solid #000; padding: 0px 10px; 
+          background: #ccc; min-height:100%; height:auto !important; height: 100%; }
+#header { height: 100px; background: #999; margin: 0 -10px; border-bottom: 1px solid #666; }
+#menu { height: 18px; background: #f90; margin: 0 -10px; border-bottom: 1px solid #666; }
+#menu li 
+		{
+			float:left;
+			display:inline; /* horizontal nav remove for vertical ones */
+			cursor:pointer;
+			margin:0px 30px 0px 0px;
+			position:relative;
+			list-style:none;
+		}
+#menu li:hover > a, #menu li:hover { color:#fff; background:#000; }
+#footer { height: 50px; background: #999; margin: 0; border-top: 1px solid #666; }
+ /* reset  */
+* { margin: 0; }
+html, body { height:100%; }
+</style>
+</head>
+<body>
+<div id="master">
+    <div id="header"><h1>Ten Ton Training</h1></div>
+    <div id="menu">
+        <ul>
+            <li>Home</li><li>About Us</li><li>Products</li><li>Contacts</li>
+        </ul>
+    </div>
+    <h1>Ohio</h1>
+    <h2>Cincinnati</h2>
+    <p>Cincinnati is a medium sized town in <span class="emphasis">Ohio</span> where I grew up.  It sets on the Ohio river in the south-west part of the state.</p>
+    <h1>Missouri</h1>
+    <h2>Saint Louis</h2>
+    <p>Saint Louis is where I lived and worked for about 4 years.  It is where I learned to kayak.</p>
+    <p class="alert">The people in St. Louis are not friendly.</p>
+    <h1>Arizona</h1>
+    <h2>Phoenix</h2>
+    <p>I loved living in Phoenix I just wished Julia had.  I would never have left the town.</p>
+    
+    <div class="push"></div>
+</div>
+<!-- Sticky footer -->
+<div id="footer"><p>&copy; 2011. All rights reserved.</p></div>
+
+</body>
+</html>
