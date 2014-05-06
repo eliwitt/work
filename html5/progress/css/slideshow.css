@@ -4,7 +4,7 @@
 
 /* container for slides */
 .images {
-	background:#fff url(../../images/gradient/h300.png) repeat-x;
+	background:#fff url(../../../images/h300.png) repeat-x;
 	position:relative;	
 	height:250px;
 	width:940px;
@@ -46,7 +46,7 @@
 	height:8px;
 	float:left;
 	margin:3px;
-	background:url(../../images/navigator.png) 0 0 no-repeat;
+	background:url(../../../images/navigator.png) 0 0 no-repeat;
 	display:block;
 	font-size:1px;		
 }
