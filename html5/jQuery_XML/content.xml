@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
  <channel>
  <item number="1">
+ 	<picture>sailboat.jpg</picture>
  	<Title>Imagination is powerful</Title>
  	<price>19</price>
  	<quote>Imagination is more important than knowledge.</quote>
@@ -17,6 +18,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more1>
  </item>
  <item number="2">
+ 	<picture>eCheck2.jpg</picture>
  	<Title>Make mistakes to learn</Title>
  	<price>29</price>
  	<quote>Anyone who has never made a mistake has never tried anything new.</quote>
@@ -33,6 +35,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more2>
  </item>
  <item number="3">
+ 	<picture>Garden1.jpg</picture>
  	<Title>Great Spirits</Title>
  	 	<price>39</price>
  	<quote>Great spirits have often encountered violent opposition from weak minds.</quote>
@@ -61,6 +64,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more3>
  </item>
  <item number="4">
+ 	<picture>Garden2.jpg</picture>
  	<Title>Make a difference</Title>
  	<price>22</price>
  	<quote>A man is but the product of his thoughts what he thinks, he becomes.</quote>
@@ -77,6 +81,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more4>	
  </item>
  <item number="5">
+ 	<picture>juliagat2011.jpg</picture>
  	<Title>A weak man is just by accident.</Title>	
  	<price>49</price>
  	<quote>A weak man is just by accident. A strong but non-violent man is unjust by accident.</quote>
@@ -93,6 +98,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more5>
  </item>
  <item number="6">
+ 	<picture>pikepeak1_5.jpg</picture>
  	<Title>Don't believe the lies</Title>	
  	<price>10</price>
  	<quote>The whole of science is nothing more than a refinement of everyday thinking.</quote>
@@ -109,6 +115,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more6>	
  </item>
  <item number="7">
+ 	<picture>pikepeak1.jpg</picture>
  	<Title>Judge of Truth &amp; Knowledge</Title>
  	<price>15</price>
  	<quote>Whoever undertakes to set himself up as a judge of Truth and Knowledge is shipwrecked by the laughter of the gods.</quote>
@@ -125,6 +132,7 @@ It is a long established fact that a reader will be distracted by the readable c
 	</more7>	
  </item> 
  <item number="8">
+ 	<picture>smokeysWinter1.jpg</picture>
  	<Title>It's time to move on</Title>
  	<price>17</price>
  	<quote>A nation's culture resides in the hearts and in the soul of its people.</quote>
