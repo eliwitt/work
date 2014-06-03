@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box
+{
+	width:100px;
+	heigth:100px;
+	background:blue;
+	-webkit-animation:animOne 5s; /* chrome, safari, Opera */
+	animation:animOne 5s;
+}
+
+/* keyframes for animation */
+
+@-webkit-keyframes animOne
+{
+	from {width:0px;
+		height:0px;
+		background:red;
+	}
+	to {width:100px;
+		height:100px;
+		background:blue;
+	}
+}
+
+@keyframes animOne
+{
+	from {width:0px;
+		height:0px;
+		background:red;
+	}
+	to {width:100px;
+		height:100px;
+		background:blue;
+	}
+}
+
+</style>
+</head>
+<body>
+<div id='box'></div>
+</body>
+</html>
