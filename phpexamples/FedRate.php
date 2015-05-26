@@ -26,6 +26,10 @@
     <label for="Height">Height:</label>
     <input type="text" name="Height" size="5" required title="Height is required" />
     </div>
+    <div class="field">
+    <label for="Boxes">Boxes:</label>
+    <input type="text" name="boxes" size="5" value="1" required title="Boxes is required" />
+    </div>
 	</fieldset>
             Get the <input type="submit" name="submit" value="Rates">
 		</form>
@@ -111,7 +115,7 @@ function callFed($good_data)
     </ns1:ResponsibleParty>
     </ns1:Payor></ns1:ShippingChargesPayment>
     <ns1:RateRequestTypes>ACCOUNT</ns1:RateRequestTypes><ns1:PackageCount>1</ns1:PackageCount><ns1:RequestedPackageLineItems><ns1:SequenceNumber>1</ns1:SequenceNumber>
-    <ns1:GroupPackageCount>1</ns1:GroupPackageCount>
+    <ns1:GroupPackageCount>'.$good_data['boxes'].'</ns1:GroupPackageCount>
     <ns1:Weight><ns1:Units>LB</ns1:Units><ns1:Value>'.$good_data['Weight'].'</ns1:Value></ns1:Weight>
     <ns1:Dimensions>
     <ns1:Length>'.$good_data['Length'].'</ns1:Length>
@@ -153,6 +157,10 @@ function callFed($good_data)
 		}
 	}
 	print '</ul>';
+	print '<pre>';
+	print '<hr/>';
+	print_r($result);
+	print '</pre>';
 }
 ?>
 	</section>
