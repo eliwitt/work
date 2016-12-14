@@ -19,7 +19,7 @@ class MOInfo {
     // define methods 
     public function toString() { 
         return $this->mo . "  so ". $this->so ." line " . $this->line . "  ad " . 
-            $this->advertisor . " design " . $this->design . " prd " . $this->product . 
+            $this->advertisor . "<br /> design " . $this->design . "<br /> prd " . $this->product . 
             " qty " . $this->qty . "<br /> csr " . $this->csr . " email " . $this->email . "<br />" .
             $this->item;
     } 
@@ -37,7 +37,7 @@ class MOInfo {
         "<CSR>" . $this->csr . "</CSR>\n" .
         "<EMAIL>" . $this->email . "</EMAIL>\n" .
         "<ITEM>" . $this->item . "</ITEM>\n" .
-        "<CustomerNumber>" . $this->cuno . "</CustomerNumber>";
+        "<CustomerNumber>" . $this->cuno . "</CustomerNumber>\n";
         return $theXML;
     }
 
