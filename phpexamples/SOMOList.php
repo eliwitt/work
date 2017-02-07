@@ -2,9 +2,9 @@
 include('./MOInfo.php');
 include('./functionMOHandler.php');
 $debug = 0;
+$firstEntry = 1;
 $message = "";
 session_start();
-$theInfo = $_SESSION['theDetail'];
 
 switch (@$_POST['BtnAct'])
 {
@@ -13,22 +13,42 @@ switch (@$_POST['BtnAct'])
 		header("Location: MOHandler.php");
 		break;
 	case "Place the Job":
-		$first = 1;
-		$hit = 0;
-		$theMOResult = processMO($theInfo);
-		if ($theMOResult != "")
-			$message .= $theMO->mo . " had this error " . $theMOResult . "<br />";
+		//
+		//  Loop thru the MOs and verify that the art is in place.
+		//
+		$theMOs = $_SESSION['theMOS'];
+		if ($debug == 1) {
+			print_r($_POST['jobMOs']);
+		}
+		$message = "";
+		$jobMOs = $_POST['jobMOs'];
+		foreach ($jobMOs as $mo) {
+		
+			foreach ($theMOs as $theMO) {
+				if ($theMO->mo == $mo) {
+					$first = 1;
+					$hit = 0;
+					$theMOResult = processMO($theMO);
+					if ($theMOResult != "")
+						$message .= $theMO->mo . " had this error " . $theMOResult . "<br />";
+				}
+
+			}
+
+		}
 		if ($message == "") {
 			$_SESSION['theResult'] = "Job Placed, enter your next mo or so #.";
-			header("Location: MOHandler.php");
-		}
+			header("Location: MOHandler.php");			
+		} 
 		break;
+	default:
+		$theMOs = $_SESSION['theMOS'];
+		$message = "Don't forget that you need to have the folder and art work ready for each MO.";
 }
-
 ?>
 <html> 
 <head>
-<title>Art Mo Handler</title>
+<title>Art SO Mo Handler</title>
 <style type="text/css">
 /* CSS reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -47,7 +67,7 @@ body {
 .container{
     width: 50%;
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 12px;
 	background: #ddd;
 	padding: 10px;
 	float:left;
@@ -67,22 +87,38 @@ img {
 <body> 
 	<section class="container">
 		<header>
-		<h2>Job Verification</h2>
+		<h2>Job Verification for the Sales Order</h2>
 		</header>
+
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			<p>
 <?php
-//
-// display info for worker to review and proceed
-//
-echo $theInfo->toString();
-echo "<br />" . $message;
+	if ($debug == 1)
+		print_r($theMOs);
+
+	foreach ($theMOs as $theMO) {
+		if ($theMO->mo != "") {
+			if ($firstEntry == 1)
+			{
+				$firstEntry = 0;
+				echo "<h2>" . $theMO->so . "</h2>";
+			}
+			echo "<br /><input type='checkbox' name='jobMOs[]' value='" . $theMO->mo . "' />"
+				. $theMO->toString() . "<br />";
+		}
+	}
 ?>
     		</p><br /><br />
     		<input type="submit" name="BtnAct" value="Start Over">&nbsp;
     		<input type="submit" name="BtnAct" value="Place the Job">
 		</form>
-		<p>Please review the information and if correct then place the job.</p>
+		<p>Please review the information and select those MOs you want to use for the job.</p>
+<?php
+//
+// display info for worker to review and proceed
+//
+echo "<br />" . $message;
+?>		
 	</section>
 	<img src="images\vpi_window.jpg" />
 </body> 

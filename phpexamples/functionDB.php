@@ -24,7 +24,7 @@ function get_the_mo_attr( &$theattr, $themo ) {
 	try {
 		if ($debug == 1)
 			echo "<p> Read the attrs using " . $themo . "</p>";
-		$stmt = $pdo->prepare('select boshce, boyvcd, rtrim(boyxcd) boyxcd, boogqt
+		$stmt = $pdo->prepare('select boshce, rtrim(boyvcd) boyvcd, rtrim(boyxcd) boyxcd, boogqt
 		from vt2662afvp.mfmohr MFG
 			left join vt2662afvp.sroorspl theLine on MFG.aybmnb = theLine.olorno and MFG.aywdnb = theLine.olline
 			left join vt2662afvp.mfcisa PrdAttr on theLine.olprdc = PrdAttr.boshce
@@ -87,7 +87,7 @@ function get_the_mo_info( &$moStuff ) {
 
 	try {
 		if ($debug == 1)
-			echo "<p> Read the from info using " . $moStuff->mo . "</p>";
+			echo "<p> Read the info using " . $moStuff->mo . "</p>";
 		$stmt = $pdo->prepare("select rtrim(olcuno) cust, olorno, olline, rtrim(olprdc) prdcode, rtrim(ohcope) advertiser, rtrim(ohhand) csr, 
                 rtrim(substring(ulcpar, 7)) email, Aya4nb, ayqty, rtrim(oldesc) Product, rtrim(olshpm) design
             from vt2662afvp.mfmohr MFG
@@ -133,4 +133,73 @@ function get_the_mo_info( &$moStuff ) {
     	echo $e->getMessage();
 	}
 }
+//=================================================================
+//
+// this function retrieves the information about the job such as
+// so, line, mo, csr, and etc. using the SO which could retrieve
+// several MOs
+//
+//=================================================================
+function get_the_so_info( $orno ) {
+    global $pdo, $debug;
+    $first = 0;
+    $soArray[] = array();
+    try {
+        if ($debug == 1)
+            echo "<p> Read the so info using " . $orno . "</p>";
+        $stmt = $pdo->prepare("select rtrim(olcuno) cust, olorno, olline, rtrim(olprdc) prdcode, rtrim(ohcope) advertiser, rtrim(ohhand) csr, 
+                rtrim(substring(ulcpar, 7)) email, Aya4nb, ayqty, rtrim(oldesc) Product, rtrim(olshpm) design
+            from vt2662afvp.mfmohr MFG
+                left join vt2662afvp.sroorspl theLine on MFG.aybmnb = theLine.olorno and MFG.aywdnb = theLine.olline
+                left join vt2662afvp.sroorshe sohdr on mfg.aybmnb = sohdr.ohorno
+                left join VT2662AFVP.SROUSP userpro on sohdr.ohhand = UPHAND
+                left join VT2662AFVP.SROCLL usercon on  '*USERPROF' = ULUCTP AND 'MAIL' = ULCLNT AND userpro.upuser = ULUSER
+            where aybmnb = :SONU");
+        $stmt->execute( array( ':SONU' => $orno ) );
+
+        // Print results for each rowset returned. We will get 1 rowset for
+        // each SELECT. The first will be any records found (which may be empty)
+        // and the second with be a count of the records returned by the first
+        // (which may be zero). Note this relies on SQL Server returning this
+        // value after a SELECT.
+        do {
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // var_dump($result);
+            foreach($result as $row => $rst)
+            {
+                if ($debug == 1)
+                    echo "<p> get the data " . $orno . "</p>";
+                // These keys will exists if this rowset is a record
+                $soData = new MOInfo;
+                if (array_key_exists('CUST', $rst)) $soData->cuno = $rst['CUST'];
+                if (array_key_exists('OLORNO', $rst)) $soData->so = $rst['OLORNO'];
+                if (array_key_exists('OLLINE', $rst)) $soData->line = $rst['OLLINE'];
+                if (array_key_exists('AYA4NB', $rst)) $soData->mo = $rst['AYA4NB'];
+                if (array_key_exists('ADVERTISER', $rst)) $soData->advertisor = $rst['ADVERTISER'];
+                if (array_key_exists('PRODUCT', $rst)) $soData->product = $rst['PRODUCT'];
+                if (array_key_exists('DESIGN', $rst)) $soData->design = $rst['DESIGN'];
+                if (array_key_exists('CSR', $rst)) $soData->csr = $rst['CSR'];
+                if (array_key_exists('EMAIL', $rst)) $soData->email = $rst['EMAIL'];
+                if (array_key_exists('AYQTY', $rst)) $soData->qty = $rst['AYQTY'];
+                if (array_key_exists('PRDCODE', $rst)) $soData->item = $rst['PRDCODE'];
+                $first = 1;
+                if ($debug == 1)
+                    print_r($soData);
+                $soArray[] = $soData;
+                unset($soData);
+            }
+        } while ($stmt->nextRowset());
+
+            // Close statement and data base connection
+        unset($stmt);
+    }
+    catch(Exception $e) {
+        echo $e->getMessage();
+    }
+    return $soArray;
+}
+//=================================================================
+// end of file
+//=================================================================
 ?>
