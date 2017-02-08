@@ -83,6 +83,14 @@ img {
 	height:60%;
 }
 </style>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		$("#allchecked").click(function(){
+    		$('input:checkbox').not(this).prop('checked', this.checked);
+		});
+      });
+</script>
 </head>
 <body> 
 	<section class="container">
@@ -102,8 +110,9 @@ img {
 			{
 				$firstEntry = 0;
 				echo "<h2>" . $theMO->so . "</h2>";
+				echo "<input type='checkbox' id='allchecked' value='Select All' />Select All<br />";
 			}
-			echo "<br /><input type='checkbox' name='jobMOs[]' value='" . $theMO->mo . "' />"
+			echo "<br /><input type='checkbox' id='singlebox' name='jobMOs[]' value='" . $theMO->mo . "' />"
 				. $theMO->toString() . "<br />";
 		}
 	}
