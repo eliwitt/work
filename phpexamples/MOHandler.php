@@ -49,11 +49,18 @@ switch (@$_POST['Button'])
 <head>
 <title>Art Mo Handler</title>
 <style type="text/css">
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+fieldset,img { 
+	border:0;
+}
+
 body {
 	
 	background-image: url(images/VPI_OldSign.jpg);
-	margin: 0; 
-	padding: 30px 24px 24px; 
 	width: 100%; height: 100%;
 	background-attachment:fixed;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -68,7 +75,7 @@ body {
 /* the container area */
 .container{
     width: 40%;
-    margin: 5px auto;
+    margin: 50px auto;
     font-size: 10px;
 	background: #ddd;
 	padding: 10px;

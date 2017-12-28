@@ -4,27 +4,14 @@ include('./functionDB.php');
 function processMO($theInfo)
 {
     global $first, $hit;
-    $theRoot = "c:\\steve\\test\\";
+    //\\artfs01\Art_Data\JobXML\MOWork    \\\\artfs01\art_data\jobxml\mowork   W:/MOWork
+    $theDir = "c:\\steve\\test";
     $message = "";
     //  check that the art folder is there and has something in it.
     //  create the xml
-    $theDir = $theRoot . $theInfo->so . "\\" . $theInfo->mo . "\\art";
-    if (!is_dir($theDir))
-        $message = "Directory " . $theDir . " does not exists, please create and resubmit your request.";
-    // now read all of the files in the directory and look for image files
-    if ($message == "") {
-        $dirlst = opendir($theDir);
-        $foundart = 0;
-        while($filename = readdir($dirlst)) {
-            $filepath = $theDir . $filename;
-            $file_parts = pathinfo($filepath);
-            //echo "[" . $file_parts['extension'] . "]<br/>";
-            if (preg_match('/(jpeg|jpg|png|gif)$/i', $file_parts['extension']))
-                $foundart = 1;
-        }
-        if ($foundart == 0)
-            $message = "No art files were found in " . $theDir;
-    }
+    //$theDir = $theDir . "\\" . $theInfo->so . "\\" . $theInfo->mo . "\\art";
+    
+
     //
     // if there are no errors then get the attrs 
     // and format them in the xml
@@ -85,10 +72,11 @@ function processMO($theInfo)
     // if message is blank then we can create the xml file in its folder
     //
     if ($message == "") {
-        $theDir = $theRoot . $theInfo->so . "\\" . $theInfo->mo . "\\xml";
+        $theDir = $theDir . "\\" . $theInfo->so . "\\" . $theInfo->mo . "\\xml";
         if (!is_dir($theDir)) {
             mkdir($theDir);
         }
+        $message = $theDir . "<br/>";
         $fh_out = fopen($theDir . "\\" . $theInfo->mo . ".xml","w");
         $theHdr = "<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n";
         $theHdr .= "<WFP>\n<JobPath>" . $theRoot . $theInfo->so . "\\" . $theInfo->mo . "</JobPath>\n";
@@ -120,7 +108,7 @@ function theProduct($theKey, $theValue){
             break;
         case "TRI10" :
             $theprd = "<Product>TRI</Product>\n";
-            $hit = 1;
+            //$hit = 1;
             break;
         case "TR10" :
             $theprd = "<Product>TRS</Product>\n";
@@ -128,7 +116,7 @@ function theProduct($theKey, $theValue){
             break;          
         case "BU10" :
             $theprd = "<Product>Bulletin</Product>\n";
-            $hit = 1;
+            //$hit = 1;
             break;
         case "EXT20" :
             $theprd = "<Product>Extension</Product>\n";
@@ -306,7 +294,7 @@ function theBleed($theKey, $theValue){
             $hit = 1;
             break;          
         case "BU50" :
-            $theBleed = "<BulletinBleedInches>" . $theValue . "</BulletinPocketInches>\n";
+            $theBleed = "<BulletinBleedInches>" . $theValue . "</BulletinBleedInches>\n";
             $hit = 1;
             break;
     }
